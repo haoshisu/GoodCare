@@ -1,0 +1,39 @@
+/* for 最新消息內文的css */
+.new-content {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  border-radius: 10px;
+}
+.w3-bar-block .w3-bar-item {
+  font-size: 20px;
+  padding: 15px 20px!important;
+}
+.nav-link.active {
+  color: #fffdfd;
+  background-color: #CF4501;
+}
+.newsitem{
+    border-bottom: solid #DCDAD9;
+    padding: 20px;
+    font-size: 20px;
+    /* width: 10%; */
+}
+.newslink{
+  text-decoration: none;
+  color: black;
+}
+.newsitem:hover {
+  color:white !important;
+  background-color: #CF4501 !important;
+}
+
+/* 這裡是下一頁的按鈕 */
+.page-link {
+  border-radius: 20px !important;
+  margin: 10px;
+  color: hsl(0, 0%, 44%);
+  background-color: white;
+}
+.page-link:hover {
+  color: white;
+  background-color: #cf4501;
+}

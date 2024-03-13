@@ -1,0 +1,30 @@
+[
+    {
+        "id":0,
+        "title":"為什麼要推動長照",
+        "link":"<iframe width='560' height='315' src='https://www.youtube.com/embed/AFSm1ixiFow?si=HgJKKjkyRd26j2Tk' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>",
+        "tldr":["台灣在2018年已成為高齡社會，按照趨勢預估在2026年後轉為超高齡社會。",
+                "台灣的青壯年扶養比，從1960年有21位青壯年扶養1位老人，到2015年已縮減為5.9位青壯年，推估2065年降低到1.2位青壯年。",
+                "由於青壯年人口的定義為15歲-64歲，35歲以下青年的經濟負擔尚未穩定，故重擔會落在35-64歲的青年，極有可能要一人養兩個老人。"
+                ],
+        "quizTitle":"按照目前趨勢推估，2026年後台灣成為超高齡化社會，屆時台灣社會每幾人就有一位是65歲以上的長者？",       
+        "quiz":[5,10,15,20],
+        "answer":0
+
+    },
+    {
+        "id":1,
+        "title":"長照服務對象有哪些",
+        "link":"<iframe width='560' height='315' src='https://www.youtube.com/embed/SCdZn0U7QhM?si=zdwkwGJSXfHrvgLb' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>",
+        "tldr":["長照的服務對象是穿衣脫襪、進食、洗澡和平地走動這些日常生活需要他人協助，且需符合失能、失智和衰弱等條件的人。",
+                "符合資格的人可以透過三種管道，如撥打1966電話或是親自到各縣市的照管中心洽詢，還有若在醫院時，可申請長照出院準備服務。",
+                "透過三種管道都會聯絡照管專員，專員會到府拜訪，蒐集個案身體狀況、失能程度以及居住環境等資料後，交由個案管理師擬定個案照顧計畫，經過安排後取得最適合的長戰服務。",
+                "長照服務屬於社會福利資源，為求公平以及避免濫用，會有評估機制來審核申請長照服務，確保有需要的人使用。"
+                ],
+        "quizTitle":"下列選項中何者不是開始開始申請長照服務流程的管道？",
+        "quiz":["電話撥打1966 長照服務專線","親自到居住地縣市衛生所洽詢","親自到居住地縣市照管中心洽詢","在出院時申請長照出院準備服務"],
+        "answer":1
+
+    }
+    
+]
