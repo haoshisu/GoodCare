@@ -3,7 +3,6 @@
   }
   
   .page-link:hover {
-<<<<<<< HEAD
     color: white !important;
     background-color: #cf4501 !important;
   }
@@ -59,14 +58,3 @@
   color: white;
   background-color: #cf4501;
 } */
-=======
-    color: white!important;
-    background-color: #cf4501!important;
-  }
-
-  .active>.page-link{
-    color: white!important;
-    background-color: #cf4501!important;
-    border-color:white!important;
-  }
->>>>>>> dc846ae0aaf909659c81adb2da0e6f960fea94af
