@@ -10,6 +10,9 @@ export {default as Product} from './Product'
 export {default as Reserve} from './Reserve'
 export {default as WebQA} from './WebQA'
 
+// 購物車
+export {default as Cart} from './Cart'
+
 // 會員專區
 export {default as UserLogin} from './UserLogin'
 export {default as UserForget} from './UserForget'

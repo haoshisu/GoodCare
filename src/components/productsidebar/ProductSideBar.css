@@ -1,0 +1,23 @@
+/* 這邊是側邊欄 */
+.w3-light-grey{
+    background-color: #ffffff!important;;
+    border-radius: 10px;
+  }
+
+.w3-button:hover {
+    color: #ffffff!important;
+    background-color: #CF4501!important;
+}
+.w3-sidebar{
+    z-index: 0;
+    position: static!important;
+}
+.nav-item{
+  font-size: 20px;
+} 
+
+/* 這裡是側邊欄active固定顏色 */
+.w3-sidebar .w3-bar-item.active {
+    background-color: #cf4501;
+    color: #fff;
+}
