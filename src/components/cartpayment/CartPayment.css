@@ -1,0 +1,21 @@
+.custom-button {
+    background-color: white; 
+    border-color: #cf4501; 
+    color: #cf4501;
+  }
+  .custom-button:hover {
+    background-color: #cf4501; 
+    border-color: #cf4501; 
+    color: #ffffff;
+  }
+
+  .custom-button-back {
+    background-color: white !important;
+    border-color: #838181 !important;
+    color: #838181 !important;
+  }
+  .custom-button-back:hover {
+    background-color: #acabab !important;
+    border-color: #acabab !important;
+    color: #ffffff !important;
+  }

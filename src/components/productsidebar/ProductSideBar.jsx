@@ -7,7 +7,7 @@ const ProductSideBar = ({ category, title }) => {
     console.log(category)
     return (
         <>
-          <div className="container">
+          {/* <div className="container">
             <div className="row">
                 <div className="col-2">
                     <div className="mb-3 mt-3">
@@ -17,8 +17,8 @@ const ProductSideBar = ({ category, title }) => {
                     </div>
                 </div>
             </div>
-          </div>
-          <div className="col2">
+          </div> */}
+          <div className="col-2">
             <div className="w3-sidebar w3-bar-block w3-light-grey w3-card h-auto">
               <Link to="/product/所有商品" className="w3-bar-item w3-button w3-border-bottom" >所有商品</Link>
               <Link to="/product/category/拐杖" className="w3-bar-item w3-button w3-border-bottom">拐杖</Link>

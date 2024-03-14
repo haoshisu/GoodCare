@@ -1,0 +1,47 @@
+/* 購物車上方流程條 */
+div>a {
+  color: black;
+}
+.step-item {
+  position: relative;
+  display: inline-block;
+  padding-left: 50px; /* 考慮到圖示的寬度 */
+  margin-right: 10px; /* 控制項目之間的間距 */
+  transform: translateX(150px); /* 向右移动 150px */
+}
+
+.step-item::before {
+  content: attr(data-index); /* 使用 data-index 屬性中的數字作為圖示內容 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px; /* 圖示的寬度 */
+  height: 30px; /* 圖示的高度 */
+  border-radius: 50%; /* 圖示呈圓形 */
+  background-color: #cf4501; /* 圖示的背景顏色 */
+  color: #fff; /* 圖示中文字的顏色 */
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-step-item {
+  margin: 13px; /* 調整步驟之間的邊距 */
+}
+
+.custom-step-item[data-index="1"]::before {
+  background-color: #cf4501;
+  color: #fff;
+}
+
+.custom-step-item[data-index="2"]::before,
+.custom-step-item[data-index="3"]::before {
+  background-color: #fff;
+  color: #000;
+  border: solid 1px black;
+}

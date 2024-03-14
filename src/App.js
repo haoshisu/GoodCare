@@ -18,7 +18,6 @@ import { Home, News, Policy, Video, Service,
 
 //範例用 
 import Template from './pages/Template'
-import TemplateNews from './pages/TemplateNews'
 // const baseURL = "http://18.182.1.131:3000/news";
 
 function App() {
@@ -53,7 +52,6 @@ function App() {
 
                   {/* 範例用 */}
                   <Route path='/Template' element={<Template/>}/>
-                  <Route path='/TemplateNews' element={<TemplateNews />}/>
 
           </Routes>
         </Router>
