@@ -5,7 +5,6 @@ import PathBox from '../components/pathbox/PathBox';
 import SideBar from '../components/sidebar/SideBar';
 import Footer from '../components/footer/Footer';
 import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
-
 import '../asset/css/policy.css'
 
 const Service = () => {
@@ -57,7 +56,7 @@ const Service = () => {
                     </h5>
                     <br />
                     <h5>相關連結：<a href="https://law.moj.gov.tw/LawclassName/LawAll.aspx?pcode=L0070040"
-                      target="_blank" style={{ color: '#CF4501', textDecoration: 'none' }}>全國法規資料庫：長期照顧服務</a>
+                      target="_blank" rel="noreferrer" style={{ color: '#CF4501', textDecoration: 'none' }}>全國法規資料庫：長期照顧服務</a>
                     </h5>
                   </div>
                 </div>
@@ -82,7 +81,7 @@ const Service = () => {
                     </h5>
                     <br />
                     <h5>相關連結：<a href="https://law.moj.gov.tw/LawclassName/LawAll.aspx?pcode=L0070040"
-                      target="_blank"
+                      target="_blank" rel="noreferrer"
                       style={{ color: '#CF4501', textDecoration: 'none' }}>全國法規資料庫：長期照顧服務機構法人條例</a></h5>
                   </div>
                 </div>

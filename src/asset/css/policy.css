@@ -9,6 +9,7 @@
   box-shadow:black!important; 
   z-index: 1!important; 
 }
+
 .accordion {
   --bs-accordion-btn-focus-border-color: black!important;
   --bs-accordion-btn-focus-box-shadow: black!important; 

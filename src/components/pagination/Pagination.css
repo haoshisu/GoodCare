@@ -6,3 +6,9 @@
     color: white!important;
     background-color: #cf4501!important;
   }
+
+  .active>.page-link{
+    color: white!important;
+    background-color: #cf4501!important;
+    border-color:white!important;
+  }
