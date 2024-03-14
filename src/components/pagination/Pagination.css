@@ -1,11 +1,8 @@
 .page-link {
-    border-radius: 20px !important;
-    margin: 10px;
-    color: hsl(0, 0%, 44%);
-    background-color: white;
+    color: #cf4501!important;
   }
   
   .page-link:hover {
-    color: white;
-    background-color: #cf4501;
+    color: white!important;
+    background-color: #cf4501!important;
   }

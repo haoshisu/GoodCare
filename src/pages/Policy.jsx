@@ -66,7 +66,7 @@ const Service = () => {
                 <div className="accordion-header" id="headingThree">
                   <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <h4>長期照顧服務機構法人條例</h4>
+                    <h3>長期照顧服務機構法人條例</h3>
                   </button>
                 </div>
                 <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
@@ -91,7 +91,7 @@ const Service = () => {
                 <div className="accordion-header" id="headingFour">
                   <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <h4>失智症政策綱領2.0</h4>
+                    <h3>失智症政策綱領2.0</h3>
                   </button>
                 </div>
                 <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour"

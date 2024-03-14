@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pagination.css'
+import './Pagination.css';
 
 function Pagination ({ totalNews, newsNum, setCurPage, curPage }) {
     let pages = []

@@ -21,9 +21,8 @@
   text-decoration: none;
   color: black;
 }
-.newsitem:hover {
-  color:white !important;
-  background-color: #CF4501 !important;
+.newslink:hover{
+border-bottom: solid 3px #CF4501 ;
 }
 
 /* 這裡是下一頁的按鈕 */
