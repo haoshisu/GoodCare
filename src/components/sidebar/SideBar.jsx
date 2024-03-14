@@ -7,7 +7,7 @@ function SideBar({ title }) {
     <React.Fragment>
       <div className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-12">
             <div className="mb-3 mt-3">
               <h1 style={{ color: "#663c2a", fontWeight: "bold" }}>
                 {title}
