@@ -43,11 +43,9 @@ function TemplateNews() {
               {/* 這裡放你的主內容 */}
               <div className='col-9'>
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                            aria-selected="true"
-                            style={{backgroundColor: '#CF4501',color:'white'}}
+                    <li class="nav-item">
+                        <button class="nav-link"
+                            style={{backgroundColor: '#F3C640',color:'white', textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)'}}
                             >焦點新聞</button>
                     </li>
                   </ul>

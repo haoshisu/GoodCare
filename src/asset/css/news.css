@@ -7,20 +7,19 @@
   font-size: 20px;
   padding: 15px 20px!important;
 }
-.nav-link.active {
-  color: #fffdfd;
-  background-color: #CF4501;
-}
+
 .newsitem{
   border-bottom: solid #DCDAD9;
   padding: 20px;
   font-size: 20px;
   /* width: 10%; */
 }
+
 .newslink{
   text-decoration: none;
   color: black;
 }
+
 .newslink:hover{
   border-bottom: solid 3px #CF4501 ;
 }
