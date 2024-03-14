@@ -3,8 +3,8 @@
   font-size: 20px;
 }
 
-.navbar-brand:hover{
-  color: #CF4501;
+.navbar-brand:hover {
+  color: #CF4501!important;
 }
 
 /* 會員登入按鈕 */
