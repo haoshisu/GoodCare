@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartSearch.css";
 
-const CartSearch = () => {
+const CartSearch = ( { doFirstBtn, doSecondBtn, doThirdBtn } ) => {
   return (
     <>
       {/* start of 搜尋框與購物車按鈕 */}
@@ -16,14 +16,14 @@ const CartSearch = () => {
                   className="form-control"
                   placeholder="找商品"
                 />
-                <button className="btn btn-outline-secondary" type="button">
-                  搜尋
-                </button>
+                  <button className="btn btn-outline-secondary" type="button">
+                    搜尋
+                  </button>
               </div>
             </div>
             <div className="col-auto">
               {/* // 購物車連結 */}
-              <a href="#a" className="cart-icon">
+              <a href="/cart" className="cart-icon">
                 <i className="fas fa-shopping-cart"></i>
               </a>
             </div>
@@ -41,21 +41,21 @@ const CartSearch = () => {
                   className="step-item custom-step-item text-center"
                   data-index="1"
                 >
-                  <a href="#a">確認購物車</a>
+                  <span type="button" onClick={ doFirstBtn }>確認購物車</span>
                 </div>
 
                 <div
                   className="step-item custom-step-item text-center"
                   data-index="2"
                 >
-                  <a href="#a">填寫收件及付款資訊</a>
+                  <span type="button" onClick={ doSecondBtn }>填寫收件及付款資訊</span>
                 </div>
 
                 <div
                   className="step-item custom-step-item text-center"
                   data-index="3"
                 >
-                  <a href="#a">訂單確認</a>
+                  <span type="button" onClick={ doThirdBtn } >訂單確認</span>
                 </div>
               </div>
             </div>

@@ -12,27 +12,15 @@
   background-color: #CF4501;
 }
 .newsitem{
-    border-bottom: solid #DCDAD9;
-    padding: 20px;
-    font-size: 20px;
-    /* width: 10%; */
+  border-bottom: solid #DCDAD9;
+  padding: 20px;
+  font-size: 20px;
+  /* width: 10%; */
 }
 .newslink{
   text-decoration: none;
   color: black;
 }
 .newslink:hover{
-border-bottom: solid 3px #CF4501 ;
-}
-
-/* 這裡是下一頁的按鈕 */
-.page-link {
-  border-radius: 20px !important;
-  margin: 10px;
-  color: hsl(0, 0%, 44%);
-  background-color: white;
-}
-.page-link:hover {
-  color: white;
-  background-color: #cf4501;
+  border-bottom: solid 3px #CF4501 ;
 }

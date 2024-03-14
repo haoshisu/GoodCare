@@ -8,6 +8,7 @@ div>a {
   padding-left: 50px; /* 考慮到圖示的寬度 */
   margin-right: 10px; /* 控制項目之間的間距 */
   transform: translateX(150px); /* 向右移动 150px */
+  text-decoration: underline;
 }
 
 .step-item::before {
@@ -45,3 +46,5 @@ div>a {
   color: #000;
   border: solid 1px black;
 }
+
+

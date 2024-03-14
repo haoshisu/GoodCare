@@ -30,6 +30,7 @@ function App() {
                   <Route path='/News' element={<News />} />
                   <Route path='/Policy' element={<Policy />} />
                   <Route path='/Video' element={<Video/>}/>
+                  <Route path='/Video/:id' element={<SingleVideo />}/>
                   <Route path='/Service' element={<Service/>}/>
                   <Route path='/Subsidy' element={<Subsidy/>}/>
                   <Route path='/Map' element={<Map/>}/>

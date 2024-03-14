@@ -1,8 +1,60 @@
-.page-link {
-    color: #cf4501!important;
+/* .page-link {
+    color: #cf4501 !important;
   }
   
   .page-link:hover {
-    color: white!important;
-    background-color: #cf4501!important;
+    color: white !important;
+    background-color: #cf4501 !important;
   }
+
+  li:active {
+    color: #cf4501 !important;
+  } */
+  .pagination > li > a, .pagination > li > button
+{
+    background-color: white;
+    /* border-color: black; */
+    color: #cf4501;
+    border-radius: 30px;
+    margin: 10px;
+    /* color: hsl(0, 0%, 44%); */
+    background-color: white;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > button:focus,
+.pagination > li > button:hover
+{
+    color: #fff;
+    background-color: #cf4501;
+    border-color: #F3C640;
+    border-width: 5px;
+    transition: .3s;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #cf4501 !Important;
+    border: solid 1px #F3C640 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    /* background-color: gray !Important;
+    border: solid 1px gray; */
+    color: #000;
+}
+
+/* 這裡是下一頁的按鈕 */
+/* .page-link {
+  border-radius: 30px !important;
+  margin: 10px;
+  color: hsl(0, 0%, 44%);
+  background-color: white;
+}
+.page-link:hover {
+  color: white;
+  background-color: #cf4501;
+} */

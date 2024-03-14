@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartDetail.css";
 
-const CartDetail = () => {
+const CartDetail = ( { doSecondBtn } ) => {
   return (
     <>
       {/* 購物車明細 */}
@@ -127,7 +127,7 @@ const CartDetail = () => {
             </table>
             <br />
             <div className="text-center">
-                <button type="button" className="btn btn-lg custom-button px-5">
+                <button type="button" className="btn btn-lg custom-button px-5" onClick={ doSecondBtn }>
                   前往結帳
                 </button>
             </div>
