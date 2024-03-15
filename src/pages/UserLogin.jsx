@@ -12,12 +12,10 @@ const Service = () => {
         <Header />
         <IndexNav />
         <PathBox />
-        <div className="container">
-            <div className="row">
-                <div>會員登入 Page</div>
-            </div>
-        </div>
-  
+
+
+
+
         {/* 底下用8個換行空出雨footer距離 */}
         <br />
         <br />
