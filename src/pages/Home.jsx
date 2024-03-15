@@ -6,7 +6,7 @@ import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
 import ScrollEffectComponent from '../components/hover/hover';
 import MyClassComponent from '../components/aos/aos';
 import SwiperComponent from '../components/swiper/swiperComponent';
-import Scroll from'../components/scroll/scroll';
+// import Scroll from'../components/scroll/scroll';
 
 
 import { Helmet } from 'react-helmet';

@@ -1,0 +1,43 @@
+
+/* 這是手風琴 */
+.accordion-button:not(.collapsed) {
+    color:white!important;
+    background-color:#F3C640!important;
+  }
+  
+  .accordion-button:focus {
+    border-color: black!important;
+    box-shadow:black!important; 
+    z-index: 1!important; 
+  }
+  .accordion {
+    --bs-accordion-btn-focus-border-color: black!important;
+    --bs-accordion-btn-focus-box-shadow: black!important; 
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  }
+  
+  .accordion-button:hover{
+    background-color:#F3C640;
+    color:black;
+  }
+  
+  
+  .new-content {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    border-radius: 10px;
+  }
+  
+  .w3-bar-block .w3-bar-item {
+    font-size: 20px;
+    padding: 15px 20px!important;
+  }
+  
+  .nav-tabs .nav-link.active,.nav-link:hover{
+    color:white;
+    background-color:#cf4501;
+  }
+  .nav-link {
+    color: black;
+    box-shadow:0 0 0px black, 0 0 2px rgba(0, 0, 0, 0.5);
+    padding: 10px 40px;
+  }

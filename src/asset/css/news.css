@@ -18,8 +18,9 @@
 .newslink{
   text-decoration: none;
   color: black;
+  padding: 10px 40px;
 }
 
 .newslink:hover{
-  border-bottom: solid 3px #CF4501 ;
+  border-bottom: solid 2px #CF4501 ;
 }
