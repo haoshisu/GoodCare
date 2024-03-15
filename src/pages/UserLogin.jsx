@@ -4,6 +4,7 @@ import IndexNav from '../components/indexnav/IndexNav';
 import PathBox from '../components/pathbox/PathBox';
 import Footer from '../components/footer/Footer';
 import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
+import Userloing from '../components/userlogin/userlogin'
 
 const Service = () => {
   
@@ -12,7 +13,7 @@ const Service = () => {
         <Header />
         <IndexNav />
         <PathBox />
-
+        <Userloing/>
 
 
 

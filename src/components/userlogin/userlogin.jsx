@@ -1,18 +1,39 @@
 import React from "react";
-
-
-const styles = {
-    backgroundImage: 'url(./background.png)',
-    width: '100%',
-    backgroundSize: 'cover'
-  };
-
+import { useState } from "react";
+import Background from "../../asset/images/userlogin/background.png"
+import '../userlogin/userlogin.css'
 const UserLogin = () => {
+    const [data,setData] = useState({account:"",password:"" ,isRemember:false})
+    var Doaccount = (e) => {
+        setData({
+            ...data,
+            account : e.target.value
+        })
+        console.log(data)
+    }
 
+    var Dopassword = (e) =>{
+        setData({
+            ...data,
+            password:e.target.value
+        })
+    }
+
+    var Doremember = (e) => {
+       const newremember = {...data}
+       newremember.isRemember = e.target.checked ? 1 : 0
+       setData(newremember)
+    //    console.log(newremember)
+    }
 
     return (
     <React.Fragment>
-        <div style={{styles}}>
+        <div style={{ 
+            backgroundImage: `url(${Background})`,
+            width:'100%',
+            backgroundSize:'cover'
+            }}>
+            
             <div className="container">
                 <div className="row">
                     <div className="col"></div>
@@ -25,16 +46,16 @@ const UserLogin = () => {
                                 <br/>
                                 <div className="mb-3">
                                     <i className="fa-solid fa-circle-user"></i>&emsp;<input type="text" className="account"
-                                        id="Inputaccount" value="" placeholder="請輸入帳號"/>
+                                        id="Inputaccount" value={data.account} placeholder="請輸入帳號" onChange={Doaccount}/>
                                 </div>
                                 <br/>
                                 <div className="mb-3">
                                     <i className="fa-solid fa-lock"></i>&emsp;<input type="password" className="password"
-                                        id="InputPassword" value="" placeholder="請輸入密碼(6-20英數字)"/>
+                                        id="InputPassword" value={data.password} onChange={Dopassword} placeholder="請輸入密碼(6-20英數字)"/>
                                 </div>
-                                <div className="mb-3 form-check">
-                                    <input type="checkbox" className="form-check-input" id="Check"/>
-                                    <label className="form-check-label" for="Check" style="font-size: 14px;">記住我</label>
+                                <div className="mb-3 form-check" >
+                                    <input type="checkbox" className="form-check-input" id="Check" onChange={Doremember} checked={data.isRemember}/>
+                                    <label className="form-check-label" for="Check" style={{fontSize: "14px"}}>記住我</label>
                                 </div>
                                 <br/>
                                 <div className="d-flex justify-content-center mb-5">
@@ -62,9 +83,7 @@ const UserLogin = () => {
     </React.Fragment>
 
 
-
-
-
-
     )
 }
+
+export default UserLogin
