@@ -1,7 +1,11 @@
 import React from "react";
 import "./CartDetail.css";
+import Counter from "../Counter/counter";
 
 const CartDetail = ( { doSecondBtn } ) => {
+  let cartInfo = JSON.parse(sessionStorage.getItem('cartInfo'))
+  // console.log(cartInfo)
+
   return (
     <>
       {/* 購物車明細 */}
@@ -19,7 +23,41 @@ const CartDetail = ( { doSecondBtn } ) => {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            {cartInfo.map((val,ind)=>{
+              return(
+                <tr>
+                  <td>
+                      <img
+                      src={require(`../../asset/images/numberImages/${val.id}.png`)}
+                      alt="Product"
+                      width="150"
+                      height="150"
+                    />
+                  </td>
+                  <td>
+                    { val.productName }
+                  </td>
+                  <td>
+                    沒存到價錢
+                  </td>
+                  <td>
+                    <Counter />
+                  </td>
+                  <td>
+                    <select className="form-select">
+                      <option value="0">0%</option>
+                      <option value="0.1">10%</option>
+                      <option value="0.2">20%</option>
+                    </select>
+                  </td>
+                  <td>
+                    總價還沒計算
+                  </td>
+                </tr>
+              )
+            })
+          }
+            {/* <tr>
               <td>
                 <img
                   src="https://via.placeholder.com/100"
@@ -69,7 +107,7 @@ const CartDetail = ( { doSecondBtn } ) => {
                   <i className="fas fa-trash-alt"></i>
                 </button>
               </td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
       </div>

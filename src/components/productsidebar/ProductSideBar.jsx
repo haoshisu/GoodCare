@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './ProductSideBar.css' 
 
 const ProductSideBar = ({ category, title }) => {
-    console.log(category)
+    // console.log(category)
     return (
         <>
           <div className="col-2">

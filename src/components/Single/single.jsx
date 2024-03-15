@@ -7,32 +7,69 @@ import Counter from '../Counter/counter'
 
 
 const Single = () => {
-    const [singleList, setsingleList] = useState([{id:0,productName:'',productDescription:''}])
+    const [ singleList, setSingleList ] = useState([{id:0,productName:'',productDescription:''}])
     
+    const [ cartInfo, setCartInfo ] = useState({})
+    
+    const [ numToBuy, setNumToBuy ] = useState(1)
+ 
     const params = useParams();
     // console.log(params)
-
+    
+    
+    const fetchData = async () => {
+        const result = await axios.get(`http://localhost:8000/product/single/${params.id}`)
+        setSingleList(result.data)
+    }
     useEffect( () => {
-        const fetchData = async () => {
-            const result = await axios.get(`http://localhost:8000/product/single/${params.id}`)
-            setsingleList(result.data)
+      fetchData()
+        const cartInit = {
+            id:singleList[0].id,
+            productName:singleList[0].productName,
+            quantity:1,
+            style:singleList[0].style
         }
-        fetchData()
-    },[params.id])
+        setCartInfo(cartInit)
+    },[ params.id, singleList])
 
     const index = params.id
-    console.log(index)
-    
+    // console.log(index)
 
     var text = singleList[0].productDescription
     // var cardtext= text.replace(/[\\n]/g,'') + '<br/>' 
     // console.log(cardtext)
-    const cardText = text.split('\\n').map((line, index) => (
-        <React.Fragment>
+    const cardText = text.split('\\n').map((line, ind) => (
+        <React.Fragment key={ ind }>
           {line}
           <br />
         </React.Fragment>
-      ));
+    ));
+
+    const handlePutInCart = () => {
+      const newCartInfo = {...cartInfo}
+      newCartInfo.quantity = numToBuy
+      setCartInfo(newCartInfo)
+      
+      // 先取目前cartInfo 陣列值，才將新值填入
+      let cartSession = JSON.parse(sessionStorage.getItem('cartInfo'))
+      
+      if ( !cartSession ) {
+        // 目前session沒有任何資料故直接存
+        sessionStorage.setItem('cartInfo',JSON.stringify([newCartInfo]))
+      } else {
+        let ind = cartSession.findIndex(i => i.id === cartInfo.id)
+        // console.log(ind)
+        if ( ind<0 ) {
+          // session有資料但找不到此商品故新增進去
+          sessionStorage.setItem('cartInfo',JSON.stringify([...cartSession, newCartInfo]))
+        } else {
+          // session有資料但找到此商品後修改
+          cartSession[ind] = newCartInfo
+          sessionStorage.setItem('cartInfo',JSON.stringify(cartSession))
+        }
+
+      }
+    }
       
     return (
     <>
@@ -47,7 +84,7 @@ const Single = () => {
                         <br/>
                         <p className="card-text" style={{fontSize: "18px"}} id='cardtext'>{cardText}</p>
                         
-                        <p className="card-text"><h3 style={{color:"orangered"}}>NT ${singleList[0].price}</h3></p>
+                        <p className="card-text"><span style={{color:"orangered"}}>NT ${singleList[0].price}</span></p>
                         {/* <!-- 數量按鈕 --> */}
                         <div className="row align-items-center">
                             <div className="col-auto">
@@ -55,15 +92,27 @@ const Single = () => {
                             </div>
                             <div className="col-4">
                                 <div className="input-group">
-                                    <Counter/>
+                                    <Counter childToParent = { setNumToBuy } />
                                 </div>
                             </div>
                         </div>
                         <br/>
                         {/* <!-- 直接購買 & 放入購物車 --> */}
                         <div>
-                            <button className="btn btn-outline-success" type="button" style={{width: "300px"  ,fontSize: "18px"}}>直接購買</button>
-                            <button className="btn btn-warning ms-5 text-white" type="button" style={{width: "300px",fontSize: "18px"}}>放入購物車</button>
+                            <a className="direct2cart btn btn-outline-success" type="button" 
+                            style={{width: "300px"  ,fontSize: "18px"}}
+                            onClick={ handlePutInCart }
+                            href='/cart'
+                            >
+                                直接購買
+                            </a>
+
+                            <button className="putcart btn btn-warning ms-5 text-white" type="button" 
+                            style={{width: "300px",fontSize: "18px"}}
+                            onClick={ handlePutInCart }
+                            >
+                                放入購物車
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -35,10 +35,12 @@ function App() {
                   <Route path='/Subsidy' element={<Subsidy/>}/>
                   <Route path='/Map' element={<Map/>}/>
                   <Route path='/Reserve' element={<Reserve />}/>
-                  <Route path='/Product' element={<Product/>}/>
-                  <Route path="/product/category/:category" element={<Product />} />
-                  <Route path="/product/single/:id" element={<SingleProduct />} />
                   <Route path='/WebQA' element={<WebQA/>}/>
+
+                  {/* 商品頁面 */}
+                  <Route path='/Product/*' element={<Product/>}/>
+                  <Route path="/product/category/:category/*" element={<Product />} />
+                  <Route path="/product/single/:id" element={<SingleProduct />} />
 
                   {/* 購物車 */}
                   <Route path='/Cart' element={<Cart/>}/>
