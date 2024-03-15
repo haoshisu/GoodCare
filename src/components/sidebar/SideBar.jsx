@@ -22,6 +22,7 @@ function SideBar({ title }) {
           </div>
         </div>
       </div>
+
       <div className="col-2">
         <div className="w3-sidebar w3-bar-block w3-light-grey w3-card h-auto">
           <NavLink to="/news" className={`w3-bar-item w3-button w3-border-bottom ${activeLink === "/news" ? "active" : ""}`} onClick={(e) => handleLinkClick(e, "/news")}>最新消息</NavLink>

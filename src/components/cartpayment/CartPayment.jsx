@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartPayment.css";
 
-const CartPayment = () => {
+const CartPayment = ( { doFirstBtn, doThirdBtn } ) => {
   return (
     <>
       <div className="container">
@@ -205,18 +205,16 @@ const CartPayment = () => {
             <div className="col-md-4 text-center">
               <a href="#a">
                 <button
-                  className="btn btn-lg custom-button-back px-5"
+                  className="btn btn-lg custom-button-back px-5" onClick={ doFirstBtn }
                 >
                   返回購物車
                 </button>
               </a>
             </div>
             <div className="col-md-4 text-center">
-              <a href="./cart3.html">
-                <button type="button" className="btn btn-lg custom-button px-5">
+                <button type="button" className="btn btn-lg custom-button px-5" onClick={ doThirdBtn }>
                   確認結帳
                 </button>
-              </a>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { } from 'react';
 import Header from '../components/header/Header';
 import IndexNav from '../components/indexnav/IndexNav';
-import PathBox from '../components/pathbox/PathBox';
+import CartSearch from '../components/cartsearch/CartSearch';
 import Footer from '../components/footer/Footer';
 import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
 
@@ -11,10 +11,13 @@ const Service = () => {
     <React.Fragment>
         <Header />
         <IndexNav />
-        <PathBox />
+        <CartSearch />
         <div className="container">
             <div className="row">
-                <div>商品頁面 Page</div>
+                <div>
+                  商品頁面 Page
+                  
+                  </div>
             </div>
         </div>
   

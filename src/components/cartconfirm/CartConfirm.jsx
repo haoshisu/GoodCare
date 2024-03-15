@@ -87,9 +87,11 @@ const CartConfirm = () => {
         </div>
         <br /> <br /> <br />
         <div className="text-center">
-          <button className="btn btn-lg custom-button px-5">
-            <i className="fa-solid fa-shopping-cart"></i> 繼續購物
-          </button>
+          <a href="/product">
+            <button className="btn btn-lg custom-button px-5">
+              <i className="fa-solid fa-shopping-cart"></i> 繼續購物
+            </button>
+          </a>
         </div>
       </div>
     </>

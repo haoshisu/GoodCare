@@ -7,7 +7,7 @@ function IndexNav() {
     <div className="topnav">
       <a href="/news" className="topnav-title">最新消息</a>
       <div className="dropdown">
-        <a class="topnav-title">關於長照</a>
+        <a href="#a" className="topnav-title">關於長照</a>
         <div className="dropdown-content">
           <div className="dropdown-content1">
             <a href="/policy">政府長照政策</a>
