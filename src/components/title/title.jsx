@@ -5,9 +5,6 @@ const Title = ({category,onSortChange}) => {
     const DoSortChange = (event) => {
         const sortBy = event.target.value;
         onSortChange(sortBy);
-    
-
-        
     }
     
     return (

@@ -32,7 +32,7 @@ const Path =  ( {onSearch} ) => {
               <button className="btn btn-outline-secondary" type="button" id="button-addon2"  onClick={DoSearch}><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
             </div>
             <div className="ps-3">
-              <h3 href=""><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></h3>
+              <a href="/cart"><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></a>
             </div>
           </div>
         </div>

@@ -1,0 +1,42 @@
+/* 購物車內容 */
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #cf4501;
+  border-color: black;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background-color: #f7ead7;
+  color: #cf4501;
+}
+
+th {
+  font-size: large;
+}
+
+.cart-icon {
+  font-size: 24px;
+  color: black;
+}
+
+.search-input {
+  margin-right: 20px; /* 增加搜尋框和購物車之間的右邊距 */
+}
+
+.search-input .form-control {
+  width: 250px; /* 調整搜尋框的寬度 */
+}
+
+.custom-button {
+  background-color: white!important;
+  border-color: #cf4501 !important;
+  color: #cf4501!important;
+}
+.custom-button:hover {
+  background-color: #cf4501 !important;
+  border-color: #cf4501 !important;
+  color: #ffffff !important;
+}

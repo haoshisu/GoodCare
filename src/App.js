@@ -18,7 +18,6 @@ import { Home, News, Policy, Video, Service,
 
 //範例用 
 import Template from './pages/Template'
-import TemplateNews from './pages/TemplateNews'
 // const baseURL = "http://18.182.1.131:3000/news";
 
 function App() {
@@ -31,6 +30,7 @@ function App() {
                   <Route path='/News' element={<News />} />
                   <Route path='/Policy' element={<Policy />} />
                   <Route path='/Video' element={<Video/>}/>
+                  <Route path='/Video/:id' element={<SingleVideo />}/>
                   <Route path='/Service' element={<Service/>}/>
                   <Route path='/Subsidy' element={<Subsidy/>}/>
                   <Route path='/Map' element={<Map/>}/>
@@ -55,7 +55,6 @@ function App() {
 
                   {/* 範例用 */}
                   <Route path='/Template' element={<Template/>}/>
-                  <Route path='/TemplateNews' element={<TemplateNews />}/>
 
           </Routes>
         </Router>

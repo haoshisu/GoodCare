@@ -5,9 +5,9 @@ import '../asset/css/news.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from '../components/header/Header';
 import IndexNav from '../components/indexnav/IndexNav';
-import Footer from '../components/footer/Footer';
 import Path from "../components/Path/path";
 import ProductSideBar from "../components/productsidebar/ProductSideBar";
+import Footer from '../components/footer/Footer';
 import Title from "../components/title/title";
 import Card from '../components/card/card'
 import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
