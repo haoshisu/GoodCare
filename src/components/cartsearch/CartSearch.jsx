@@ -5,11 +5,10 @@ const CartSearch = ( { doFirstBtn, doSecondBtn, doThirdBtn } ) => {
   return (
     <>
       {/* start of 搜尋框與購物車按鈕 */}
-      <div className="container mt-2">
+      {/* <div className="container mt-2">
         <div className="container">
           <div className="row align-items-center justify-content-end">
             <div className="col-auto ms-auto">
-              {/* // 搜尋框 */}
               <div className="input-group search-input">
                 <input
                   type="text"
@@ -22,14 +21,13 @@ const CartSearch = ( { doFirstBtn, doSecondBtn, doThirdBtn } ) => {
               </div>
             </div>
             <div className="col-auto">
-              {/* // 購物車連結 */}
               <a href="/cart" className="cart-icon">
                 <i className="fas fa-shopping-cart"></i>
               </a>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* 購物車流程條 */}
       <div className="container justify-content-center ">
         <div className="row justify-content-center">

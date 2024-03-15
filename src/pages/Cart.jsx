@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useParams } from "react-router";
 import Header from "../components/header/Header";
 import IndexNav from "../components/indexnav/IndexNav";
 import CartSearch from "../components/cartsearch/CartSearch";
@@ -12,7 +12,8 @@ import CartPayment from "../components/cartpayment/CartPayment";
 import CartConfirm from "../components/cartconfirm/CartConfirm";
 
 const Cart = () => {
-  const sideBarTitle = "購物專區";
+  // const sideBarTitle = "購物專區";
+  const { category } = useParams();
 
   const [isFirst, setIsFirst] = useState(true);
   const [isSecond, setIsSecond] = useState(false);
@@ -46,7 +47,7 @@ const Cart = () => {
 
       <div className="container">
         <div className="row">
-          <ProductSideBar title={sideBarTitle} />
+          <ProductSideBar category={category} />
           <div className="col-1"></div>
           <div className="col-9">
             {isFirst && (
