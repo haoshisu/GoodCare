@@ -1,0 +1,44 @@
+/* 中間的長照圖 */
+.old{
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .old img {
+    display: block;
+    width: 100%;
+  }
+  .old1{
+    position: absolute;
+    z-index: 1;
+    top: -70px;
+    margin: 0;
+    color:rgb(255, 255, 255);
+    text-shadow:4px 4px 6px rgb(7, 6, 6);
+    font-size: 100px;
+    left: 50px;
+  }
+  .old1 em{
+    border: solid #ffffff;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow:4px 4px 6px rgb(7, 6, 6);
+  }
+  
+  .old2{
+    position: absolute;
+    right: 12%;
+    bottom: 30%;
+    background-color:white;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 8px 8px 8px black;
+    opacity: 0.8;
+  }
+  .old2 :hover{
+    transform: scale(1.1);
+    background-color:white;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 8px 8px 8px black;
+  }
