@@ -1,13 +1,14 @@
+/* basicScroll */
 img.scene:last-child {
-    position: static;
-  }
-  div.scene {
-    position: static;
-  }
-  .scene {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      transform: translateY(var(--translateY));
-      will-change: transform;
-  }
+  position: static;
+}
+div.scene {
+  position: static;
+}
+.scene {
+	position: absolute;
+  top: 0;
+	width: 100%;
+	transform: translateY(var(--translateY));
+	will-change: transform;
+}

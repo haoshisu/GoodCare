@@ -45,7 +45,7 @@ function TemplateNews() {
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <button class="nav-link"
-                            style={{backgroundColor: '#F3C640',color:'white', textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)'}}
+                            style={{backgroundColor: '#214F39',color:'white', textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)'}}
                             >焦點新聞</button>
                     </li>
                   </ul>

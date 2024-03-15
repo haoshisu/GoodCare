@@ -1,21 +1,5 @@
-
-/* basicScroll */
-img.scene:last-child {
-  position: static;
-}
-div.scene {
-  position: static;
-}
-.scene {
-	position: absolute;
-  top: 0;
-	width: 100%;
-	transform: translateY(var(--translateY));
-	will-change: transform;
-}
-
 /* 長期照顧服務 */
-.icon ul{
+.iconcrae ul{
   padding: 0;
   list-style: none;
   display: flex;
@@ -24,35 +8,39 @@ div.scene {
   margin: 2em 0;
 }
 
-.icon ul li{
+.iconcrae ul li{
   flex-basis: 25%;
   display: flex;
   justify-content: center;
   margin-bottom: 1.5em;
 }
 
-.icon ul li a:hover{
+.iconcrae ul li a:hover{
   background: #fff;
   box-shadow: 0px 0px 20px rgba(209,106,19,0.35);
 }
-.icon ul li a{
+
+.iconcrae ul li a{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 210px;
+  width: 220px;
   height: 200px;
   color: #663C2A;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   border-radius: 25px;
   background-color: #fff;
-  padding: 1em;
+  padding: 0.9em;
   text-decoration: none;
   transition: .3s ease-in;
   transform: scale(1.1);
 }
 
+.iconcrae ul li a img{
+ width: 4em;
+}
 
 /* 品牌介紹 */
 .brand{

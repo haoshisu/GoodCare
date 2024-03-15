@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     font-size: 23px;
+    z-index: 2;
   }
   
   .topnav .topnav-title{

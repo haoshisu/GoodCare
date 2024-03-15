@@ -6,7 +6,7 @@ import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
 import ScrollEffectComponent from "../components/hover/hover";
 import MyClassComponent from "../components/aos/aos";
 import SwiperComponent from "../components/swiper/swiperComponent";
-// import Scroll from'../components/scroll/scroll';
+import Scroll from'../components/scroll/scroll';
 
 import { Helmet } from "react-helmet";
 
@@ -31,7 +31,7 @@ const Home = () => {
           <div class="row">
             <div class="col-4"></div>
             <div class="col-4 d-flex justify-content-center ">
-              <h1>長期照顧服務項目pika</h1>
+              <h1>長期照顧服務項目</h1>
             </div>
             <div class="col-4"></div>
           </div>
@@ -46,7 +46,7 @@ const Home = () => {
           </div>
         </div>
         <div class="container">
-          <div class="icon">
+          <div class="iconcrae">
             <ul>
               <li>
                 <a href="#" target="_blank">
@@ -76,7 +76,7 @@ const Home = () => {
           </div>
         </div>
         <div class="container">
-          <div class="icon">
+          <div class="iconcrae">
             <ul>
               <li>
                 <a href="#" target="_blank">

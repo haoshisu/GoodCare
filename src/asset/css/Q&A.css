@@ -34,7 +34,8 @@
   
   .nav-tabs .nav-link.active,.nav-link:hover{
     color:white;
-    background-color:#cf4501;
+    background-color:#214F39;
+    text-shadow:0 0 0px black, 0 0 2px rgba(0, 0, 0, 0.5);
   }
   .nav-link {
     color: black;

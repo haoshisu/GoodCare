@@ -17,9 +17,16 @@ const Service = () => {
       <PathBox />
       <div className="container">
         <div className="row">
-          <SideBar title={ sidebarTitle } />
+          <SideBar title={sidebarTitle} />
           {/* 這裡放你的主內容 */}
           <div className='col-9'>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link"
+                  style={{ backgroundColor: '#214F39', color: 'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+                >政府長照政策</button>
+              </li>
+            </ul>
             <div className="accordion" id="accordionExample">
               <div className="accordion-item">
                 <div className="accordion-header" id="headingOne">
