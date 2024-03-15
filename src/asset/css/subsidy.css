@@ -1,0 +1,156 @@
+.custom-btn {
+  background-color: #f7ead7 !important;
+  color: black !important;
+  border-radius: 200px !important;
+
+  padding: 10px 20px !important;
+  font-size: 20px !important;
+  cursor: pointer;
+}
+.custom-btn:hover {
+  background-color: #f3c640 !important;
+  color: black !important;
+}
+.custom-btn-4 {
+  background-color: white !important;
+  color: #cf4501 !important;
+  border-radius: 200px !important;
+  border: 1px solid #cf4501 !important;
+  padding: 10px 20px !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+}
+
+.custom-btn-4:hover {
+  background-color: #cf4501 !important;
+  color: white !important;
+}
+
+body,
+html {
+  height: 100% !important;
+}
+.container-fluid {
+  height: 100% !important;
+}
+.content {
+  background-color: #fff !important;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+li {
+  font-size: 20px !important;
+}
+
+a.custom-link {
+  color: #cf4501 !important;
+  text-decoration: underline !important;
+}
+a.custom-link:hover {
+  color: #9d3400 !important;
+  cursor: pointer !important;
+}
+.noMatch {
+  color: #cf4501 !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+}
+
+.custom-button {
+  background-color: white !important;
+  border-color: #cf4501 !important;
+  color: #cf4501 !important;
+}
+.custom-button:hover {
+  background-color: #cf4501 !important;
+  border-color: #cf4501 !important;
+  color: #ffffff !important;
+}
+.custom-button {
+  background-color: white !important;
+  border-color: #cf4501 !important;
+  color: #cf4501 !important;
+}
+.custom-button:hover {
+  background-color: #cf4501 !important;
+  border-color: #cf4501 !important;
+  color: #ffffff !important;
+}
+.form-group label {
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+table {
+  width: 50% !important;
+  margin: 20px auto !important;
+  border-collapse: collapse !important;
+}
+th,
+td {
+  padding: 8px !important;
+  border-bottom: 1px solid #ddd !important;
+  text-align: left !important;
+}
+th {
+  background-color: #f2f2f2 !important;
+}
+
+.custom-table thead th {
+  background-color: #343a40 !important;
+  color: #fff !important;
+  text-align: left !important;
+}
+
+.custom-table tbody td {
+  text-align: left !important;
+  border-bottom: 1px solid !important;
+}
+.custom-table th,
+.custom-table td {
+  width: 50% !important;
+  text-align: center !important;
+}
+.custom-table {
+  max-width: 800px !important; /* 限制表格的最大寬度為 800px */
+  margin: 0 auto !important; /* 將表格水平置中 */
+}
+.m-line {
+  border-right: 1px solid #dee2e6 !important; /* 设置每列数据的右边框为1px实线灰色 */
+}
+
+.content-block {
+  display: none !important; /* 默认隐藏内容块 */
+}
+
+.btn-container {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.btn-toggle {
+  background-color: #acabab !important;
+  font-size: 20px !important;
+  margin: 5px !important;
+}
+
+.btn-toggle.active {
+  background-color: #cf4501 !important;
+  color: white !important;
+}
+
+.btn-toggle:hover {
+  background-color: #cf4501 !important;
+  color: white !important;
+}
+.form-group label {
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+.centered-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
