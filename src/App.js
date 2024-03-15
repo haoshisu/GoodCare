@@ -13,7 +13,7 @@ import {
 import { Home, News, Policy, Video, Service,
          Subsidy, Map, Product, Reserve, WebQA,
          UserLogin, UserForget, UserRegister, UserProfile, UserModify,
-         SingleVideo, Cart
+         SingleVideo, Cart,SingleProduct
 } from './pages/appIndex'
 
 //範例用 
@@ -36,6 +36,8 @@ function App() {
                   <Route path='/Map' element={<Map/>}/>
                   <Route path='/Reserve' element={<Reserve />}/>
                   <Route path='/Product' element={<Product/>}/>
+                  <Route path="/product/category/:category" element={<Product />} />
+                  <Route path="/product/single/:id" element={<SingleProduct />} />
                   <Route path='/WebQA' element={<WebQA/>}/>
 
                   {/* 購物車 */}

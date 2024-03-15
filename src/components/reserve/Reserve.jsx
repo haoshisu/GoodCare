@@ -1,4 +1,5 @@
 import React from 'react';
+import './Reserve.css';
 
 function Reserve() {
   return(
