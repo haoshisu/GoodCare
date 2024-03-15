@@ -1,0 +1,256 @@
+import React from "react";
+import Header from "../../components/header/Header";
+import IndexNav from "../../components/indexnav/IndexNav";
+import PathBox from "../../components/pathbox/PathBox";
+import Footer from "../../components/footer/Footer";
+import BackToTopBtn from "../../components/backtotopbtn/BackToTopBtn";
+import "../../asset/css/subsidy.css";
+
+const Subsidy_link1 = () => {
+  return (
+    <React.Fragment>
+      <Header />
+      <IndexNav />
+      <PathBox />
+      <div className="container col-1"></div>
+      <div className="container col-10">
+        <div className="row">
+          <div className="col-md-12 text-left">
+            <h1 style={{ fontWeight: "bold" }}>各縣市長照2.0整合型計畫</h1>
+          </div>
+        </div>
+        <div className="row justify-content-center mt-4 mb-4">
+          <div className="col-10">
+            <div className="content">
+              <ul>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="http://health.gov.taipei/News_Content.aspx?n=443B3B25B63B855B&amp;sms=122EBF8E365A8D85&amp;s=BA18A45D537D5976"
+                    target="_blank"
+                    title="另開新視窗"
+                  >
+                    臺北市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://www.health.ntpc.gov.tw/basic/?mode=detail&amp;node=9294"
+                    target="_blank"
+                    title="新北市長照2.0整合型計畫(另開新視窗)"
+                  >
+                    新北市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://care.tycg.gov.tw/News_Content.aspx?Create=1&amp;n=400&amp;state=1C5D152DDF4F3ED0&amp;s=788438&amp;ccms_cs=1&amp;sms=8067"
+                    target="_blank"
+                    title="桃園市長照2.0整合型計畫(另開新視窗)"
+                  >
+                    桃園市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="http://www.health.taichung.gov.tw/1960540/post"
+                    target="_blank"
+                    title="另開新視窗"
+                  >
+                    臺中市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://ltc.tainan.gov.tw/01_news_page.asp?num=20220217101106&amp;page=9"
+                    target="_blank"
+                    title="另開新視窗"
+                  >
+                    台南市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://ltc.kchb.gov.tw/file"
+                    target="_blank"
+                    title="另開新視窗"
+                  >
+                    高雄市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://ltc.ilshb.gov.tw/information/28/index/6"
+                    target="_blank"
+                    title="宜蘭縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    宜蘭縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://social.hsinchu.gov.tw/News_Content.aspx?n=205&amp;s=240198"
+                    target="_blank"
+                    title="新竹縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    新竹縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://longcare.miaoli.gov.tw/cp.aspx?n=8355"
+                    target="_blank"
+                    title="苗栗縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    苗栗縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://www.chshb.gov.tw/taxonomy/term/69"
+                    target="_blank"
+                    title="彰化縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    彰化縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://welfare.nantou.gov.tw/1486/2009"
+                    target="_blank"
+                    title="南投縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    南投縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://ylshb.yunlin.gov.tw/News.aspx?n=14344&amp;sms=18114"
+                    target="_blank"
+                    title="雲林縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    雲林縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://ltccenter.cyhg.gov.tw/News_Content.aspx?n=4242&amp;s=308222"
+                    target="_blank"
+                    title="嘉義縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    嘉義縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://www.pthg.gov.tw/care/cp.aspx?n=79386911F1B265C5"
+                    target="_blank"
+                    title="屏東縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    屏東縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://ttshbltc.ttshb.gov.tw/news_view.php?bno=392"
+                    target="_blank"
+                    title="臺東縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    臺東縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://long-term.hlshb.gov.tw/careservice?blog=944"
+                    target="_blank"
+                    title="花蓮縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    花蓮縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://www.penghu.gov.tw/society/home.jsp?id=318"
+                    target="_blank"
+                    title="澎湖縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    澎湖縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://www.klcg.gov.tw/tw/social/2757-270856.html"
+                    target="_blank"
+                    title="基隆市長照2.0整合型計畫(另開新視窗)"
+                  >
+                    基隆市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://www.hcchb.gov.tw/news_detail.php?newid=100"
+                    target="_blank"
+                    title="新竹市長照2.0整合型計畫(另開新視窗)"
+                  >
+                    新竹市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://longcare.chiayi.gov.tw/News_Content.aspx?Create=1&amp;n=4452&amp;state=09ED6BBD9BA90914&amp;s=633684&amp;ccms_cs=1&amp;sms=12542"
+                    target="_blank"
+                    title="嘉義市長照2.0整合型計畫(另開新視窗)"
+                  >
+                    嘉義市
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://longtermcare.kinmen.gov.tw/mode02.asp?m=20181120133505077&amp;t=list"
+                    target="_blank"
+                    title="金門縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    金門縣
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="custom-link"
+                    href="https://www.matsuhb.gov.tw/Chhtml/content/345?mcid=83237&amp;webaid=9"
+                    target="_blank"
+                    title="連江縣長照2.0整合型計畫(另開新視窗)"
+                  >
+                    連江縣
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+      <BackToTopBtn />
+    </React.Fragment>
+  );
+};
+export default Subsidy_link1;
