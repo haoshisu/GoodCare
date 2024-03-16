@@ -15,12 +15,6 @@
   /* width: 10%; */
 }
 
-.newslink{
-  text-decoration: none;
-  color: black;
-  padding: 10px 40px;
-}
-
 .newslink:hover{
   border-bottom: solid 2px #CF4501 ;
 }
