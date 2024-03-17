@@ -4,6 +4,7 @@ import IndexNav from '../components/indexnav/IndexNav';
 import PathBox from '../components/pathbox/PathBox';
 import Footer from '../components/footer/Footer';
 import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
+import Reserve from '../components/reserve/Reserve';
 
 const Service = () => {
   
@@ -12,21 +13,7 @@ const Service = () => {
         <Header />
         <IndexNav />
         <PathBox />
-        <div className="container">
-            <div className="row">
-                <div>照服員預約 Page</div>
-            </div>
-        </div>
-  
-        {/* 底下用8個換行空出雨footer距離 */}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <Reserve />
         <Footer />
         <BackToTopBtn />
       </React.Fragment>
