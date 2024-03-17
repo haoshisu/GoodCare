@@ -4,7 +4,7 @@ import IndexNav from "../components/indexnav/IndexNav";
 import PathBox from "../components/pathbox/PathBox";
 import Footer from "../components/footer/Footer";
 import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
-import Subsidy_Home from "../components/subsidy/subsidy";
+import SubsidyHome from "../components/subsidy/subsidy";
 
 const Service = () => {
   return (
@@ -12,7 +12,7 @@ const Service = () => {
       <Header />
       <IndexNav />
       <PathBox />
-      <Subsidy_Home />
+      <SubsidyHome />
 
       <br />
       <Footer />

@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../../components/header/Header";
-import IndexNav from "../../components/indexnav/IndexNav";
-import PathBox from "../../components/pathbox/PathBox";
-import Footer from "../../components/footer/Footer";
-import BackToTopBtn from "../../components/backtotopbtn/BackToTopBtn";
+import Header from "../header/Header";
+import IndexNav from "../indexnav/IndexNav";
+import PathBox from "../pathbox/PathBox";
+import Footer from "../footer/Footer";
+import BackToTopBtn from "../backtotopbtn/BackToTopBtn";
 import "../../asset/css/subsidy.css";
 
-const Subsidy_link1 = () => {
+const SubsidyLink1 = () => {
   return (
     <React.Fragment>
       <Header />
@@ -253,4 +253,4 @@ const Subsidy_link1 = () => {
     </React.Fragment>
   );
 };
-export default Subsidy_link1;
+export default SubsidyLink1;

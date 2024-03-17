@@ -2,7 +2,7 @@ import React from "react";
 import "../../asset/css/subsidy.css";
 // import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-const subsidy_Home = () => {
+const subsidyHome = () => {
   return (
     <React.Fragment>
       <div className="container">
@@ -15,7 +15,7 @@ const subsidy_Home = () => {
             </div>
             <div className="d-flex justify-content-between align-items-center">
               <a
-                href="./subsidy_link1.html"
+                href="/subsidyLink1"
                 target="_blank"
                 className="btn custom-btn btn-lg mb-4"
                 role="button"
@@ -27,7 +27,7 @@ const subsidy_Home = () => {
               </a>
 
               <a
-                href="./subsidy_link2.html"
+                href="/subsidyLink2"
                 target="_blank"
                 className="btn custom-btn btn-lg mb-4"
                 role="button"
@@ -39,7 +39,7 @@ const subsidy_Home = () => {
               </a>
 
               <a
-                href="./subsidy_link3.html"
+                href="/subsidyLink3"
                 target="_blank"
                 className="btn custom-btn btn-lg mb-4"
                 role="button"
@@ -55,7 +55,7 @@ const subsidy_Home = () => {
 
             <div className="d-flex flex-column align-items-center mt-5">
               <a
-                href="./subsidy_Search1.html"
+                href="/subsidySearch1"
                 target="_blank"
                 className="btn custom-btn-4 btn-lg"
                 role="button"
@@ -80,4 +80,4 @@ const subsidy_Home = () => {
   );
 };
 
-export default subsidy_Home;
+export default subsidyHome;

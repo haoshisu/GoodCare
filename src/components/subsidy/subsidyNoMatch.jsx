@@ -6,7 +6,7 @@ import Footer from "../footer/Footer";
 import BackToTopBtn from "../backtotopbtn/BackToTopBtn";
 import "../../asset/css/subsidy.css";
 
-const Subsidy_noMatch = () => {
+const SubsidyNoMatch = () => {
   return (
     <React.Fragment>
       <Header />
@@ -40,7 +40,7 @@ const Subsidy_noMatch = () => {
                   </div>
                 </div>
                 <div className="text-center mt-4">
-                  <a href="./subsidy_Search1.html">
+                  <a href="./subsidySearch1.html">
                     <button
                       type="button"
                       className="btn btn-lg custom-button px-5"
@@ -60,4 +60,4 @@ const Subsidy_noMatch = () => {
     </React.Fragment>
   );
 };
-export default Subsidy_noMatch;
+export default SubsidyNoMatch;

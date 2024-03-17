@@ -6,7 +6,7 @@ import Footer from "../../components/footer/Footer";
 import BackToTopBtn from "../../components/backtotopbtn/BackToTopBtn";
 import "../../asset/css/subsidy.css";
 
-const Subsidy_link3 = () => {
+const SubsidyLink3 = () => {
   return (
     <React.Fragment>
       <Header />
@@ -157,4 +157,4 @@ const Subsidy_link3 = () => {
     </React.Fragment>
   );
 };
-export default Subsidy_link3;
+export default SubsidyLink3;
