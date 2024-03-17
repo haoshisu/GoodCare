@@ -9,6 +9,7 @@ export {default as Map} from './Map'
 export {default as Product} from './Product'
 export {default as SingleProduct} from './SingleP'
 export {default as Reserve} from './Reserve'
+export {default as ReserveConfirm} from './ReserveConfirm'
 export {default as WebQA} from './WebQA'
 
 // 購物車
