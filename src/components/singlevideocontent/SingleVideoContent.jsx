@@ -16,7 +16,7 @@ const SingleVideoContent = ({ dataList }) => {
       ></iframe>
       <div
         className="mb-3 mt-3 p-3"
-        style={{ backgroundColor: "whitesmoke", height: "200px" }}
+        style={{ backgroundColor: "whitesmoke", height: "100%" }}
       >
         <h3 style={{ color: "#663c2a", fontWeight: "bold" }}>長照小學堂</h3>
         <ul>
@@ -27,7 +27,7 @@ const SingleVideoContent = ({ dataList }) => {
       </div>
       <div className="mb-3 mt-3 p-3" style={{ backgroundColor: "whitesmoke" }}>
         <h3 style={{ color: "#663c2a", fontWeight: "bold" }}>長照小測驗</h3>
-        <div className="container" style={{ height: "200px" }}>
+        <div className="container" style={{ height: "100%" }}>
           <p>{ dataList.quizTitle }</p>
           <div className="row">
             {dataList.quiz.map((val, ind) => {

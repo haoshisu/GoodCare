@@ -28,6 +28,7 @@ import {
   UserModify,
   SingleVideo,
   Cart,
+  SingleProduct
 } from "./pages/appIndex";
 
 //範例用
@@ -57,6 +58,11 @@ function App() {
 
           {/* 購物車 */}
           <Route path="/Cart" element={<Cart />} />
+
+          {/* 商品頁面 */}
+          <Route path='/Product/*' element={<Product/>}/>
+          <Route path="/product/category/:category/*" element={<Product />} />
+          <Route path="/product/single/:id" element={<SingleProduct />} />
 
           {/* 會員中心 */}
           <Route path="/UserLogin" element={<UserLogin />} />

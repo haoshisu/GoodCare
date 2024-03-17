@@ -29,12 +29,11 @@ const CartSearch = ( { doFirstBtn, doSecondBtn, doThirdBtn } ) => {
         </div>
       </div> */}
       {/* 購物車流程條 */}
-      <div className="container justify-content-center ">
-        <div className="row justify-content-center">
-          <div className="push-right"></div>
-          <div className="row">
-            <div className="col-6 pt-4 pb-4">
-              <div className="h5 justify-content-center">
+      <div className="container">
+        <div className="row">
+          <div className="col-3"></div>
+          <div className="col-9">
+            <div className="h5 pt-4 pb-4 d-flex justify-content-evenly">
                 <div
                   className="step-item custom-step-item text-center"
                   data-index="1"
@@ -55,7 +54,6 @@ const CartSearch = ( { doFirstBtn, doSecondBtn, doThirdBtn } ) => {
                 >
                   <span type="button" onClick={ doThirdBtn } >訂單確認</span>
                 </div>
-              </div>
             </div>
           </div>
         </div>
