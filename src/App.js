@@ -20,6 +20,7 @@ import {
   Map,
   Product,
   Reserve,
+  ReserveConfirm,
   WebQA,
   UserLogin,
   UserForget,
@@ -54,6 +55,7 @@ function App() {
           <Route path="/Subsidy" element={<Subsidy />} />
           <Route path="/Map" element={<Map />} />
           <Route path="/Reserve" element={<Reserve />} />
+          <Route path='/ReserveConfirm' element={<ReserveConfirm />}/>
           <Route path="/Product" element={<Product />} />
           <Route path="/WebQA" element={<WebQA />} />
 
