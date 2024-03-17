@@ -23,3 +23,10 @@ export {default as UserModify} from './UserModify'
 
 // single video
 export {default as SingleVideo} from './SingleVideo';
+
+// 補助資訊
+export {default as SubsidyLink1} from '../components/subsidy/subsidy_link1';
+export {default as SubsidyLink2} from '../components/subsidy/subsidy_link2';
+export {default as SubsidyLink3} from '../components/subsidy/subsidy_link3';
+export {default as SubsidyNoMatch} from '../components/subsidy/subsidy_noMatch';
+export {default as SubsidyResult} from '../components/subsidy/subsidy_Result';
