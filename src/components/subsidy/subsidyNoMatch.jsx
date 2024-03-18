@@ -9,9 +9,6 @@ import "../../asset/css/subsidy.css";
 const SubsidyNoMatch = () => {
   return (
     <React.Fragment>
-      <Header />
-      <IndexNav />
-      <PathBox />
       <div className="container col-1"></div>
       <div className="container col-10">
         <div className="row">
@@ -55,8 +52,6 @@ const SubsidyNoMatch = () => {
         </div>
       </div>
 
-      <Footer />
-      <BackToTopBtn />
     </React.Fragment>
   );
 };

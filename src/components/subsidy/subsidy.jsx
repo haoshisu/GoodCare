@@ -2,7 +2,7 @@ import React from "react";
 import "../../asset/css/subsidy.css";
 // import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-const subsidyHome = () => {
+const subsidyHome = ({ goToFirst }) => {
   return (
     <React.Fragment>
       <div className="container">
@@ -54,14 +54,12 @@ const subsidyHome = () => {
             </div>
 
             <div className="d-flex flex-column align-items-center mt-5">
-              <a
-                href="/subsidySearch"
-                target="_blank"
+              <button
                 className="btn custom-btn-4 btn-lg"
-                role="button"
+                onClick={ goToFirst }
               >
                 <i className="fa-solid fa-search"></i> 進行查詢
-              </a>
+              </button>
             </div>
           </div>
           <div className="col-md-1"></div>

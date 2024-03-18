@@ -17,9 +17,7 @@ const Subsidy_Result = () => {
 
   return (
     <React.Fragment>
-      <Header />
-      <IndexNav />
-      <PathBox />
+      
       <div className="container col-1"></div>
       <div className="container col-10">
         <div className="row">
@@ -375,8 +373,7 @@ const Subsidy_Result = () => {
           </button>
         </Link>
       </div>
-      <Footer />
-      <BackToTopBtn />
+      
     </React.Fragment>
   );
 };

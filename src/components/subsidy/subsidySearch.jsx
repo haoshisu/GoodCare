@@ -115,9 +115,7 @@ const SubsidySearch = () => {
   };
   return (
     <React.Fragment>
-      <Header />
-      <IndexNav />
-      <PathBox />
+      
       <div className="container col-10">
         <div className="row">
           <div className="col-md-12 text-left">
@@ -240,8 +238,6 @@ const SubsidySearch = () => {
         </div>
       </div>
 
-      <Footer />
-      <BackToTopBtn />
     </React.Fragment>
   );
 };
