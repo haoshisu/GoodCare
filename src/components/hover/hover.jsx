@@ -17,7 +17,7 @@ const ScrollEffectComponent = () => {
             const hover2Elements = document.querySelectorAll('.hover2');
 
             // 根據滾動位置進行操作
-            if (scrollTop > 1800) {
+            if (scrollTop > 2700) {
                 // 如果滾動位置超過2800像素，將 hover1 和 hover2 元素的位置進行適當的調整
                 hover1Elements.forEach(element => {
                     element.style.top = '0px';
