@@ -1,0 +1,97 @@
+.appointment {
+  position: relative;
+  overflow: hidden; /* 子元素不溢出 */
+}
+
+.appointment::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../asset/images/reserve/reserve_bg.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5; /* 背景圖像的不透明度 */
+  z-index: -1; /* 將偽元素置於背景 */
+}
+
+#formcontent{
+  box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 25px;
+  background-color: white;
+}
+
+
+.appointment h2{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+.appointment form {
+  margin-bottom: 40px;
+  background-color:rgb(246, 246, 246);
+  border: 3px solid #ccc;
+  padding:20px 30px 30px 30px;
+}
+.form-row {
+  margin-top:20px;
+}
+.appointment form p{
+  margin: 1px;
+}
+.appointment form hr {
+  height: 1px;
+  background-color: black; 
+}
+textarea {
+  resize: none;
+  vertical-align: top;
+}
+.button-container {
+  margin-top: 20px; 
+  text-align: center; 
+}
+
+.cancel-button {
+  border: none;
+  width:60px;
+  height:35px;
+  color:white;
+  border-radius: 5px;
+  background-color:#cfaf8b;
+  margin-right:40px;
+  font-weight: bold;
+}
+.submit-button {
+  border: none;
+  width:60px;
+  height:35px;
+  color:white;
+  border-radius: 5px;
+  background-color:#c78e4d;
+  font-weight: bold;
+}
+
+
+/*confirm*/
+
+#formcontentConfirm input[type="text"],
+#formcontentConfirm input[type="email"],
+#formcontentConfirm input[type="tel"],
+#formcontentConfirm input[type="date"],
+#formcontentConfirm input[type="number"],
+#formcontentConfirm select,
+#formcontentConfirm textarea {
+  background-color: #f0f0f0; /* 這裡是你想要的背景顏色 */
+  border: 1px solid #ccc; /* 可選，設置邊框 */
+  pointer-events: none
+}
+
+#formcontentConfirm{
+  box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 25px;
+  background-color: white;
+}
+
