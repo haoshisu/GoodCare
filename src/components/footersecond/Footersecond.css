@@ -1,0 +1,11 @@
+.footer{
+    background-color: #504E4E;
+      
+  }
+  .footer p{
+      font-size: 20px;
+      color:#ddd;
+  }
+  .footer img{
+      width: 20em;
+  }

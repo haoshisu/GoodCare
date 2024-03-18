@@ -8,8 +8,6 @@ import MyClassComponent from "../components/aos/aos";
 import SwiperComponent from "../components/swiper/swiperComponent";
 import Scroll from'../components/scroll/scroll';
 
-import { Helmet } from "react-helmet";
-
 import "../asset/css/home.css";
 
 const Home = () => {
@@ -49,27 +47,27 @@ const Home = () => {
           <div class="iconcrae">
             <ul>
               <li>
-                <a href="#" target="_blank">
-                  <img src={require("../asset/images/Home/icon1.png")} />
-                  <span>照顧及專業服務</span>
+                <a href="/Service" target="_blank">
+                  <img src={require("../asset/images/Home/icon1.png")} alt="照顧及專業服務"/>
+                  <h5>照顧及專業服務</h5>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
-                  <img src={require("../asset/images/Home/icon2.png")} />
-                  <span>長照據點</span>
+                <a href="/Map" target="_blank">
+                  <img src={require("../asset/images/Home/icon2.png")} alt="長照據點"/>
+                  <h5>長照據點</h5>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
-                  <img src={require("../asset/images/Home/icon3.png")} />
-                  <span>醫療輔具</span>
+                <a href="/Product" target="_blank">
+                  <img src={require("../asset/images/Home/icon3.png")} alt="醫療輔具"/>
+                  <h5>醫療輔具</h5>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
-                  <img src={require("../asset/images/Home/icon4.png")} />
-                  <span>預約照服員</span>
+                <a href="/ReserveConfirm" target="_blank">
+                  <img src={require("../asset/images/Home/icon4.png")} alt="預約照服員"/>
+                  <h5>預約照服員</h5>
                 </a>
               </li>
             </ul>
@@ -79,27 +77,27 @@ const Home = () => {
           <div class="iconcrae">
             <ul>
               <li>
-                <a href="#" target="_blank">
-                  <img src={require("../asset/images/Home/icon5.png")} />
-                  <span>出院準備</span>
+                <a href="/Service" target="_blank">
+                  <img src={require("../asset/images/Home/icon5.png")} alt="出院準備"/>
+                  <h5>出院準備</h5>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
-                  <img src={require("../asset/images/Home/icon6.png")} />
-                  <span>家庭照顧者支持服務</span>
+                <a href="/Service" target="_blank">
+                  <img src={require("../asset/images/Home/icon6.png")} alt="家庭照顧者支持服務"/>
+                  <h5>家庭照顧者支持服務</h5>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
-                  <img src={require("../asset/images/Home/icon7.png")} />
-                  <span>交通接送</span>
+                <a href="/Service" target="_blank">
+                  <img src={require("../asset/images/Home/icon7.png")} alt="交通接送"/>
+                  <h5>交通接送</h5>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank">
-                  <img src={require("../asset/images/Home/icon8.png")} />
-                  <span>輔助資訊</span>
+                <a href="/Subsidy" target="_blank">
+                  <img src={require("../asset/images/Home/icon8.png")} alt="輔助資訊"/>
+                  <h5>輔助資訊</h5>
                 </a>
               </li>
             </ul>
@@ -239,7 +237,7 @@ const Home = () => {
         <br />
         <br />
         <div class="d-flex justify-content-center">
-          <img src={require("../asset/images/Home/footerold.png")} />
+          <img src={require("../asset/images/Home/footerold.png")} alt="oldpeople"/>
         </div>
         <div class="footersunflower">
           <div id="position" class="sunflower">
@@ -268,7 +266,7 @@ const Home = () => {
             </div>
             <div class="vase"></div>
           </div>
-          <img src={require("../asset/images/Home/footerweeds.png")} />
+          <img src={require("../asset/images/Home/footerweeds.png")} alt="footerweeds"/>
         </div>
       </>
       <Homefooter />

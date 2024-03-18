@@ -82,21 +82,23 @@ a.custom-link:hover {
   font-size: 18px !important;
   font-weight: bold !important;
 }
-table {
-  width: 50% !important;
-  margin: 20px auto !important;
-  border-collapse: collapse !important;
+/* 修改中 */
+
+.custom-table {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse;
 }
-th,
+.custom-table th,
 td {
-  padding: 8px !important;
-  border-bottom: 1px solid #ddd !important;
-  text-align: left !important;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
 }
-th {
+.custom-table th {
   background-color: #f2f2f2 !important;
 }
-
+/* 修改中 */
 .custom-table thead th {
   background-color: #343a40 !important;
   color: #fff !important;

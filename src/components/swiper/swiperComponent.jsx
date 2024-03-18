@@ -32,22 +32,22 @@ export default function App() {
                 className="mySwiper"
             >
                     <SwiperSlide>
-                        <a href="#" target="_blank"><img src={require('../../asset/images/Home/swiper1.png')} /></a>
+                        <a href="/Service" target="_blank"><img src={require('../../asset/images/Home/swiper1.png')} /></a>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#" target="_blank"><img src={require('../../asset/images/Home/swiper2.jpg')} /></a>
+                        <a href="https://1966.gov.tw/LTC/cp-6457-69925-207.html" target="_blank"><img src={require('../../asset/images/Home/swiper2.jpg')} /></a>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#" target="_blank"><img src={require('../../asset/images/Home/swiper3.jpg')} /></a>
+                        <a href="/map" target="_blank"><img src={require('../../asset/images/Home/swiper3.jpg')} /></a>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#" target="_blank"><img src={require('../../asset/images/Home/swiper4.jpg')} /></a>
+                        <a href="https://www.youtube.com/watch?v=hxgI7g-cl4Q" target="_blank"><img src={require('../../asset/images/Home/swiper4.jpg')} /></a>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#" target="_blank"><img src={require('../../asset/images/Home/swiper5.png')} /></a>
+                        <a href="/Service" target="_blank"><img src={require('../../asset/images/Home/swiper5.png')} /></a>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#" target="_blank"><img src={require('../../asset/images/Home/swiper6.png')} /></a>
+                        <a href="/Service" target="_blank"><img src={require('../../asset/images/Home/swiper6.png')} /></a>
                     </SwiperSlide>
             </Swiper>
         </>

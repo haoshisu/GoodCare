@@ -1,29 +1,44 @@
 import React from "react";
 import { useState } from "react";
+import axios from 'axios'
 import Background from "../../asset/images/userlogin/background.png"
 import '../userlogin/userlogin.css'
+
 const UserLogin = () => {
-    const [data,setData] = useState({account:"",password:"" ,isRemember:false})
-    var Doaccount = (e) => {
-        setData({
-            ...data,
-            account : e.target.value
-        })
-        console.log(data)
-    }
+    // const [data,setData] = useState({account:"",password:"" ,isRemember:false})
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    console.log(username)
 
-    var Dopassword = (e) =>{
-        setData({
-            ...data,
-            password:e.target.value
-        })
-    }
+    // var Doaccount = (e) => {
+    //     setData({
+    //         ...data,
+    //         account : e.target.value
+    //     })
+        
+    // }
 
-    var Doremember = (e) => {
-       const newremember = {...data}
-       newremember.isRemember = e.target.checked ? 1 : 0
-       setData(newremember)
-    //    console.log(newremember)
+    // var Dopassword = (e) =>{
+    //     setData({
+    //         ...data,
+    //         password:e.target.value
+    //     })
+    // }
+
+    // var Doremember = (e) => {
+    //    const newremember = {...data}
+    //    newremember.isRemember = e.target.checked ? 1 : 0
+    //    setData(newremember)
+    // //    console.log(newremember)
+    // }
+
+    var Dologin = async(event) => {
+        try {
+            const response = await axios.post('http://localhost:8000/member', { username, password });
+            console.log(response.data);
+        } catch (error) {
+            console.error('Login failed:', error);
+        }
     }
 
     return (
@@ -46,20 +61,21 @@ const UserLogin = () => {
                                 <br/>
                                 <div className="mb-3">
                                     <i className="fa-solid fa-circle-user"></i>&emsp;<input type="text" className="account"
-                                        id="Inputaccount" value={data.account} placeholder="請輸入帳號" onChange={Doaccount}/>
+                                        id="Inputaccount" value={username} placeholder="請輸入帳號" onChange={e => setUsername(e.target.value)}/>
                                 </div>
                                 <br/>
                                 <div className="mb-3">
                                     <i className="fa-solid fa-lock"></i>&emsp;<input type="password" className="password"
-                                        id="InputPassword" value={data.password} onChange={Dopassword} placeholder="請輸入密碼(6-20英數字)"/>
+                                        id="InputPassword" value={password} onChange={e => setPassword(e.target.value)} placeholder="請輸入密碼(6-20英數字)"/>
                                 </div>
                                 <div className="mb-3 form-check" >
-                                    <input type="checkbox" className="form-check-input" id="Check" onChange={Doremember} checked={data.isRemember}/>
+                                    <input type="checkbox" className="form-check-input" id="Check" />
+                                    {/* onChange={Doremember} checked={data.isRemember} */}
                                     <label className="form-check-label" for="Check" style={{fontSize: "14px"}}>記住我</label>
                                 </div>
                                 <br/>
                                 <div className="d-flex justify-content-center mb-5">
-                                    <button className="login" type="submit" method="post" value="">登入</button>
+                                    <button className="login" type="submit" method="post" value="" onClick={Dologin}>登入</button>
                                 </div>
                             </form>
                             <div className="d-flex justify-content-center mb-3">

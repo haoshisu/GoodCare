@@ -17,7 +17,7 @@ export default class MyClassComponent extends Component {
                 <img src={require('../../asset/images/Home/oldman.png')}/>
             </div>
             <div class="old2" data-aos="fade-left" data-aos-duration="3000">
-                <a href="#"><img src={require('../../asset/images/Home/taiwan.png')}/></a>
+                <a href="/Map"><img src={require('../../asset/images/Home/taiwan.png')}/></a>
             </div>
         </div>
       </div>

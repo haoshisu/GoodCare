@@ -229,11 +229,6 @@ const Service = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Footer />
       <BackToTopBtn />
     </React.Fragment >

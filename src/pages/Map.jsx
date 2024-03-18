@@ -7,19 +7,21 @@ import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
 import Map from '../components/map/Map';
 
 const Service = () => {
-  
+
   return (
     <React.Fragment>
-        <Header />
-        <IndexNav />
-        <PathBox />
-        <Map />
-  
-        {/* 底下用8個換行空出雨footer距離 */}
+      <Header />
+      <IndexNav />
+      <PathBox />
+      <Map />
 
-        <Footer />
-        <BackToTopBtn />
-      </React.Fragment>
+      {/* 底下用8個換行空出雨footer距離 */}
+      <br />
+      <br />
+      <br />
+      <Footer />
+      <BackToTopBtn />
+    </React.Fragment>
   )
 }
 
