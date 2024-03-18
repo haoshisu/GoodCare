@@ -12,7 +12,7 @@ const Service = () => {
       <Header />
       <IndexNav />
       <PathBox />
-      <SubsidyHome />
+        <SubsidyHome />
 
       <br />
       <Footer />

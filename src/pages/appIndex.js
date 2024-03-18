@@ -26,7 +26,6 @@ export { default as UserModify } from "./UserModify";
 export { default as SingleVideo } from "./SingleVideo";
 
 //補助資訊
-export { default as SubsidyHome } from "./Subsidy";
 export { default as SubsidyLink1 } from "../components/subsidy/subsidyLink1";
 export { default as SubsidyLink2 } from "../components/subsidy/subsidyLink2";
 export { default as SubsidyLink3 } from "../components/subsidy/subsidyLink3";
