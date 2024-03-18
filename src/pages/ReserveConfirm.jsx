@@ -4,7 +4,7 @@ import IndexNav from '../components/indexnav/IndexNav';
 import PathBox from '../components/pathbox/PathBox';
 import Footer from '../components/footer/Footer';
 import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
-import ReserveConfirm from '../components/reserve/Reserve';
+import ReserveConfirm from '../components/reserve/ReserveConfirm';
 
 const Service = () => {
   
