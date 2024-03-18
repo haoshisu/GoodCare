@@ -31,8 +31,8 @@ const Path =  ( {onSearch} ) => {
               <input type="text" className="form-control" placeholder="找商品" id="search" value={searchvalue.value} onChange={Dochange}/>
               <button className="btn btn-outline-secondary" type="button" id="button-addon2"  onClick={DoSearch}><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
             </div>
-            <div className="ps-3">
-              <a href="/cart"><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></a>
+            <div className="ps-3 mt-2">
+              <a href="/cart" ><h2><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></h2></a>
             </div>
           </div>
         </div>
