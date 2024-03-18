@@ -1,0 +1,84 @@
+/*html的部分-卡片*/
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  height: 80px;
+  width: 85%;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background-color: #ededed;
+}
+
+.box {
+  width: 10em;
+  height: 2.5em;
+  border-radius: 50px;
+  font-size: 18px;
+  background-color: #CF4501;
+  color: white;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.serchtext {
+  height: 2.5em;
+  width: auto;
+  margin-right: 30px;
+}
+
+.serchtext1 {
+  height: 2.5em;
+  width: 20em;
+  margin-right: 30px;
+}
+
+.serchbutton {
+  width: auto;
+  border: none;
+  font-size: 22px;
+  background-color: #ededed;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+}
+
+
+/*Map*/
+
+
+#svgarea{
+  height:80vh;
+  position: relative;
+  left: 25%;
+}
+
+
+.title_area {
+  width:22em;
+  border: solid 2px rgb(17, 16, 16);
+  border-radius: 25px;
+  margin-top:20px;
+  padding: 10px 25px ;
+  position: absolute;
+  right: 15%;
+}
+
+
+/*位置*/
+#svgarea path {
+  stroke: rgb(2, 2, 2);
+  fill: transparent;
+  transition: 0.4s;
+}
+#svgarea path:hover {
+  fill: #1d5f17;
+  transform: translate(-3px, -3px);
+}

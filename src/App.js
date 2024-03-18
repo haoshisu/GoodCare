@@ -20,6 +20,7 @@ import {
   Map,
   Product,
   Reserve,
+  ReserveConfirm,
   WebQA,
   UserLogin,
   UserForget,
@@ -29,18 +30,15 @@ import {
   SingleVideo,
   Cart,
   SingleProduct,
-  SubsidyLink1,
-  SubsidyLink2,
-  SubsidyLink3,
-  SubsidyNoMatch,
-  SubsidySearch,
-  SubsidySearchCFM,
-  SubsidyResult,
 } from "./pages/appIndex";
 
 //範例用
 import Template from "./pages/Template";
-// import SubsidySearch from "./components/subsidy/subsidySearch";
+import Subsidy_link1 from "./components/subsidy/subsidy_link1";
+import Subsidy_link2 from "./components/subsidy/subsidy_link2";
+import Subsidy_link3 from "./components/subsidy/subsidy_link3";
+import Subsidy_noMatch from "./components/subsidy/subsidy_noMatch";
+import Subsidy_Result from "./components/subsidy/subsidy_Result";
 // const baseURL = "http://18.182.1.131:3000/news";
 
 function App() {
@@ -57,6 +55,7 @@ function App() {
           <Route path="/Subsidy" element={<Subsidy />} />
           <Route path="/Map" element={<Map />} />
           <Route path="/Reserve" element={<Reserve />} />
+          <Route path="/Product" element={<Product />} />
           <Route path="/WebQA" element={<WebQA />} />
 
           {/* 商品頁面 */}
@@ -83,13 +82,11 @@ function App() {
           <Route path="/Video/:id" element={<SingleVideo />} />
 
           {/* 補助資訊 */}
-          <Route path="/SubsidyLink1" element={<SubsidyLink1 />} />
-          <Route path="/SubsidyLink2" element={<SubsidyLink2 />} />
-          <Route path="/SubsidyLink3" element={<SubsidyLink3 />} />
-          <Route path="/SubsidyNoMatch" element={<SubsidyNoMatch />} />
-          <Route path="/SubsidySearch" element={<SubsidySearch />} />
-          <Route path="/SubsidySearchCFM" element={<SubsidySearchCFM />} />
-          <Route path="/SubsidyResult" element={<SubsidyResult />} />
+          <Route path="/Subsidy_link1" element={<Subsidy_link1 />} />
+          <Route path="/Subsidy_link2" element={<Subsidy_link2 />} />
+          <Route path="/Subsidy_link3" element={<Subsidy_link3 />} />
+          <Route path="/Subsidy_noMatch" element={<Subsidy_noMatch />} />
+          <Route path="/Subsidy_Result" element={<Subsidy_Result />} />
 
           {/* 範例用 */}
           <Route path="/Template" element={<Template />} />

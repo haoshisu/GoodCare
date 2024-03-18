@@ -67,6 +67,9 @@ function Service() {
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
       <Footer/>
       <BackToTopBtn/>
     </>

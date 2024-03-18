@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CartDetail.css";
 
 import toast, { Toaster } from 'react-hot-toast';
@@ -6,15 +6,36 @@ import Counter from "../Counter/counter";
 
 const CartDetail = ( { doSecondBtn } ) => {
   let cartInfo = JSON.parse(sessionStorage.getItem('cartInfo'))
-  // console.log(cartInfo)
+  let [userCoupon, setUserCoupon] = useState('')
+  
+  // 吐司提示
   const notify = () => toast.success('購物車尚未有任何東西！')
   if(!cartInfo) notify()
+
+  // 計算總金額
+  let cartPrice = 0
+  let charge = 100
+  let totalDiscount = 0
+  let totalPrice = 0
+
+  let realCoupon = [{code:'GoodCare2024',discount:0.9},{code:'GC2024',discount:0.85}]
+  
+  let couponInd = realCoupon.findIndex((i)=>i.code === userCoupon)
+
+  cartPrice = cartInfo? cartInfo.map((v)=> cartPrice += v.quantity * v.price) : 0
+  totalPrice = ( couponInd>=0 )? cartPrice * realCoupon[couponInd].discount + charge : cartPrice + charge
+  totalDiscount = totalPrice - cartPrice - charge
+
+  const doSubmitCode = (e) => {
+    // setUserCoupon(e.target.value)
+    console.log('OK')
+  }
 
   return (
     <>
       {/* 購物車明細 */}
       <div className="container justify-content-center">
-        <table className="table">
+        <table className="table" style={{width:"100%"}}>
           <thead>
             <tr>
               <th scope="col">商品圖片</th>
@@ -70,10 +91,8 @@ const CartDetail = ( { doSecondBtn } ) => {
       {cartInfo &&
         <div className="container">
         <div className="row">
-          <div className="col-4"></div>
-          <div className="col-8">
-            <div className="row">
-              <div className="col-9">
+              <div className="col-3"></div>
+              <div className="col-6">
                 <input
                   type="text"
                   className="form-control"
@@ -81,12 +100,10 @@ const CartDetail = ( { doSecondBtn } ) => {
                 />
               </div>
               <div className="col-3">
-                <button className="btn btn-outline-primary" type="button">
+                <button className="btn btn-outline-primary" type="button" onChange={ doSubmitCode }>
                   使用折扣碼
                 </button>
               </div>
-            </div>
-          </div>
         </div>
         <br />
         </div>
@@ -104,19 +121,19 @@ const CartDetail = ( { doSecondBtn } ) => {
                 <tbody>
                   <tr>
                     <td>商品小計</td>
-                    <td>$0.00</td>
+                    <td>{ 'NT$' + cartPrice }</td>
                   </tr>
                   <tr>
                     <td>折扣</td>
-                    <td>$0.00</td>
+                    <td className={ (totalDiscount<0)? "text-danger":"" }>{ 'NT$' + totalDiscount }</td>
                   </tr>
                   <tr>
                     <td>運費</td>
-                    <td>$0.00</td>
+                    <td>{ 'NT$' + charge }</td>
                   </tr>
                   <tr>
                     <td>合計</td>
-                    <td>$0.00</td>
+                    <td>{ 'NT$' + totalPrice }</td>
                   </tr>
                 </tbody>
               </table>

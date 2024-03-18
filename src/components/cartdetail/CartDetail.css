@@ -13,23 +13,6 @@
   color: #cf4501;
 }
 
-th {
-  font-size: large;
-}
-
-.cart-icon {
-  font-size: 24px;
-  color: black;
-}
-
-.search-input {
-  margin-right: 20px; /* 增加搜尋框和購物車之間的右邊距 */
-}
-
-.search-input .form-control {
-  width: 250px; /* 調整搜尋框的寬度 */
-}
-
 .custom-button {
   background-color: white!important;
   border-color: #cf4501 !important;
