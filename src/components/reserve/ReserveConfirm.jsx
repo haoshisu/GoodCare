@@ -36,7 +36,7 @@ function ReserveConfirm() {
       title: '預約成功！',
       
       text: '會由專人與主要聯絡人聯繫。',
-      imageUrl: "../../asset/images/reserve/confirm_pic.jpg",
+      imageUrl: require("../../asset/images/reserve/confirm_pic.jpg"),
       imageAlt:'圖片',
       imageWidth: 300,
       imageHeight: 200,
