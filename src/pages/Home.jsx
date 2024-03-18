@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <>
-        {/* <Scroll /> */}
+        <Scroll />
         <Header />
         <IndexNav />
         <br />

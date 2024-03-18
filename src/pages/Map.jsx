@@ -16,9 +16,6 @@ const Service = () => {
       <Map />
 
       {/* 底下用8個換行空出雨footer距離 */}
-      <br />
-      <br />
-      <br />
       <Footer />
       <BackToTopBtn />
     </React.Fragment>

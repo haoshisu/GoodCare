@@ -79,11 +79,6 @@ const Cart = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Footer />
       <BackToTopBtn />
     </>
