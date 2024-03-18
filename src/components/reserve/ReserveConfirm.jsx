@@ -40,8 +40,6 @@ function ReserveConfirm() {
       imageAlt:'圖片',
       imageWidth: 300,
       imageHeight: 200,
-
-
       showConfirmButton: false,
 
 

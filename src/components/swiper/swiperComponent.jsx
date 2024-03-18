@@ -30,6 +30,7 @@ export default function App() {
                 pagination={true}
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper"
+                initialSlide={2}
             >
                     <SwiperSlide>
                         <a href="/Service" target="_blank"><img src={require('../../asset/images/Home/swiper1.png')} /></a>
