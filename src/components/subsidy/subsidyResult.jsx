@@ -8,16 +8,23 @@ import React, { useState } from "react";
 import "../../asset/css/subsidy.css";
 import { Link } from "react-router-dom";
 
-const Subsidy_Result = () => {
+const Subsidy_Result = ({ goToFirst }) => {
   const [activeContent, setActiveContent] = useState("content1");
 
   const showContent = (contentId) => {
     setActiveContent(contentId);
   };
+  // Result的內部分頁
+  // const Result = () => {
+  //   const [isCare, setIsCare] = useState(true); //照顧服務
+  //   const [isVehicle, setIsVehicle] = useState(false); //交通接送
+  //   const [isBreak, setIsBreak] = useState(false); //喘息服務
+  //   const [isThird, setIsAidTool] = useState(false); //輔具/居家無障礙服務
+  //   const [isNoMatch, setIs] = useState(false); //住宿式機構服務
+  // end of Result的內部分頁
 
   return (
     <React.Fragment>
-      
       <div className="container col-1"></div>
       <div className="container col-10">
         <div className="row">
@@ -366,14 +373,15 @@ const Subsidy_Result = () => {
           </div>
         </div>
       </div>
-      <div className=" text-center mt-4">
-        <Link to="/subsidySearch">
-          <button type="button" className="btn btn-lg custom-button px-5 mr-2">
-            重新查詢
-          </button>
-        </Link>
+
+      <div className="text-center mt-4">
+        <button
+          className="btn btn-lg custom-button px-5 mr-2"
+          onClick={goToFirst}
+        >
+          重新查詢
+        </button>
       </div>
-      
     </React.Fragment>
   );
 };

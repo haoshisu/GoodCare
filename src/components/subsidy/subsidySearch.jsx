@@ -8,7 +8,7 @@ import BackToTopBtn from "../backtotopbtn/BackToTopBtn";
 import "../../asset/css/subsidy.css";
 import { Link } from "react-router-dom";
 
-const SubsidySearch = () => {
+const SubsidySearch = ({ goToSecond }) => {
   const [selectedIdentity, setSelectedIdentity] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedDistrict, setSelectedDistrict] = useState("");
@@ -115,7 +115,6 @@ const SubsidySearch = () => {
   };
   return (
     <React.Fragment>
-      
       <div className="container col-10">
         <div className="row">
           <div className="col-md-12 text-left">
@@ -224,20 +223,27 @@ const SubsidySearch = () => {
                     </div>
                   </form>
                 </div>
-                <div className="text-center mt-5">
+                {/* <div className="text-center mt-5">
                   <Link
                     to="/subsidySearchCFM"
                     className="btn btn-lg custom-button px-5"
                   >
                     下一頁
                   </Link>
+                </div> */}
+                <div className="text-center mt-5">
+                  <button
+                    className="btn btn-lg custom-button px-5"
+                    onClick={goToSecond}
+                  >
+                    下一頁
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </React.Fragment>
   );
 };

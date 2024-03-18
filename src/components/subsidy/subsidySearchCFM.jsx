@@ -8,7 +8,7 @@ import BackToTopBtn from "../backtotopbtn/BackToTopBtn";
 import "../../asset/css/subsidy.css";
 import { Link } from "react-router-dom";
 
-const subsidySearchCFM = () => {
+const subsidySearchCFM = ({ goToThird, goToFirst }) => {
   const populateDistricts = () => {
     const citySelect = document.getElementById("city");
     const districtSelect = document.getElementById("district");
@@ -186,19 +186,16 @@ const subsidySearchCFM = () => {
                     </tbody>
                   </table>
                 </div>
-                <div className=" text-center mt-4">
-                  <Link to="/subsidySearch">
-                    <button
-                      type="button"
-                      className="btn btn-lg btn-outline-success px-5 mr-2"
-                    >
-                      重新填寫
-                    </button>
-                  </Link>
+                <div className="text-center mt-4">
                   <button
-                    type="button"
-                    onClick={submitForm}
-                    className="btn btn-lg custom-button px-5 ml-2"
+                    className="btn btn-lg btn-outline-success px-5"
+                    onClick={goToFirst}
+                  >
+                    重新填寫
+                  </button>
+                  <button
+                    className="btn btn-lg custom-button px-5"
+                    onClick={goToThird}
                   >
                     確認送出
                   </button>
