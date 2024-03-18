@@ -42,9 +42,9 @@ function TemplateNews() {
 
               {/* 這裡放你的主內容 */}
               <div className='col-9'>
-                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li>
-                        <button class="nav-link" style={{  backgroundColor: '#214F39',color: 'white',textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)'}}>焦點新聞</button>
+                        <button className="nav-link" style={{  backgroundColor: '#214F39',color: 'white',textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)'}}>焦點新聞</button>
                     </li>
                   </ul>
                   <div className="tab-content " id="myTabContent">

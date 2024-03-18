@@ -7,8 +7,9 @@ div.scene {
 }
 .scene {
 	position: absolute;
-  top: 0;
+  	top: 0;
 	width: 100%;
 	transform: translateY(var(--translateY));
 	will-change: transform;
+	z-index: -1;
 }
