@@ -55,7 +55,7 @@ const subsidyHome = () => {
 
             <div className="d-flex flex-column align-items-center mt-5">
               <a
-                href="/subsidySearch1"
+                href="/subsidySearch"
                 target="_blank"
                 className="btn custom-btn-4 btn-lg"
                 role="button"

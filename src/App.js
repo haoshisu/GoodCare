@@ -29,17 +29,18 @@ import {
   SingleVideo,
   Cart,
   SingleProduct,
+  SubsidyLink1,
+  SubsidyLink2,
+  SubsidyLink3,
+  SubsidyNoMatch,
+  SubsidySearch,
+  SubsidySearchCFM,
+  SubsidyResult,
 } from "./pages/appIndex";
-
-//補助資訊
-import SubsidyLink1 from "./components/subsidy/subsidyLink1";
-import SubsidyLink2 from "./components/subsidy/subsidyLink2";
-import SubsidyLink3 from "./components/subsidy/subsidyLink3";
-import SubsidyNoMatch from "./components/subsidy/subsidyNoMatch";
-import SubsidyResult from "./components/subsidy/subsidyResult";
 
 //範例用
 import Template from "./pages/Template";
+// import SubsidySearch from "./components/subsidy/subsidySearch";
 // const baseURL = "http://18.182.1.131:3000/news";
 
 function App() {
@@ -66,6 +67,11 @@ function App() {
           {/* 購物車 */}
           <Route path="/Cart" element={<Cart />} />
 
+          {/* 商品頁面 */}
+          <Route path="/Product/*" element={<Product />} />
+          <Route path="/product/category/:category/*" element={<Product />} />
+          <Route path="/product/single/:id" element={<SingleProduct />} />
+
           {/* 會員中心 */}
           <Route path="/UserLogin" element={<UserLogin />} />
           <Route path="/UserForget" element={<UserForget />} />
@@ -81,6 +87,8 @@ function App() {
           <Route path="/SubsidyLink2" element={<SubsidyLink2 />} />
           <Route path="/SubsidyLink3" element={<SubsidyLink3 />} />
           <Route path="/SubsidyNoMatch" element={<SubsidyNoMatch />} />
+          <Route path="/SubsidySearch" element={<SubsidySearch />} />
+          <Route path="/SubsidySearchCFM" element={<SubsidySearchCFM />} />
           <Route path="/SubsidyResult" element={<SubsidyResult />} />
 
           {/* 範例用 */}

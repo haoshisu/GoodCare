@@ -1,10 +1,14 @@
 import React from "react";
 import "./CartDetail.css";
+
+import toast, { Toaster } from 'react-hot-toast';
 import Counter from "../Counter/counter";
 
 const CartDetail = ( { doSecondBtn } ) => {
   let cartInfo = JSON.parse(sessionStorage.getItem('cartInfo'))
   // console.log(cartInfo)
+  const notify = () => toast.success('購物車尚未有任何東西！')
+  if(!cartInfo) notify()
 
   return (
     <>
@@ -23,7 +27,7 @@ const CartDetail = ( { doSecondBtn } ) => {
             </tr>
           </thead>
           <tbody>
-            {cartInfo.map((val,ind)=>{
+            {cartInfo? cartInfo.map((val,ind)=>{
               return(
                 <tr>
                   <td>
@@ -38,7 +42,7 @@ const CartDetail = ( { doSecondBtn } ) => {
                     { val.productName }
                   </td>
                   <td>
-                    沒存到價錢
+                    { val.price }
                   </td>
                   <td>
                     <Counter />
@@ -56,64 +60,15 @@ const CartDetail = ( { doSecondBtn } ) => {
                 </tr>
               )
             })
-          }
-            {/* <tr>
-              <td>
-                <img
-                  src="https://via.placeholder.com/100"
-                  alt="Product"
-                  width="150"
-                  height="150"
-                />
-              </td>
-              <td>商品 A</td>
-              <td>$100</td>
-              <td>
-                <div className="input-group input-group-sm">
-                  <button
-                    className="btn btn-outline-secondary quantity-btn btn-sm"
-                    type="button"
-                  >
-                    -
-                  </button>
-                  <input
-                    type="text"
-                    className="form-control-sm"
-                    style={{
-                      fontSize: "14px",
-                      padding: "0.375rem 0.75rem",
-                      height: "auto",
-                    }}
-                    value="1"
-                  />
-                  <button
-                    className="btn btn-outline-secondary quantity-btn btn-sm"
-                    type="button"
-                  >
-                    +
-                  </button>
-                </div>
-              </td>
-              <td>
-                <select className="form-select">
-                  <option value="0">0%</option>
-                  <option value="0.1">10%</option>
-                  <option value="0.2">20%</option>
-                </select>
-              </td>
-              <td>$90</td>
-              <td>
-                <button className="delete-btn">
-                  <i className="fas fa-trash-alt"></i>
-                </button>
-              </td>
-            </tr> */}
+            :<tr><td colSpan={ 7 } className="text-muted text-center"> 您尚未加入任何東西到購物車 </td></tr>
+            }     
           </tbody>
         </table>
       </div>
 
       {/* 折扣碼 */}
-      <div className="container">
+      {cartInfo &&
+        <div className="container">
         <div className="row">
           <div className="col-4"></div>
           <div className="col-8">
@@ -134,44 +89,59 @@ const CartDetail = ( { doSecondBtn } ) => {
           </div>
         </div>
         <br />
-      </div>
+        </div>
+      }
       {/* 帳單明細 */}
-      <div className="container">
-        <div className="row">
-          <div className="col-3"></div>
-          <div className="col-9">
-            <h2 className="my-4 text-center" style={{ fontWeight: "bold" }}>
-              訂單資訊
-            </h2>
-            <table className="table">
-              <tbody>
-                <tr>
-                  <td>商品小計</td>
-                  <td>$0.00</td>
-                </tr>
-                <tr>
-                  <td>折扣</td>
-                  <td>$0.00</td>
-                </tr>
-                <tr>
-                  <td>運費</td>
-                  <td>$0.00</td>
-                </tr>
-                <tr>
-                  <td>合計</td>
-                  <td>$0.00</td>
-                </tr>
-              </tbody>
-            </table>
-            <br />
-            <div className="text-center">
-                <button type="button" className="btn btn-lg custom-button px-5" onClick={ doSecondBtn }>
-                  前往結帳
-                </button>
+      {cartInfo &&
+        <div className="container">
+          <div className="row">
+            <div className="col-3"></div>
+            <div className="col-9">
+              <h2 className="my-4 text-center" style={{ fontWeight: "bold" }}>
+                訂單資訊
+              </h2>
+              <table className="table">
+                <tbody>
+                  <tr>
+                    <td>商品小計</td>
+                    <td>$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>折扣</td>
+                    <td>$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>運費</td>
+                    <td>$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>合計</td>
+                    <td>$0.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <div className="text-center">
+                  <button type="button" className="btn btn-lg custom-button px-5" onClick={ doSecondBtn }>
+                    前往結帳
+                  </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      }
+      {/* 叫他回去買東西 */}
+      {!cartInfo &&
+        <div className="grid text-center">
+          <a href="/product">
+            <button className="btn btn-lg custom-button px-5 g-start-2">
+              <i className="fa-solid fa-shopping-cart"></i> 繼續購物
+            </button>
+          </a>
+          <Toaster position="top-right" reverseOrder={false}/>
+        </div>
+
+      }
     </>
   );
 };

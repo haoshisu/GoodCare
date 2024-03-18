@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import axios from 'axios'
+import toast, { Toaster } from 'react-hot-toast';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './single.css'
-import axios from 'axios'
 import Counter from '../Counter/counter'
 
 
@@ -12,10 +14,11 @@ const Single = () => {
     const [ cartInfo, setCartInfo ] = useState({})
     
     const [ numToBuy, setNumToBuy ] = useState(1)
- 
+    
     const params = useParams();
     // console.log(params)
     
+    const notify = () => toast.success('成功加入購物車！')
     
     const fetchData = async () => {
         const result = await axios.get(`http://localhost:8000/product/single/${params.id}`)
@@ -27,6 +30,7 @@ const Single = () => {
             id:singleList[0].id,
             productName:singleList[0].productName,
             quantity:1,
+            price:singleList[0].price,
             style:singleList[0].style
         }
         setCartInfo(cartInit)
@@ -109,10 +113,11 @@ const Single = () => {
 
                             <button className="putcart btn btn-warning ms-5 text-white" type="button" 
                             style={{width: "300px",fontSize: "18px"}}
-                            onClick={ handlePutInCart }
+                            onClick={ ()=>{ handlePutInCart(); notify() } }
                             >
                                 放入購物車
                             </button>
+                            <Toaster position="top-right" reverseOrder={false}/>
                         </div>
                     </div>
                 </div>

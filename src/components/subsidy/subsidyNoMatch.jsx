@@ -40,7 +40,7 @@ const SubsidyNoMatch = () => {
                   </div>
                 </div>
                 <div className="text-center mt-4">
-                  <a href="./subsidySearch1.html">
+                  <a href="./SubsidySearch">
                     <button
                       type="button"
                       className="btn btn-lg custom-button px-5"
