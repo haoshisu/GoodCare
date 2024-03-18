@@ -61,24 +61,24 @@ const Card = ({ category,sortBy,search }) => {
 
                 {productList.map((p,i) => (
                     
-                    <div className="col" key={i}>
-                    <div className="card h-100"  style={{boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)"}} >
-                    <a href={`/product/single/${p.id}`} style={{textDecoration:"none" , color:"black"}}>
-                        <img src={require(`../../asset/images/numberImages/${p.id}.png`)} className="card-img-top" alt="..."/>
-                    <div className="card-body">
+                    <div className={`col ${i % 3 === 1 && i !== 0 ? 'offset-md-0' : ''}`} key={i}>
+                        <div className="card h-100"  style={{boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)"}} >
+                            <a href={`/product/single/${p.id}`} style={{textDecoration:"none" , color:"black"}}>
+                                <img src={require(`../../asset/images/numberImages/${p.id}.png`)} className="card-img-top" alt="..."/>
+                                <div className="card-body">
+                                
+                                    <h5 className="card-title">{p.productName}</h5>
+                                    <p className="card-text">NT ${p.price}</p>
+                                
+                                </div>
+                            </a>
                         
-                        <h5 className="card-title">{p.productName}</h5>
-                        <p className="card-text">NT ${p.price}</p>
-                        
-                    </div>
-                    </a>
-                    
-                    </div>
+                        </div>
                     </div>
                     
                 ))}
-   
-            
+
+          
         </React.Fragment>
     )
 
