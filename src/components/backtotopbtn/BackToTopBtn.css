@@ -11,4 +11,5 @@
     height: 50px; /* 設置按鈕高度 */
     cursor: pointer;
     font-size: 20px;
+    z-index: 2;
   }

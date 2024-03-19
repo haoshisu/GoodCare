@@ -18,10 +18,16 @@
     border-bottom: 3px solid transparent;
     cursor:pointer;
   }
+
+  @media screen and (max-width: 1280px){
+    .topnav {font-size: 18px}
+    .topnav .topnav-title{font-size: 1em}
+  }
+
   .dropdown-content {
     background-color:#F3C640!important;
     min-width: 260px!important;
-    padding: 20px;
+    padding: 20px!important;
     border-radius: 5px;
   }
 
@@ -68,8 +74,4 @@
   
   .dropdown:hover .dropdown-content {
     display: block;
-  }
-
-  a img{
-    width: 6em;
   }

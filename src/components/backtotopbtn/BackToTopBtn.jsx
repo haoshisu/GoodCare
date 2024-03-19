@@ -9,10 +9,10 @@ const [visible, setVisible] = useState(false)
 
 const toggleVisible = () => { 
 	const scrolled = document.documentElement.scrollTop; 
-	if (scrolled > 300){ 
+	if (scrolled > 400){ 
 	setVisible(true) 
 	} 
-	else if (scrolled <= 300){ 
+	else if (scrolled <= 400){ 
 	setVisible(false) 
 	} 
 }; 

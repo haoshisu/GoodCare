@@ -34,8 +34,19 @@ function Scroll() {
           <img className="scene" data-modifier="34" alt="pic8" src={require('../../asset/images/Home/basicScroll-8.png')} />
           <img className="scene" data-modifier="18" alt="pic9" src={require('../../asset/images/Home/basicScroll-9.png')} />
         </div>
-        <div className="scene" data-modifier="29">
-        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         </>
     );
 }

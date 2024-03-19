@@ -2,7 +2,7 @@ import React, { } from 'react';
 import Header from '../components/header/Header';
 import IndexNav from '../components/indexnav/IndexNav';
 import PathBox from '../components/pathbox/PathBox';
-import Footer from '../components/footer/Footer';
+import Footersecond from '../components/footersecond/Footersecond';
 import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
 import ReserveConfirm from '../components/reserve/ReserveConfirm';
 
@@ -14,7 +14,9 @@ const Service = () => {
         <IndexNav />
         <PathBox />
         <ReserveConfirm />
-        <Footer />
+        <br />
+        <br />
+        <Footersecond />
         <BackToTopBtn />
       </React.Fragment>
   )

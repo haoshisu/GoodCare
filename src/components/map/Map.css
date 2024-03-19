@@ -44,10 +44,20 @@
   background-color: #ededed;
 }
 
-table,
-th,
-td {
+.stronghold{
+  margin: 30px auto 0 auto;
+  text-align: center;
+  width: 90%;
+}
+
+.stronghold th,
+.stronghold td {
   border: 2px solid black;
+}
+
+.stronghold th{
+background-color: #ffe2d4;
+font-weight: bold;
 }
 
 
