@@ -12,8 +12,8 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
       <PathBox pathName={"照服員預約"} path={"/reserve"}/>
+      <ReserveConfirm />
       <br />
       <br />
       <Footersecond />
