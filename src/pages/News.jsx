@@ -45,7 +45,7 @@ function TemplateNews() {
       <>
           <Header />
           <IndexNav />
-          <PathBox />
+          <PathBox pathName={"最新消息"} path={"/news"}/>
           { !isShow &&
             <div className="container">
             <div className="row">

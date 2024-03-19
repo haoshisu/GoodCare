@@ -42,7 +42,7 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"補助資訊"} path={"/subsidy"}/>
       {isHome && <SubsidyHome goToFirst={goToFirst} />}
       {isFirst && <SubsidySearch goToSecond={goToSecond} />}
       {isSecond && (

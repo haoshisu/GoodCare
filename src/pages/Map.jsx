@@ -13,7 +13,7 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"據點查詢"} path={"/map"}/>
       <div className="container carecenter">
 
         <ul className="nav nav-tabs" id="myTab" role="tablist">

@@ -15,7 +15,7 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"常見問題"} path={"/webqa"}/>
       <div className="container">
         <div className="row">
           <SideBar title={sidebarTitle} />

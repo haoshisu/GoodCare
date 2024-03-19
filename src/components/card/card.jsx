@@ -26,7 +26,7 @@ const Card = ({ category,sortBy,search }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let url = 'http://localhost:8000/product/';
+                let url = 'http://localhost:8000/product';
                 if (category) {
                     url = `http://localhost:8000/product/category/${category}`;
                 }else if(search){

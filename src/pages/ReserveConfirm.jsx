@@ -13,7 +13,7 @@ const Service = () => {
       <Header />
       <IndexNav />
       <PathBox />
-      <ReserveConfirm />
+      <PathBox pathName={"照服員預約"} path={"/reserve"}/>
       <br />
       <br />
       <Footersecond />

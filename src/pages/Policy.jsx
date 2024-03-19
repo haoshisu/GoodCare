@@ -14,10 +14,10 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"長照政策"} path={"/policy"}/>
       <div className="container">
         <div className="row">
-          <SideBar title={sidebarTitle} />
+          <SideBar title={ sidebarTitle } pathName={ sidebarTitle }/>
           {/* 這裡放你的主內容 */}
           <div className='col-9'>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
