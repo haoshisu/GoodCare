@@ -36,7 +36,7 @@ import {
   SubsidyNoMatch,
   SubsidySearch,
   SubsidySearchCFM,
-  SubsidyResult
+  SubsidyResult,
 } from "./pages/appIndex";
 
 //範例用

@@ -1,5 +1,5 @@
-import React from "react";
-// import React, { useState } from "react";
+// import React from "react";
+import React, { useState } from "react";
 import Header from "../header/Header";
 import IndexNav from "../indexnav/IndexNav";
 import PathBox from "../pathbox/PathBox";
@@ -151,10 +151,9 @@ const subsidySearchCFM = ({ goToThird, goToFirst }) => {
                     <tbody>
                       <tr>
                         <td className="text-center m-line">身份</td>
-                        <td
-                          className="text-center"
-                          id="identityPlaceholder"
-                        ></td>
+                        <td className="text-center" id="identityPlaceholder">
+                          {selectedIdentity}
+                        </td>
                       </tr>
                       <tr>
                         <td className="text-center m-line">收入狀況</td>
@@ -193,6 +192,7 @@ const subsidySearchCFM = ({ goToThird, goToFirst }) => {
                   >
                     重新填寫
                   </button>
+                  &nbsp;&nbsp;&nbsp;
                   <button
                     className="btn btn-lg custom-button px-5"
                     onClick={goToThird}

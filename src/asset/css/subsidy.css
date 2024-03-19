@@ -123,7 +123,7 @@ td {
 }
 
 .content-block {
-  display: none !important; /* 默认隐藏内容块 */
+  /* display: none !important; 默认隐藏内容块 */
 }
 
 .btn-container {
