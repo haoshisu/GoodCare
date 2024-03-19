@@ -8,11 +8,9 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../../asset/images/reserve/reserve_bg.jpg");
-
+  background-image: url("../../asset/images/reserve/reserve_bg.jpg") ;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5; /* 背景圖像的不透明度 */
   z-index: -1; /* 將偽元素置於背景 */
 }
 
@@ -22,24 +20,28 @@
   background-color: white;
 }
 
-
 .appointment h2{
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 
 }
 .appointment form {
-  margin-bottom: 40px;
   background-color:rgb(246, 246, 246);
-  border: 3px solid #ccc;
-  padding:20px 30px 30px 30px;
+  padding:30px 40px;
 }
 .form-row {
   margin-top:20px;
 }
+
+.form-row input{
+  border: 0px;
+  border-bottom: 1px solid #d0d0d0;
+  font-size: 18px;
+  }
+
 .appointment form p{
   margin: 1px;
+  font-size: 1.1em;
 }
 .appointment form hr {
   height: 1px;

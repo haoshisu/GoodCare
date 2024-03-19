@@ -7,18 +7,18 @@ import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
 import ReserveConfirm from '../components/reserve/ReserveConfirm';
 
 const Service = () => {
-  
+
   return (
     <React.Fragment>
-        <Header />
-        <IndexNav />
-        <PathBox />
-        <ReserveConfirm />
-        <br />
-        <br />
-        <Footersecond />
-        <BackToTopBtn />
-      </React.Fragment>
+      <Header />
+      <IndexNav />
+      <PathBox />
+      <ReserveConfirm />
+      <br />
+      <br />
+      <Footersecond />
+      <BackToTopBtn />
+    </React.Fragment>
   )
 }
 

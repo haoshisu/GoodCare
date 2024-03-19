@@ -14,9 +14,8 @@ const Service = () => {
       <IndexNav />
       <PathBox />
       <Reserve />
-      <br />
-      <br />
-      <br />
+      <br/>
+      <br/>
       <Footersecond />
       <BackToTopBtn />
     </React.Fragment>

@@ -27,9 +27,11 @@
 
 .registered1{
   border-radius:25px; 
-  width:50%;
-  font-size: 20px;
+  width:25%;
+  font-size: 1.3em;
   background-color: white;
+  color: #CF4501;
+  border-color: #CF4501;
 }
 
 .registered2{
@@ -47,6 +49,6 @@
 }
 
 .registered1:hover{
-  background-color: #663D2A;
+  background-color:#CF4501 ;
   color: white;
 }

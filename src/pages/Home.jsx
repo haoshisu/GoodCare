@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/header/Header";
 import IndexNav from "../components/indexnav/IndexNav";
-import Homefooter from "../components/homefooter/Footer";
+import Footersecond from "../components/footersecond/Footersecond";
 import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
 import ScrollEffectComponent from "../components/hover/hover";
 import MyclassNameComponent from "../components/aos/aos";
@@ -270,7 +270,7 @@ const Home = () => {
           <img src={require("../asset/images/Home/footerweeds.png")} alt="footerweeds"/>
         </div>
       </>
-      <Homefooter />
+      <Footersecond />
       <BackToTopBtn />
     </React.Fragment>
   );

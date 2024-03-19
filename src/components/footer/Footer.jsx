@@ -4,12 +4,11 @@ import './Footer.css'
 function Footer() {
 
   return (
-    <div style={{height:'300px'}}>
+    <div>
       <div className="d-flex justify-content-center">
           <img src={require("../../asset/images/index/footerold.png")} alt='footerLogo' style={{width:'100%'}}/>
       </div>
       <div className="footer">
-          <br />
           <br />
           <div className="container mb-5 d-flex justify-content-between">
               <div className="d-flex flex-column justify-content-space-evenly">
