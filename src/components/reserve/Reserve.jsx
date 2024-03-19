@@ -55,8 +55,8 @@ function Reserve() {
             <form onSubmit={handleSubmit} id="formcontent">
               <h2>預約照服員資料表</h2>
               <hr />
-              <h4>申請人</h4>
-              <h5>(主要聯絡人)</h5>
+              <h4>申請人&nbsp;&nbsp;(主要聯絡人)</h4>
+
               <div className="form-row">
                 <label for="name"><p><i className="fa-solid fa-user"></i> 姓名：</p></label>
                 <input type="text" id="applyname" name="applyname" value={applyname} onChange={(e) => setApplyname(e.target.value)} />
@@ -71,8 +71,7 @@ function Reserve() {
               </div>
               <br />
               <hr />
-              <h4>預約照顧</h4>
-              <h5>(被照顧者資料)</h5>
+              <h4>預約照顧&nbsp;&nbsp;(被照顧者資料)</h4>
               <div className="form-row">
                 <label for="name"><p><i className="fa-solid fa-user"></i> 姓名：</p></label>
                 <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />

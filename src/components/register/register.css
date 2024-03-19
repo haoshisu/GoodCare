@@ -26,12 +26,11 @@
 }
 
 .registered1{
-  border-radius:25px; 
   width:25%;
+  border-radius: 5px;
   font-size: 1.3em;
-  background-color: white;
-  color: #CF4501;
-  border-color: #CF4501;
+  background-color: #CF4501;
+  color:white;
 }
 
 .registered2{
@@ -48,7 +47,3 @@
   border-radius: 25px;
 }
 
-.registered1:hover{
-  background-color:#CF4501 ;
-  color: white;
-}

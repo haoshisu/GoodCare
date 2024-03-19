@@ -10,7 +10,6 @@ const SingleNews = ({ newsData }) => {
           <h2>{ news.title }</h2>
           <div className='row'>
             <div>{ news.source }</div>
-            <div>{ news.create }</div>
             <div>{ news.update }</div>
           </div>
           <section>
