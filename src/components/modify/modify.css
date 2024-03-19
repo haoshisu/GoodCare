@@ -5,15 +5,12 @@
 }
 
 .Modify1{
-  border-radius:25px; 
-  width:40%;
-  font-size: 20px;
-  background-color: white;
-}
-
-.Modify1:hover{
-  background-color:#663D2A ;
-  color:white; 
+  width:25%;
+  border-radius: 5px;
+  font-size: 1.3em;
+  background-color: #CF4501;
+  color:white;
+  border: 1px solid #cf4501;
 }
 
 .Modify2{
@@ -34,11 +31,7 @@
   border-radius:25px; 
   width:40%;
   font-size: 20px;
-  background-color: white;
-}
-
-.Modify4:hover{
-  background-color:#555352 ;
+  background-color: #555352;
   color:white; 
 }
 

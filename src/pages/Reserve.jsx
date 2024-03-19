@@ -12,11 +12,10 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"照服員預約"} path={"/reserve"}/>
       <Reserve />
-      <br />
-      <br />
-      <br />
+      <br/>
+      <br/>
       <Footersecond />
       <BackToTopBtn />
     </React.Fragment>

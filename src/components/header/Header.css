@@ -1,13 +1,14 @@
 /* header */
 .navbar-brand{
   font-size: 20px;
+  
 }
 
 .navbar-brand:hover {
   color: #CF4501!important;
 }
 
-a img{
+.headerlogo{
   width: 6em;
 }
 
@@ -24,4 +25,30 @@ a img{
   color: white !important;
   background-color: #cf4501 !important;
 
+}
+
+.d-flex .search-icon{
+  font-size: 30px;
+  display: none!important;
+}
+
+@media screen and (max-width: 990px){
+  .user span {display: none;}
+  .user {
+    border: none;
+    border-radius:none;
+    font-size:25px;
+  }
+.d-flex.search-bar {
+  display: none!important;
+}
+.d-flex .search-icon{
+display: flex!important;
+}
+.navbar-brand{
+  display: none!important;
+}
+.headerlogo{
+    width:4em;
+}
 }

@@ -3,6 +3,7 @@
 .accordion-button:not(.collapsed) {
     color:white!important;
     background-color:#F3C640!important;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
   }
   
   .accordion-button:focus {

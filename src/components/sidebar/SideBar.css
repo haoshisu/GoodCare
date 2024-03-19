@@ -7,6 +7,7 @@
 .w3-button:hover {
     color: #ffffff!important;
     background-color: #CF4501!important;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
 }
 .w3-sidebar{
     z-index: 0;
@@ -20,4 +21,5 @@
 .w3-sidebar .w3-bar-item.active {
     background-color: #cf4501;
     color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
 }

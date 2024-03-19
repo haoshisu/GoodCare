@@ -15,7 +15,7 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"服務資訊"} path={"/service"}/>
       <div className="container">
         <div className="row">
           <SideBar title={sidebarTitle} />

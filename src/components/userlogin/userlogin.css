@@ -12,20 +12,18 @@
   font-size: 18px;
   border-bottom: 1px solid #d0d0d0;
 }
+
 .login{
-  width:50%;
-  border-radius: 15px;
-  font-size: 20px;
-  background-color: white;
-}
-.login:hover{
-  background-color: #663D2A;
-  color: white;
+  width:25%;
+  border-radius: 5px;
+  font-size: 1.3em;
+  background-color: #CF4501;
+  color:white;
+  border: 1px solid #cf4501;
 }
 
 .userlogin{
   background-color: white;
   padding: 50px 80px;
-  box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 25px;
 }

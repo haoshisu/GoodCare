@@ -58,7 +58,7 @@ function App() {
           <Route path="/Map" element={<Map />} />
           <Route path="/Reserve" element={<Reserve />} />
           <Route path="/ReserveConfirm" element={<ReserveConfirm />} />
-          <Route path="/Product" element={<Product />} />
+          {/* <Route path="/Product" element={<Product />} /> */}
           <Route path="/WebQA" element={<WebQA />} />
 
           {/* 商品頁面 */}

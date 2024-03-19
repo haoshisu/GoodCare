@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast"
 import "./SingleVideoContent.css";
 
 const SingleVideoContent = ({ dataList }) => {
-  // console.log(dataList)
+  const [isDone, setIsDone] = useState(false)
+  const notifySuccess = () => toast.success("恭喜答對！");
+  const notifyError = () => toast.error("再接再厲!");
+
+  const checkAnswer = (ind) => {
+    if (ind === dataList.answer){
+      notifySuccess()
+      setIsDone(true)
+    } else {
+      notifyError()
+    }
+  }
+  
   return (
     <div className="container singlevideocontent p-4">
       <iframe
@@ -35,22 +48,27 @@ const SingleVideoContent = ({ dataList }) => {
                 <div className="d-grid mb-3 col-6 mx-auto" key={ ind }>
                   <button
                     type="button"
-                    className="btn btn-lg btn-outline-success"
+                    className={"btn btn-lg btn-outline-success"+(isDone?" disabled bg-light":"") }
+                    autocomplete={(isDone?"off":"")}
+                    onClick={ () => checkAnswer(ind) }
                   >
-                    {val}
+                    { val }
                   </button>
                 </div>
               ) : (
                 <div className="d-grid mb-3 col-6 mx-auto" key={ ind }>
                   <button
                     type="button"
-                    className="btn btn-lg btn-outline-success"
+                    className={"btn btn-lg btn-outline-success"+(isDone?" disabled bg-light":"") }
+                    autocomplete={(isDone?"off":"")}
+                    onClick={ () => checkAnswer(ind) }
                   >
-                    {val}
+                    { val }
                   </button>
                 </div>
               );
             })}
+            <Toaster position="top-center" reverseOrder={false}/>
           </div>
         </div>
       </div>
