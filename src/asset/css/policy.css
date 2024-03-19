@@ -1,7 +1,8 @@
 /* 這是手風琴 */
 .accordion-button:not(.collapsed) {
-  color:black!important;
+  color:white!important;
   background-color:#F3C640!important;
+  text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
 }
 
 .accordion-button:focus {

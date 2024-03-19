@@ -15,10 +15,10 @@ function IndexNav() {
               <li className="nav-item">
                 <a href="/news" className="topnav-title">最新消息</a>
               </li>
-              <li className="nav-item dropdown ">
-                <a href="#a" className="topnav-title">關於長照</a>
-                <ul className="dropdown-menu dropdown-content">
-                  <li className="dropdown-content1">
+              <li class="nav-item dropdown ">
+                <div className="topnav-title">關於長照</div>
+                <ul class="dropdown-menu dropdown-content">
+                  <li class="dropdown-content1">
                     <a href="/policy">政府長照政策</a>
                   </li>
                   <li className="dropdown-content1">

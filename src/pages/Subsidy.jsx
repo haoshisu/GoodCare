@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/header/Header";
 import IndexNav from "../components/indexnav/IndexNav";
 import PathBox from "../components/pathbox/PathBox";
-import Footer from "../components/footer/Footer";
+import Footersecond from "../components/footersecond/Footersecond";
 import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
 import SubsidyHome from "../components/subsidy/subsidy";
 import {
@@ -52,7 +52,7 @@ const Service = () => {
       {isNoMatch && <SubsidyNoMatch />}
 
       <br />
-      <Footer />
+      <Footersecond />
       <BackToTopBtn />
     </React.Fragment>
   );
