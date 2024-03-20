@@ -13,3 +13,13 @@ div.scene {
 	will-change: transform;
 	z-index: -1;
 }
+
+
+@media screen and (max-width: 1400px) {
+	.scene{
+	  display: none!important;
+	}
+	.scrollbr{
+	display: none!important;
+	}
+  }

@@ -9,3 +9,31 @@
   .footer img{
       width: 20em;
   }
+
+
+  @media screen and (max-width: 992px) {
+    .footer p{
+        font-size: 18px;
+    }
+    .footer img{
+        width: 18em!important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer p{
+        font-size: 16px;
+    }
+    .footer img{
+        width: 15em!important;;
+    }
+  }
+  
+  @media screen and (max-width: 520px) {
+    .footer p{
+        font-size: 13px;
+    }
+    .footer img{
+        width: 10em!important;;
+    }
+  }
