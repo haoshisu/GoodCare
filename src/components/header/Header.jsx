@@ -1,8 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState,useContext } from 'react';
+import AuthContext from "../../Context/AuthProvider";
+import axios from 'axios'
 import './Header.css'
 
-function Header() {
-
+function Header( ) {
+    const [userName, setUserName] = useState('');
+    const { auth } = useContext(AuthContext);
+    // console.log(auth.accessToken)
+    useEffect(() => {
+        if ( auth && auth.accessToken) {
+            console.log(auth)
+            const accessToken = auth.accessToken;
+            axios.get('http://localhost:8000/member/login', {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                }
+            })
+            .then(response => {
+                setUserName(response.data[0].account);
+                console.log(response)
+            })
+            .catch(error => {
+                console.error('Failed to fetch user information:', error);
+            });
+        }
+    }, [auth]);
+  
+    // const auth = useContext(AuthContext)
+    // console.log(auth.auth.account)
   return (
     <div className="container">
         <div className="d-flex justify-content-between">
@@ -21,7 +46,9 @@ function Header() {
                 <div className="d-flex align-items-center">
                     <a className="user text-dark" href="/userlogin">
                         <i className="fa-solid fa-user"></i>
-                        <span>會員登入/註冊</span>
+                        &nbsp;
+                        <span>{userName ? `${userName}  你好` : '會員登入/註冊'}</span>
+                        
                     </a>
                 </div>
             </div>

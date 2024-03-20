@@ -1,3 +1,26 @@
+/* 名稱判斷 */
+.hide{
+  display: none;
+}
+
+.valid{
+  color:green;
+}
+
+.invalid{
+  color:red;
+}
+
+.instructions{
+  display:block;
+}
+
+.offscreen{
+  display: none;
+}
+
+
+
 /* 字型樣式 */
 *.lato-thin {
   font-family: "Lato", sans-serif;

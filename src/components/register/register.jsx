@@ -123,12 +123,12 @@ const Register = () => {
         
     }
 
-    const Dosubmit = async (e) => {
+    const Dosubmit = async () => {
         const response = await axios.post('http://localhost:8000/member',JSON.stringify({
             name,birthday,gender,email,address,tel,account,pwd
         }),{
             headers:{'Content-Type':'application/json'},
-            withCreadentials:true
+            withCredentials: true
         })
         // console.log(response.data)
         // e.preventDefault()
@@ -294,7 +294,6 @@ const Register = () => {
                                 id="password" 
                                 name="password"
                                 placeholder="請輸入密碼(6-20英數字)"
-                                ref={userRef} 
                                 autoComplete="off"  /* autoComplete取消自動完成 */
                                 onChange ={(e) => setPwd(e.target.value)}
                                 required

@@ -1,7 +1,22 @@
 import './IndexNav.css'
 import React from 'react';
+import { useState,useContext,useEffect } from 'react';
+import AuthContext from "../../Context/AuthProvider";
+// import { UserModify } from '../../pages/appIndex';
 
 function IndexNav() {
+  const { auth } = useContext(AuthContext);
+  const [road,setRoad] = useState('/userlogin')
+
+  useEffect(() => {
+    if (auth && auth.accessToken) {
+      setRoad('/UserModify');
+    } else {
+      setRoad('/userlogin');
+    }
+  }, [auth]);
+  console.log( auth ) 
+
 
   return (
     <div className="topnav">
@@ -20,7 +35,7 @@ function IndexNav() {
       <a href="/map" className="topnav-title">長照據點地圖</a>
       <a href="/product" className="topnav-title">醫療輔具商品</a>
       <a href="/reserve" className="topnav-title">預約照服員</a>
-      <a href="/userlogin" className="topnav-title">會員資料</a>
+      <a href={road} className="topnav-title">會員資料</a>
       <a href="/webqa" className="topnav-title">網站常見問題</a>
     </div>
   );
