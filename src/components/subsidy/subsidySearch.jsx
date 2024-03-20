@@ -1,14 +1,11 @@
-// import React from "react";
+//import React from "react";
 import React, { useState } from "react";
-import Header from "../header/Header";
-import IndexNav from "../indexnav/IndexNav";
-import PathBox from "../pathbox/PathBox";
-import Footer from "../footer/Footer";
-import BackToTopBtn from "../backtotopbtn/BackToTopBtn";
+import { useForm } from "react-hook-form";
 import "../../asset/css/subsidy.css";
-import { Link } from "react-router-dom";
 
-const SubsidySearch = ({ goToSecond, setFormData }) => {
+const SubsidySearch = ({ goToSecond }) => {
+  const { register, handleSubmit } = useForm();
+
   const [selectedIdentity, setSelectedIdentity] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedDistrict, setSelectedDistrict] = useState("");
@@ -87,11 +84,9 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
     }
     return districts;
   };
-
   const handleCityChange = (event) => {
     setSelectedCity(event.target.value);
-    const districts = populateDistricts();
-    setSelectedDistrict("");
+    setSelectedDistrict(""); // 清空區域選擇
   };
 
   const handleDistrictChange = (event) => {
@@ -102,17 +97,20 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
     setSelectedIdentity(event.target.value);
   };
 
-  const handleSubmit = () => {
-    console.log("Selected Identity:", selectedIdentity);
-    console.log("Selected City:", selectedCity);
-    console.log("Selected District:", selectedDistrict);
-
-    // 將選擇的身份、城市和區域存到 sessionStorage 中，以便在下一个頁面使用
-    sessionStorage.setItem("selectedIdentity", selectedIdentity);
-    sessionStorage.setItem("selectedCity", selectedCity);
-    sessionStorage.setItem("selectedDistrict", selectedDistrict);
-    window.location.href = "/subsidySearchCFM";
+  const onSubmit = () => {
+    console.log("Form Data:", {
+      selectedIdentity,
+      selectedCity,
+      selectedDistrict,
+    });
+    // 調用傳遞給組件的goToSecond函式並將表單資料作為參數傳遞
+    goToSecond({
+      selectedIdentity,
+      selectedCity,
+      selectedDistrict,
+    });
   };
+
   return (
     <React.Fragment>
       <div className="container col-10">
@@ -137,7 +135,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                   />
                 </div>
                 <div className="col-md-6 mb-4">
-                  <form className="mb-4">
+                  <form className="mb-4" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                       <label htmlFor="identity">身份:</label>
                       <select
@@ -223,14 +221,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                     </div>
                   </form>
                 </div>
-                {/* <div className="text-center mt-5">
-                  <Link
-                    to="/subsidySearchCFM"
-                    className="btn btn-lg custom-button px-5"
-                  >
-                    下一頁
-                  </Link>
-                </div> */}
+
                 <div className="text-center mt-5">
                   <button
                     className="btn btn-lg custom-button px-5"

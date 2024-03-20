@@ -18,7 +18,7 @@ const Service = () => {
   const [isSecond, setIsSecond] = useState(false); //confirm
   const [isThird, setIsThird] = useState(false); //result
   const [isNoMatch, setIsNoMatch] = useState(false); //nomatch
-  const [register, handleSubmit] = useForm(data);
+  // const [register, handleSubmit] = useForm(data);
 
   const goToFirst = () => {
     setIsHome(false);
@@ -43,7 +43,7 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox pathName={"補助資訊"} path={"/subsidy"}/>
+      <PathBox pathName={"補助資訊"} path={"/subsidy"} />
       {isHome && <SubsidyHome goToFirst={goToFirst} />}
       {isFirst && <SubsidySearch goToSecond={goToSecond} />}
       {isSecond && (

@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import Header from "../header/Header";
-import IndexNav from "../indexnav/IndexNav";
-import PathBox from "../pathbox/PathBox";
-import Footer from "../footer/Footer";
-import BackToTopBtn from "../backtotopbtn/BackToTopBtn";
 import "../../asset/css/subsidy.css";
-import { Link } from "react-router-dom";
 import SubsidyResultC from "../subsidy/subsidyResultC";
 import SubsidyResultV from "../subsidy/subsidyResultV";
 import SubsidyResultB from "../subsidy/subsidyResultB";
