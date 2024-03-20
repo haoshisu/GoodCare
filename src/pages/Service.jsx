@@ -15,7 +15,7 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"服務資訊"} path={"/service"}/>
       <div className="container">
         <div className="row">
           <SideBar title={sidebarTitle} />
@@ -223,14 +223,7 @@ const Service = () => {
           </div>
         </div>
       </div>
-
-
       {/* 底下用8個換行空出雨footer距離 */ }
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <br />

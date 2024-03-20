@@ -3,7 +3,6 @@ import { useParams } from "react-router";
 import Header from "../components/header/Header";
 import IndexNav from "../components/indexnav/IndexNav";
 import CartSearch from "../components/cartsearch/CartSearch";
-import ProductSideBar from "../components/productsidebar/ProductSideBar";
 import Footer from "../components/footer/Footer";
 import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
 // 本頁切換底下三種流程 分為First, Second, Third
@@ -44,12 +43,11 @@ const Cart = () => {
         doSecondBtn={goToSecond}
         doThirdBtn={goToThird}
       />
-
+      <br />
+      <br />
       <div className="container">
         <div className="row">
-          <ProductSideBar category={category} />
-          <div className="col-1"></div>
-          <div className="col-9">
+          <div className="col-10">
             {isFirst && (
               <CartDetail
                 doFirstBtn={goToFirst}
@@ -76,11 +74,6 @@ const Cart = () => {
       </div>
 
       {/* 底下用8個換行空出footer距離 */}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
       <br />
       <br />

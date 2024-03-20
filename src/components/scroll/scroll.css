@@ -7,8 +7,19 @@ div.scene {
 }
 .scene {
 	position: absolute;
-  top: 0;
+  	top: 0;
 	width: 100%;
 	transform: translateY(var(--translateY));
 	will-change: transform;
+	z-index: -1;
 }
+
+
+@media screen and (max-width: 1400px) {
+	.scene{
+	  display: none!important;
+	}
+	.scrollbr{
+	display: none!important;
+	}
+  }

@@ -19,7 +19,7 @@ function Video() {
         <React.Fragment>
             <Header />
             <IndexNav />
-            <PathBox />
+            <PathBox pathName={"影音專區"} path={"/video"}/>
             <div className="container">
                 <div className="row">
                     <SideBar title={sidebarTitle} />

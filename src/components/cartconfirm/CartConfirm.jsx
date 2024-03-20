@@ -45,6 +45,12 @@ const CartConfirm = () => {
         </div>
         <br />
         <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <div className="row border-bottom pb-2 mb-2">
           <div className="col-1"></div>
           <div className="col-2">
@@ -85,7 +91,10 @@ const CartConfirm = () => {
             <h5>$1500</h5>
           </div>
         </div>
-        <br /> <br /> <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <div className="text-center">
           <a href="/product">
             <button className="btn btn-lg custom-button px-5">

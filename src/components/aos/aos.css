@@ -42,3 +42,38 @@
     padding: 10px;
     box-shadow: 8px 8px 8px black;
   }
+
+
+@media screen and (max-width: 1400px) {
+  .old1 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .old1{
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .old1 {
+    font-size: 50px;
+  }
+  .old2{
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .old1 {
+    font-size: 40px
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .old1 {
+    font-size: 30px;
+    left: 20px;
+    top:-40px;
+  }
+}

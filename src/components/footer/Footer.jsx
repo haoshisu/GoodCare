@@ -4,9 +4,9 @@ import './Footer.css'
 function Footer() {
 
   return (
-    <div style={{height:'300px'}}>
+    <div>
       <div className="d-flex justify-content-center">
-          <img src={require("../../asset/images/index/footerold.png")} alt='footerLogo'/>
+          <img src={require("../../asset/images/index/footerold.png")} alt='footerLogo' style={{width:'100%'}}/>
       </div>
       <div className="footer">
           <br />

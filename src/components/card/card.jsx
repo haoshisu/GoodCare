@@ -26,7 +26,7 @@ const Card = ({ category,sortBy,search }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let url = 'http://localhost:8000/product/';
+                let url = 'http://localhost:8000/product';
                 if (category) {
                     url = `http://localhost:8000/product/category/${category}`;
                 }else if(search){
@@ -58,30 +58,27 @@ const Card = ({ category,sortBy,search }) => {
     return (
         
         <React.Fragment>
-
-                {productList.map((p,i) => (
+            {productList && productList.map((p,i) => (
+                
+                <div className={`col ${i % 3 === 1 && i !== 0 ? 'offset-md-0' : ''}`} key={i}>
+                    <div className="card h-100"  style={{boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)"}} >
+                        <a href={`/product/single/${p.id}`} style={{textDecoration:"none" , color:"black"}}>
+                            <img src={require(`../../asset/images/numberImages/${p.id}.png`)} className="card-img-top" alt="..."/>
+                            <div className="card-body">
+                            
+                                <h5 className="card-title">{p.productName}</h5>
+                                <p className="card-text">NT ${p.price}</p>
+                            
+                            </div>
+                        </a>
                     
-                    <div className={`col ${i % 3 === 1 && i !== 0 ? 'offset-md-0' : ''}`} key={i}>
-                        <div className="card h-100"  style={{boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)"}} >
-                            <a href={`/product/single/${p.id}`} style={{textDecoration:"none" , color:"black"}}>
-                                <img src={require(`../../asset/images/numberImages/${p.id}.png`)} className="card-img-top" alt="..."/>
-                                <div className="card-body">
-                                
-                                    <h5 className="card-title">{p.productName}</h5>
-                                    <p className="card-text">NT ${p.price}</p>
-                                
-                                </div>
-                            </a>
-                        
-                        </div>
                     </div>
-                    
-                ))}
+                </div>
+                
+            ))}
 
-          
         </React.Fragment>
     )
-
 }
 
 export default Card

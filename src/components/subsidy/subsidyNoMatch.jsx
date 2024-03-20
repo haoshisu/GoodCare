@@ -1,17 +1,9 @@
 import React from "react";
-import Header from "../header/Header";
-import IndexNav from "../indexnav/IndexNav";
-import PathBox from "../pathbox/PathBox";
-import Footer from "../footer/Footer";
-import BackToTopBtn from "../backtotopbtn/BackToTopBtn";
 import "../../asset/css/subsidy.css";
 
-const Subsidy_noMatch = () => {
+const SubsidyNoMatch = () => {
   return (
     <React.Fragment>
-      <Header />
-      <IndexNav />
-      <PathBox />
       <div className="container col-1"></div>
       <div className="container col-10">
         <div className="row">
@@ -40,7 +32,7 @@ const Subsidy_noMatch = () => {
                   </div>
                 </div>
                 <div className="text-center mt-4">
-                  <a href="./subsidy_Search1.html">
+                  <a href="./SubsidySearch">
                     <button
                       type="button"
                       className="btn btn-lg custom-button px-5"
@@ -54,10 +46,7 @@ const Subsidy_noMatch = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
-      <BackToTopBtn />
     </React.Fragment>
   );
 };
-export default Subsidy_noMatch;
+export default SubsidyNoMatch;

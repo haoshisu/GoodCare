@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
-import '../asset/css/news.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from '../components/header/Header';
 import IndexNav from '../components/indexnav/IndexNav';
@@ -67,6 +66,9 @@ function Service() {
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
       <Footer/>
       <BackToTopBtn/>
     </>

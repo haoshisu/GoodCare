@@ -36,3 +36,9 @@
   .hover:hover>.hover2{
     top: 0px;
   }
+
+  @media screen and (max-width: 520px) {
+    .hover {
+      display: none;
+    }
+  }

@@ -1,0 +1,39 @@
+.footer{
+    background-color: #504E4E;
+      
+  }
+  .footer p{
+      font-size: 20px;
+      color:#ddd;
+  }
+  .footer img{
+      width: 20em;
+  } 
+
+
+  @media screen and (max-width: 992px) {
+    .footer p{
+        font-size: 18px;
+    }
+    .footer img{
+        width: 18em!important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer p{
+        font-size: 15px;
+    }
+    .footer img{
+        width: 13em!important;;
+    }
+  }
+  
+  @media screen and (max-width: 520px) {
+    .footer p{
+        font-size: 10px;
+    }
+    .footer img{
+        width: 11em!important;;
+    }
+  }

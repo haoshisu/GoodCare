@@ -1,10 +1,11 @@
 import React from 'react';
-import './Footer.css'
+import './Footersecond.css'
 
-function Homefooter() {
+function Footersecond() {
 
   return (
       <div className="footer">
+          <br />
           <br />
           <div className="container mb-5 d-flex justify-content-between">
               <div className="d-flex flex-column justify-content-space-evenly">
@@ -36,4 +37,4 @@ function Homefooter() {
   );
 }
 
-export default Homefooter;
+export default Footersecond;
