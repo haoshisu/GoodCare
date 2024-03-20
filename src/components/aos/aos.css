@@ -69,3 +69,11 @@
     font-size: 40px
   }
 }
+
+@media screen and (max-width: 520px) {
+  .old1 {
+    font-size: 30px;
+    left: 20px;
+    top:-40px;
+  }
+}

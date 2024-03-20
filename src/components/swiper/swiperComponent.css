@@ -20,3 +20,10 @@
   .swiper-pagination {
     position: static!important;
   }
+
+  @media screen and (max-width: 430px) {
+    .swiper-slide img {
+      width: 180%;
+    }
+      
+  }

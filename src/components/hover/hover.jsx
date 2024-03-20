@@ -45,20 +45,22 @@ const ScrollEffectComponent = () => {
         };
     }, []);
 
-    return <div class="hover" id="hoverContainer">
-        <div class="hover1">
-            <img src={require('../../asset/images/Home/hover1.png')} />
+    return <>
+        <div class="hover" id="hoverContainer">
+            <div class="hover1">
+                <img src={require('../../asset/images/Home/hover1.png')} alt="老人圖1" />
+            </div>
+            <div class="hover2">
+                <img src={require('../../asset/images/Home/hover2.png')} alt="老人圖2" />
+            </div>
+            <div class="hover1">
+                <img src={require('../../asset/images/Home/hover3.png')} alt="老人圖3" />
+            </div>
+            <div class="hover2">
+                <img src={require('../../asset/images/Home/hover4.png')} alt="老人圖4" />
+            </div>
         </div>
-        <div class="hover2">
-            <img src={require('../../asset/images/Home/hover2.png')} />
-        </div>
-        <div class="hover1">
-            <img src={require('../../asset/images/Home/hover3.png')} />
-        </div>
-        <div class="hover2">
-            <img src={require('../../asset/images/Home/hover4.png')} />
-        </div>
-    </div>
+    </>
 };
 
 export default ScrollEffectComponent;

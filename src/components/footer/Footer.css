@@ -22,18 +22,24 @@
 
   @media screen and (max-width: 768px) {
     .footer p{
-        font-size: 16px;
+        font-size: 15px;
     }
     .footer img{
-        width: 15em!important;;
+        width: 13em!important;;
     }
   }
   
   @media screen and (max-width: 520px) {
     .footer p{
-        font-size: 13px;
+        font-size: 10px;
     }
     .footer img{
-        width: 10em!important;;
+        width: 11em!important;;
+    }
+  }
+
+  @media screen and (max-width: 398px) {
+    .footer p{
+        font-size: 9px;
     }
   }

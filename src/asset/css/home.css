@@ -53,13 +53,12 @@
     content: '';
     width: 45vw;
     height: 100vh;
-    bottom: 20px;
     background-image: url('../images/Home/heartlove.png');
-    background-size:auto;
+    background-size:cover;
     opacity: 0.3;
     position: absolute;
     z-index: -1;
-    top: 77%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -394,20 +393,29 @@
   .icontitle1 {
     font-size: 0.7em;
   }
-  .brand1{
-    font-size: 1em;
-  }
-  .brand2{
-    font-size: 0.5em;
+  .brand{
+    display: none;
   }
   .iconcrae ul li a {
     width: 200px;
     height: 200px;
 
   }
+  .homebr{
+    display: none;
+  }
+  .homebr1{
+    display: none;
+  }
+  .homebr2{
+    display: none;
+  }
+  .homebr3{
+    display: none;
+  }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 422px) {
   .iconcrae ul li a {
     width: 150px;
     height: 150px;

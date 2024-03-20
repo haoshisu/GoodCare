@@ -17,8 +17,10 @@ const Home = () => {
         <Scroll />
         <Header />
         <IndexNav />
+        <div class="homebr">
         <br />
         <br />
+        </div>
         <br />
         <br />
         <MyclassNameComponent />
@@ -104,19 +106,23 @@ const Home = () => {
             </ul>
           </div>
         </div>
+        <div class="homebr1">
         <br />
         <br />
         <br />
         <br />
         <br />
         <br />
+        </div>
         <ScrollEffectComponent />
+        <div class="homebr2">
         <br />
         <br />
         <br />
         <br />
         <br />
         <br />
+        </div>
         <div className="container">
           <div className="brand">
             <div className="row">
@@ -229,6 +235,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div class="homebr3">
         <br />
         <br />
         <br />
@@ -237,6 +244,7 @@ const Home = () => {
         <br />
         <br />
         <br />
+        </div>
         <div className="d-flex justify-content-center">
           <img src={require("../asset/images/Home/footerold.png")} alt="oldpeople" className="footerold"/>
         </div>
