@@ -27,6 +27,7 @@ function SingleProduct() {
       <div className="container">
         <div className="row mb-5">
           <ProductSideBar />
+          <div className='col-1'></div>
           <div className="col-md-12 col-lg-9 col-xl-9'">
             <Single />
           </div>

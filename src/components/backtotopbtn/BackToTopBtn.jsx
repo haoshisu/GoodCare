@@ -29,11 +29,11 @@ const scrollToTop = () =>{
 window.addEventListener('scroll', toggleVisible); 
 
 return ( 
-	<button> 
+	<div> 
 	    <FaArrowCircleUp onClick={scrollToTop} id="BackToTopBtn"
 		style={{display: visible ? 'inline' : 'none'}}
 		/> 
-	</button> 
+	</div>
     // <button id="backToTopBtn" onclick="scrollToTop()">⬆︎</button>
 ); 
 } 

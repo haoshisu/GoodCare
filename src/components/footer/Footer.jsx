@@ -10,7 +10,7 @@ function Footer() {
       </div>
       <div className="footer">
           <br />
-          <div className="container mb-5 d-flex justify-content-between">
+          <div className="container d-flex justify-content-between">
               <div className="d-flex flex-column justify-content-space-evenly">
                   <p><i className="fa-solid fa-phone"></i> {"電話: 04-229374948"}</p>
                   <p><i className="fa-solid fa-house"></i> {"地址: 408台中市南屯區公益路二段51號18樓"}</p>

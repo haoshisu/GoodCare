@@ -29,6 +29,9 @@
   
 @media screen and (max-width: 390px) {
     .card-text{
-        font-Size:1em;
+        font-Size:0.8em;
+    }
+    .card-title{
+     font-size:13px;; 
     }
   }

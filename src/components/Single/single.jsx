@@ -88,7 +88,7 @@ const Single = () => {
             <img
               src={require(`../../asset/images/numberImages/${index}.png`)}
               alt="..."
-              style={{width:'100%'}}
+              style={{ width: '100%' }}
             />
           </div>
           <div className="col-md-8">
@@ -108,12 +108,10 @@ const Single = () => {
                 </span>
               </p>
               {/* <!-- 數量按鈕 --> */}
-              <div className="row align-items-center">
-                <div className="col-auto">
-                  <span className="h4">數量</span>
-                </div>
-                <div className="col-4">
-                  <div className="input-group">
+              <div className="row">
+                <div className="col-8">
+                <div className="input-group">
+                  <div className="h4 me-3">數量</div>
                     <Counter curNum={numToBuy} childToParent={setNumToBuy} />
                   </div>
                 </div>
@@ -124,7 +122,7 @@ const Single = () => {
                 <a
                   className="direct2cart btn btn-outline-success"
                   type="button"
-            
+
                   onClick={handlePutInCart}
                   href="/cart"
                 >
@@ -152,7 +150,7 @@ const Single = () => {
           </p>
           <img
             src={require(`../../asset/images/numberDescripiton/${index}.png`)}
-            alt="" style={{width:'100%'}}
+            alt="" style={{ width: '100%' }}
           />
         </div>
       </div>

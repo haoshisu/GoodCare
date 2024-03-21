@@ -114,12 +114,12 @@ const UserLogin = (  ) => {
                                     <button className="login" type="button" onClick={DoLogin} >登入</button>
                                 </div>
                             </form>
-                            <div className="d-flex justify-content-center mb-3">
-                                <Link to="/UserRegister">
-                                    <h5>註冊帳號&emsp;｜</h5>
+                            <div className="userregister d-flex justify-content-center mb-3">
+                                <Link to="/UserRegister" style={{textDecoration:'none'}}>
+                                    <h5 >註冊帳號&emsp;｜</h5>
                                 </Link>                            
 
-                                <Link to="/UserForget">
+                                <Link to="/UserForget" style={{textDecoration:'none'}}>
                                     <h5>&emsp;忘記密碼</h5>
                                 </Link>
                             </div>
