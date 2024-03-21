@@ -6,19 +6,24 @@ import Footersecond from '../components/footersecond/Footersecond';
 import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
 import Modify from '../components/modify/modify';
 const Service = () => {
-  
+  const userData = localStorage.getItem('auth')
+  if (!userData){ window.location.href = './userlogin' }
+
   return (
     <React.Fragment>
+      {userData &&
+        <>
         <Header />
         <IndexNav />
         <br/>
         <br/>
         <Modify/>
-  
-        {/* 底下用8個換行空出雨footer距離 */}
+
         <br />
         <Footersecond/>
         <BackToTopBtn />
+        </>
+      }
       </React.Fragment>
   )
 }

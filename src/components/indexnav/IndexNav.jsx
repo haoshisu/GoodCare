@@ -1,22 +1,14 @@
+import React, { useEffect, useState } from 'react';
 import './IndexNav.css'
-import React from 'react';
-import { useState,useContext,useEffect } from 'react';
-import AuthContext from "../../Context/AuthProvider";
-// import { UserModify } from '../../pages/appIndex';
 
 function IndexNav() {
-  const { auth } = useContext(AuthContext);
-  const [road,setRoad] = useState('/userlogin')
+  const [road,setRoad] = useState('./userlogin')
+  const userData = localStorage.getItem('auth')
 
-  useEffect(() => {
-    if (auth && auth.accessToken) {
-      setRoad('/UserModify');
-    } else {
-      setRoad('/userlogin');
-    }
-  }, [auth]);
-  console.log( auth ) 
-
+  useEffect(
+    () => userData? setRoad('./usermodify'): setRoad('./userlogin'),
+    [userData]
+  )
 
   return (
   

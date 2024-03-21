@@ -2,6 +2,8 @@ import React from "react";
 import "./CartPayment.css";
 
 const CartPayment = ( { doFirstBtn, doThirdBtn } ) => {
+  const userData = localStorage.getItem('auth')
+  console.log(userData)
   return (
     <>
       <div className="container">
@@ -38,7 +40,7 @@ const CartPayment = ( { doFirstBtn, doThirdBtn } ) => {
                   placeholder="請填寫您的聯絡電話"
                 />
               </div>
-              <div className="mb-3 row">
+              {/* <div className="mb-3 row">
                 <div className="col-md-6">
                   <label for="city" className="form-label">
                     縣市
@@ -57,7 +59,7 @@ const CartPayment = ( { doFirstBtn, doThirdBtn } ) => {
                     <option value="">請選擇地區</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
               <div className="mb-3">
                 <label for="address" className="form-label">
                   詳細地址
@@ -112,7 +114,7 @@ const CartPayment = ( { doFirstBtn, doThirdBtn } ) => {
                   placeholder="請填寫您的聯絡電話"
                 />
               </div>
-              <div className="mb-3 row">
+              {/* <div className="mb-3 row">
                 <div className="col-md-6">
                   <label for="city" className="form-label">
                     縣市
@@ -129,7 +131,7 @@ const CartPayment = ( { doFirstBtn, doThirdBtn } ) => {
                     <option value="">請選擇地區</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
               <div className="mb-3">
                 <label for="address" className="form-label">
                   詳細地址

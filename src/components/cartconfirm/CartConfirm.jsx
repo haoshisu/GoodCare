@@ -3,7 +3,7 @@ import "./CartConfirm.css";
 
 const CartConfirm = () => {
   const cartInfo = JSON.parse(sessionStorage.getItem('cartInfo')) || []
-  const discount = parseFloat(sessionStorage.getItem('couponDiscount'))
+  const discount = parseFloat(sessionStorage.getItem('couponDiscount'))|| 1
   const charge = 100
   
   //calculate price
@@ -44,7 +44,6 @@ const CartConfirm = () => {
           { cartInfo &&
               cartInfo.map((val,ind)=>{
                 return(
-                  
                   <div className="row border-bottom pb-2 mb-2">
                     <div className="col">{ ind+1 }</div>
                     <div className="col">{ val.productName }</div>

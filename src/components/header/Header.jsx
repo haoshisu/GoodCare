@@ -1,35 +1,16 @@
-import React, { useEffect, useState,useContext } from 'react';
-import AuthContext from "../../Context/AuthProvider";
-import axios from 'axios'
+import React from 'react';
 import './Header.css'
 
 function Header( ) {
-    const [userName, setUserName] = useState('');
-    const { auth } = useContext(AuthContext);
-    const [road, setRoad] = useState('/userlogin')
-    // console.log(auth.accessToken)
-    useEffect(() => {
-        if ( auth && auth.accessToken) {
-            // console.log(auth)
-            const accessToken = auth.accessToken;
-            axios.get('http://localhost:8000/member/login', {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`
-                }
-            })
-            .then(response => {
-                setUserName(response.data[0].name);
-                setRoad('/UserModify')
-                // console.log(response)
-            })
-            .catch(error => {
-                // console.error('Failed to fetch user information:', error);
-                setRoad('/userlogin')
-            });
-        }else{
-            setRoad('/userlogin')
+    const userData = JSON.parse(localStorage.getItem('auth'))||''
+    
+    const doRedirect = () => {
+        if (userData){
+            window.location.href = '/usermodify'
+        } else {
+            window.location.href = '/userlogin'   
         }
-    }, [auth]);
+    }
   
     
   return (
@@ -49,10 +30,10 @@ function Header( ) {
                 </nav>
                 <div className="d-flex align-items-center search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
                 <div className="d-flex align-items-center">
-                    <a className="user text-dark" href= {road}>
+                    <a className="user text-dark" onClick={ doRedirect } href='#a'>
                         <i className="fa-solid fa-user"></i>
                         &nbsp;
-                        <span>{userName ? `${userName}  你好` : '會員登入/註冊'}</span>
+                        <span>{userData.name ? `${userData.name}  你好` : '會員登入/註冊'}</span>
                         
                     </a>
                 </div>
