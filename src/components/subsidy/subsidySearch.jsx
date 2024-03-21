@@ -3,13 +3,12 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "../../asset/css/subsidy.css";
 
-const SubsidySearch = ({ goToSecond }) => {
+const SubsidySearch = ({ goToSecond, setFormData }) => {
   const { register, handleSubmit } = useForm();
 
   const [selectedIdentity, setSelectedIdentity] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedDistrict, setSelectedDistrict] = useState("");
-
   const populateDistricts = () => {
     // 根據所選城市定義區域
     let districts = [];
@@ -84,31 +83,19 @@ const SubsidySearch = ({ goToSecond }) => {
     }
     return districts;
   };
-  const handleCityChange = (event) => {
-    setSelectedCity(event.target.value);
-    setSelectedDistrict(""); // 清空區域選擇
-  };
 
   const handleDistrictChange = (event) => {
     setSelectedDistrict(event.target.value);
   };
 
-  const handleIdentityChange = (event) => {
-    setSelectedIdentity(event.target.value);
+  const handleCityChange = (event) => {
+    setSelectedCity(event.target.value); // 更新所選縣市
+    setSelectedDistrict(""); // 清空區域選擇
   };
-
-  const onSubmit = () => {
-    console.log("Form Data:", {
-      selectedIdentity,
-      selectedCity,
-      selectedDistrict,
-    });
-    // 調用傳遞給組件的goToSecond函式並將表單資料作為參數傳遞
-    goToSecond({
-      selectedIdentity,
-      selectedCity,
-      selectedDistrict,
-    });
+  const onSubmit = (data) => {
+    // alert(JSON.stringify(data));
+    setFormData(data);
+    goToSecond();
   };
 
   return (
@@ -141,20 +128,24 @@ const SubsidySearch = ({ goToSecond }) => {
                       <select
                         className="form-control"
                         id="identitySelect"
-                        onChange={handleIdentityChange}
-                        value={selectedIdentity}
+                        {...register("identity")}
+                        // value={selectedIdentity}
                       >
-                        <option>請選擇身份</option>
-                        <option>50歲以上失智者</option>
-                        <option>55歲以上原住民</option>
-                        <option>65歲以上老人</option>
-                        <option>身心障礙者</option>
-                        <option>其他</option>
+                        <option value="請選擇身份">請選擇身份</option>
+                        <option value="50歲以上失智者">50歲以上失智者</option>
+                        <option value="55歲以上原住民">55歲以上原住民</option>
+                        <option value="65歲以上老人">65歲以上老人</option>
+                        <option value="身心障礙者">身心障礙者</option>
+                        <option value="其他">其他</option>
                       </select>
                     </div>
                     <div className="form-group">
                       <label htmlFor="income">收入狀況:</label>
-                      <select className="form-control" id="income">
+                      <select
+                        className="form-control"
+                        id="income"
+                        {...register("income")}
+                      >
                         <option>請選擇收入狀況</option>
                         <option>低收入戶</option>
                         <option>中低收入戶</option>
@@ -163,7 +154,11 @@ const SubsidySearch = ({ goToSecond }) => {
                     </div>
                     <div className="form-group">
                       <label htmlFor="disability">是否持有身心障礙證明:</label>
-                      <select className="form-control" id="disability">
+                      <select
+                        className="form-control"
+                        id="disability"
+                        {...register("disability")}
+                      >
                         <option>請選擇是否持有身心障礙證明</option>
                         <option>是</option>
                         <option>否</option>
@@ -174,8 +169,10 @@ const SubsidySearch = ({ goToSecond }) => {
                       <select
                         className="form-control"
                         id="city"
-                        onChange={handleCityChange}
                         value={selectedCity}
+                        {...register("city", {
+                          onChange: handleCityChange,
+                        })}
                       >
                         <option value="">請選擇縣市</option>
                         <option value="台北市">台北市</option>
@@ -207,11 +204,14 @@ const SubsidySearch = ({ goToSecond }) => {
                       <select
                         className="form-control"
                         id="district"
-                        onChange={handleDistrictChange}
                         value={selectedDistrict}
+                        {...register("district", {
+                          // 更新所選區域
+                          onChange: (e) => setSelectedDistrict(e.target.value),
+                        })}
                       >
                         <option value="">請選擇區域</option>
-                        {/* 动态生成区域选项 */}
+
                         {populateDistricts().map((district) => (
                           <option key={district} value={district}>
                             {district}
@@ -219,16 +219,15 @@ const SubsidySearch = ({ goToSecond }) => {
                         ))}
                       </select>
                     </div>
+                    <div className="text-center mt-5">
+                      <input
+                        type="submit"
+                        className="btn btn-lg custom-button px-5"
+                        // onClick={goToSecond}
+                        value={"下一頁"}
+                      />
+                    </div>
                   </form>
-                </div>
-
-                <div className="text-center mt-5">
-                  <button
-                    className="btn btn-lg custom-button px-5"
-                    onClick={goToSecond}
-                  >
-                    下一頁
-                  </button>
                 </div>
               </div>
             </div>

@@ -5,6 +5,7 @@ import PathBox from "../components/pathbox/PathBox";
 import Footersecond from "../components/footersecond/Footersecond";
 import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
 import SubsidyHome from "../components/subsidy/subsidy";
+
 import {
   SubsidyNoMatch,
   SubsidyResult,
@@ -18,7 +19,7 @@ const Service = () => {
   const [isSecond, setIsSecond] = useState(false); //confirm
   const [isThird, setIsThird] = useState(false); //result
   const [isNoMatch, setIsNoMatch] = useState(false); //nomatch
-  // const [register, handleSubmit] = useForm(data);
+  const [formData, setFormData] = useState("");
 
   const goToFirst = () => {
     setIsHome(false);
@@ -45,12 +46,18 @@ const Service = () => {
       <IndexNav />
       <PathBox pathName={"補助資訊"} path={"/subsidy"} />
       {isHome && <SubsidyHome goToFirst={goToFirst} />}
-      {isFirst && <SubsidySearch goToSecond={goToSecond} />}
-      {isSecond && (
-        <SubsidySearchCFM goToThird={goToThird} goToFirst={goToFirst} />
+      {isFirst && (
+        <SubsidySearch goToSecond={goToSecond} setFormData={setFormData} />
       )}
-      {isThird && <SubsidyResult goToFirst={goToFirst} />}
-      {isNoMatch && <SubsidyNoMatch />}
+      {isSecond && (
+        <SubsidySearchCFM
+          goToThird={goToThird}
+          goToFirst={goToFirst}
+          formData={formData}
+        />
+      )}
+      {isThird && <SubsidyResult goToFirst={goToFirst} formData={formData} />}
+      {isNoMatch && <SubsidyNoMatch goToFirst={goToFirst} />}
 
       <br />
       <Footersecond />

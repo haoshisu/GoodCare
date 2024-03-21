@@ -1,112 +1,24 @@
+//import React from "react";
 import React, { useState } from "react";
 import "../../asset/css/subsidy.css";
 
-const subsidySearchCFM = ({ goToThird, goToFirst }) => {
-  const populateDistricts = () => {
-    const citySelect = document.getElementById("city");
-    const districtSelect = document.getElementById("district");
-    const city = citySelect.value;
-    districtSelect.innerHTML = "";
-
-    // Define districts based on selected city
-    let districts = [];
-    switch (city) {
-      case "台北市":
-        districts = [
-          "大安區",
-          "萬華區",
-          "信義區",
-          "中正區",
-          "松山區",
-          "大同區",
-          "中山區",
-          "北投區",
-          "士林區",
-          "內湖區",
-          "南港區",
-        ];
-        break;
-      case "新北市":
-        districts = [
-          "板橋區",
-          "三重區",
-          "中和區",
-          "新莊區",
-          "永和區",
-          "土城區",
-          "樹林區",
-          "三峽區",
-          "鶯歌區",
-          "新店區",
-          "坪林區",
-          "烏來區",
-          "汐止區",
-          "深坑區",
-          "石碇區",
-          "平溪區",
-          "雙溪區",
-          "貢寮區",
-          "金山區",
-          "萬里區",
-          "蘆洲區",
-          "五股區",
-          "泰山區",
-          "林口區",
-          "八里區",
-          "淡水區",
-          "三芝區",
-          "石門區",
-        ];
-        break;
-      case "桃園市":
-        districts = [
-          "中壢區",
-          "平鎮區",
-          "龍潭區",
-          "楊梅區",
-          "新屋區",
-          "觀音區",
-          "桃園區",
-          "龜山區",
-          "八德區",
-          "大溪區",
-          "復興區",
-          "大園區",
-          "蘆竹區",
-        ];
-        break;
-      // Add districts for other cities as needed
-      default:
-        break;
-    }
-
-    // Dynamically add district options to the dropdown
-    districts.forEach((district) => {
-      const option = document.createElement("option");
-      option.value = district;
-      option.textContent = district;
-      districtSelect.appendChild(option);
-    });
-  };
-
-  // Retrieve selected identity from sessionStorage and display it
-  const selectedIdentity = sessionStorage.getItem("selectedIdentity");
-  const identityPlaceholder = document.getElementById("identityPlaceholder");
-  if (identityPlaceholder) {
-    identityPlaceholder.textContent = selectedIdentity;
-  }
-
+const SubsidySearchCFM = ({
+  goToThird,
+  goToFirst,
+  selectedIdentity,
+  formData,
+}) => {
+  console.log(formData);
   // Function to handle form submission
   const submitForm = () => {
-    const selectedIdentity = document
-      .getElementById("identityPlaceholder")
-      .textContent.trim();
-    if (selectedIdentity === "其他") {
-      window.location.href = "/subsidyNoMatch"; // Redirect to no match page for "其他"
+    if (formData.identity === "其他") {
+      window.location.href = "/subsidyNoMatch";
     } else {
-      window.location.href = "/subsidyResult"; // Redirect to search result page
+      // window.location.href = "/subsidyResult";
+      goToThird();
     }
   };
+
   return (
     <React.Fragment>
       <div className="container col-10">
@@ -145,13 +57,13 @@ const subsidySearchCFM = ({ goToThird, goToFirst }) => {
                       <tr>
                         <td className="text-center m-line">身份</td>
                         <td className="text-center" id="identityPlaceholder">
-                          {selectedIdentity}
+                          {formData.identity}
                         </td>
                       </tr>
                       <tr>
                         <td className="text-center m-line">收入狀況</td>
                         <td className="text-center" id="income">
-                          一般戶
+                          {formData.income}
                         </td>
                       </tr>
                       <tr>
@@ -159,19 +71,19 @@ const subsidySearchCFM = ({ goToThird, goToFirst }) => {
                           是否持有身心障礙證明
                         </td>
                         <td className="text-center" id="disability">
-                          否
+                          {formData.disability}
                         </td>
                       </tr>
                       <tr>
                         <td className="text-center m-line">縣市</td>
                         <td className="text-center" id="city">
-                          台北市
+                          {formData.city}
                         </td>
                       </tr>
                       <tr>
                         <td className="text-center m-line">區域</td>
                         <td className="text-center" id="district">
-                          大安區
+                          {formData.district}
                         </td>
                       </tr>
                       {/* Add other form items as needed */}
@@ -188,7 +100,7 @@ const subsidySearchCFM = ({ goToThird, goToFirst }) => {
                   &nbsp;&nbsp;&nbsp;
                   <button
                     className="btn btn-lg custom-button px-5"
-                    onClick={goToThird}
+                    onClick={submitForm}
                   >
                     確認送出
                   </button>
@@ -201,4 +113,4 @@ const subsidySearchCFM = ({ goToThird, goToFirst }) => {
     </React.Fragment>
   );
 };
-export default subsidySearchCFM;
+export default SubsidySearchCFM;
