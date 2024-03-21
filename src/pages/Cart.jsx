@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useParams } from "react-router";
 import Header from "../components/header/Header";
 import IndexNav from "../components/indexnav/IndexNav";
 import CartSearch from "../components/cartsearch/CartSearch";
@@ -11,12 +10,11 @@ import CartPayment from "../components/cartpayment/CartPayment";
 import CartConfirm from "../components/cartconfirm/CartConfirm";
 
 const Cart = () => {
-  // const sideBarTitle = "購物專區";
-  const { category } = useParams();
-
   const [isFirst, setIsFirst] = useState(true);
   const [isSecond, setIsSecond] = useState(false);
   const [isThird, setIsThird] = useState(false);
+  const [isActive,setIsActive] = useState(false)
+  const [isDone,setIsDone] = useState(false)
 
   const goToFirst = () => {
     setIsFirst(true);
@@ -39,9 +37,11 @@ const Cart = () => {
       <Header />
       <IndexNav />
       <CartSearch
-        doFirstBtn={goToFirst}
-        doSecondBtn={goToSecond}
-        doThirdBtn={goToThird}
+        SecondActive={isSecond}
+        ThirdActive={isThird}
+        FirstDone={isSecond||isThird}
+        SecondDone={isThird}
+        ThirdDone={isThird}
       />
       <br />
       <br />

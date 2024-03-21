@@ -2,6 +2,18 @@ import React from "react";
 import "./CartConfirm.css";
 
 const CartConfirm = () => {
+  const cartInfo = JSON.parse(sessionStorage.getItem('cartInfo')) || []
+  const discount = parseFloat(sessionStorage.getItem('couponDiscount'))
+  const charge = 100
+  
+  //calculate price
+  const totalPrice = cartInfo.reduce((acc, val) => {
+    const productTotal = val.price * val.quantity;
+    return acc + productTotal;
+  }, 0);
+
+  const discountPrice = totalPrice*discount+charge
+
   return (
     <>
       <div className="container col-9 mt-5">
@@ -29,26 +41,21 @@ const CartConfirm = () => {
             <h5 className="fw-bold">小計</h5>
           </div>
         </div>
-        <div className="row border-bottom pb-2 mb-2">
-          <div className="col">1</div>
-          <div className="col">行動拐杖</div>
-          <div className="col">$800</div>
-          <div className="col">1</div>
-          <div className="col">$800</div>
-        </div>
-        <div className="row border-bottom pb-2 mb-2">
-          <div className="col">2</div>
-          <div className="col">行動拐杖</div>
-          <div className="col">$800</div>
-          <div className="col">1</div>
-          <div className="col">$800</div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+          { cartInfo &&
+              cartInfo.map((val,ind)=>{
+                return(
+                  
+                  <div className="row border-bottom pb-2 mb-2">
+                    <div className="col">{ ind+1 }</div>
+                    <div className="col">{ val.productName }</div>
+                    <div className="col">{ val.price }</div>
+                    <div className="col">{ val.quantity }</div>
+                    <div className="col">{ val.price*val.quantity }</div>
+                  </div>
+                )
+              })
+          }
+
         <br />
         <br />
         <div className="row border-bottom pb-2 mb-2">
@@ -58,7 +65,7 @@ const CartConfirm = () => {
           </div>
           <div className="col-4"></div>
           <div className="col-5">
-            <h5>$1600</h5>
+            <h5>{ totalPrice }</h5>
           </div>
         </div>
         <div className="row border-bottom pb-2 mb-2">
@@ -68,7 +75,7 @@ const CartConfirm = () => {
           </div>
           <div className="col-4"></div>
           <div className="col-5">
-            <h5>$100</h5>
+            <h5>{ totalPrice-(discountPrice-charge) }</h5>
           </div>
         </div>
         <div className="row border-bottom pb-2 mb-2">
@@ -78,7 +85,7 @@ const CartConfirm = () => {
           </div>
           <div className="col-4"></div>
           <div className="col-5">
-            <h5>$0</h5>
+            <h5>{ charge }</h5>
           </div>
         </div>
         <div className="row">
@@ -88,7 +95,7 @@ const CartConfirm = () => {
           </div>
           <div className="col-4"></div>
           <div className="col-5">
-            <h5>$1500</h5>
+            <h5>{ discountPrice }</h5>
           </div>
         </div>
         <br />
