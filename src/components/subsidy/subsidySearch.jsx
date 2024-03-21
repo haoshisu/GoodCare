@@ -114,7 +114,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
             >
               <h3>請填寫被照顧者之相關資訊:</h3>
               <div className="row">
-                <div className="col-md-5 mb-4 mt-4 d-flex justify-content-center">
+                <div className="col-md-5 mb-5 mt-4 d-flex justify-content-center">
                   <img
                     src={require("../../asset/images/subsidy/elder.jpg")}
                     alt="elder"
@@ -122,7 +122,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                   />
                 </div>
                 <div className="col-md-6 mb-4">
-                  <form className="mb-4" onSubmit={handleSubmit(onSubmit)}>
+                  <form className="mb-1" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                       <label htmlFor="identity">身份:</label>
                       <select

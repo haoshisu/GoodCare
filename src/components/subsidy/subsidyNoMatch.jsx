@@ -4,7 +4,7 @@ import "../../asset/css/subsidy.css";
 const SubsidyNoMatch = ({ goToFirst }) => {
   return (
     <React.Fragment>
-      <div className="container col-1"></div>
+      {/* <div className="container col-1"></div> */}
       <div className="container col-10">
         <div className="row">
           <div className="col-md-12 text-left">
@@ -14,9 +14,9 @@ const SubsidyNoMatch = ({ goToFirst }) => {
           </div>
         </div>
         <div className="container col-1"></div>
-        <div className="container col-10">
+        <div className="container col-10 noMatchCard">
           <div className="row justify-content-center mt-4 mb-4">
-            <div className="col-10">
+            <div className="col-12 ">
               <div className="content text-center">
                 <h3 className="noMatch">
                   很抱歉，您所輸入的資料不符合長照2.0補助對象，請參考以下流程：

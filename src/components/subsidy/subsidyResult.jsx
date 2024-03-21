@@ -71,17 +71,17 @@ const SubsidyResult = ({ goToFirst }) => {
           </div>
         </div>
         <div className="row justify-content-center mt-4 mb-4">
-          <div className="col-10">
+          <div className="col-12">
             <div className="content">
               <h3 style={{ color: "#cf4501", fontWeight: "bold" }}>
                 您的補助查詢結果:
               </h3>
               <p></p>
-              <div className="container mt-5">
+              <div className="container mt-5 custom-card">
                 <div className="row">
                   <div className="col-md-12">
-                    <div className="btn-container">
-                      <div className="btn-container">
+                    <div className="btn-container ">
+                      <div className="btn-container btn-containerA">
                         <button
                           type="button"
                           className="btn btn-toggle"

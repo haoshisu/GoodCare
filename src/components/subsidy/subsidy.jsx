@@ -13,7 +13,7 @@ const subsidyHome = ({ goToFirst }) => {
               <br />
               <br />
             </div>
-            <div className="d-flex justify-content-between align-items-center">
+            <div className="btn-containerA d-flex justify-content-between align-items-center">
               <a
                 href="/subsidyLink1"
                 target="_blank"
@@ -62,11 +62,12 @@ const subsidyHome = ({ goToFirst }) => {
           <div className="col-md-1"></div>
           <div className="col-md-5 mb-4">
             <div className="text-center">
-              <h3>用心照顧，共創美好生活</h3>
+              <h3 className="picCaption">用心照顧，共創美好生活</h3>
             </div>
             <img
               src={require("../../asset/images/subsidy/cuteOldmen.png")}
               alt="cuteoldmen"
+              className="centered-image responsive-image"
             />
           </div>
         </div>

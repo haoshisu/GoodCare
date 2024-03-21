@@ -1,7 +1,20 @@
 import React from "react";
 import "../../asset/css/subsidy.css";
 
-const SubsidyResultC = () => {
+const SubsidyResultC = ({ formData }) => {
+  console.log(formData);
+  // 根据不同的收入狀況返回對應的政府補貼比例
+  const SubsidyPercentage = () => {
+    switch (formData.income) {
+      case "低收入":
+        return "100% 的照顧項目支出";
+      case "中低收入":
+        return "95% 的照顧項目支出";
+      case "一般":
+      default:
+        return "84% 的照顧項目支出";
+    }
+  };
   return (
     <React.Fragment>
       <div id="content1" className="content-block">
@@ -18,13 +31,13 @@ const SubsidyResultC = () => {
               <tr>
                 <td className="text-center m-line ">您的收入狀況為</td>
                 <td className="text-center " id="income">
-                  一般戶
+                  {/* {formData.income} */}一般戶
                 </td>
               </tr>
               <tr>
                 <td className="text-center m-line ">政府補貼</td>
                 <td className="text-center " id="subsidy">
-                  84% 的照顧項目支出
+                  {SubsidyPercentage}84% 的照顧項目支出
                 </td>
               </tr>
             </tbody>

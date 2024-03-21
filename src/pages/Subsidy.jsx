@@ -5,7 +5,7 @@ import PathBox from "../components/pathbox/PathBox";
 import Footersecond from "../components/footersecond/Footersecond";
 import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
 import SubsidyHome from "../components/subsidy/subsidy";
-
+import SubsidyResultC from "../components/subsidy/subsidyResultC";
 import {
   SubsidyNoMatch,
   SubsidyResult,
@@ -50,6 +50,22 @@ const Service = () => {
     setIsNoMatch(true);
   };
 
+  // 定義選定的收入狀況
+  const [incomeCategory, setIncomeCategory] = useState("");
+
+  // 根据不同的收入狀況返回對應的政府補貼比例
+  const getSubsidyPercentage = () => {
+    switch (formData.Income) {
+      case "低收入":
+        return "100% 的照顧項目支出";
+      case "中低收入":
+        return "95% 的照顧項目支出";
+      case "一般":
+      default:
+        return "84% 的照顧項目支出";
+    }
+  };
+
   return (
     <React.Fragment>
       <Header />
@@ -70,7 +86,16 @@ const Service = () => {
       {isThird && <SubsidyResult goToFirst={goToFirst} formData={formData} />}
       {isNoMatch && <SubsidyNoMatch goToFirst={goToFirst} />}
 
+      {/* <SubsidyResultC income={incomeValue} /> */}
+      {/* 選擇的收入狀況和對應的政府比例
+      {isThird && (
+        <SubsidyResultC
+          incomeCategory={incomeCategory}
+          subsidyPercentage={getSubsidyPercentage()}
+        />
+      )} */}
       <br />
+
       <Footersecond />
       <BackToTopBtn />
     </React.Fragment>
