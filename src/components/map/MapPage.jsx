@@ -1,0 +1,61 @@
+import React from 'react';
+import '../../components/pagination/Pagination.css';
+
+function Pagination ({ totalItems, itemsPerPage, setCurrentPage, currentPage }) {
+    let pages = []
+    let maxPage = Math.ceil(totalItems / itemsPerPage)
+
+    for (let i=1; i<= maxPage; i++) {
+      pages.push(i)
+    }
+
+    // console.log(maxPage)
+    return (
+      <nav aria-label="Page navigation example" className="d-flex justify-content-center">
+        <ul className="pagination">
+            <li className="page-item">
+                <button className="page-link" aria-label="Previous"
+                  onClick={() =>
+                    setCurrentPage((prev) => {
+                      if (prev === 1) return prev;
+                      return prev - 1;
+                    })}>
+                    <span aria-hidden="true">&laquo;</span>
+                </button>
+            </li>
+            
+            {
+            pages.map((page, ind) => {
+              return(
+                <li className={currentPage === page ? "page-item active" : "page-item"}>
+                  <a
+                    key={ind}
+                    onClick={() => {
+                      setCurrentPage(page);
+                    }}
+                    href='##'
+                    className='page-link'
+                  >
+                    {page}
+                  </a>
+                </li>
+              )
+            })
+            }
+
+            <li className="page-item">
+                <button className="page-link" aria-label="Previous"
+                  onClick={() =>
+                    setCurrentPage((prev) => {
+                      if (prev === maxPage) return prev;
+                      return prev + 1;
+                    })}>
+                  <span aria-hidden="true">&raquo;</span>
+                </button>
+            </li>
+        </ul>
+      </nav>
+    )
+}
+
+export default Pagination
