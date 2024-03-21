@@ -313,7 +313,7 @@ const Register = () => {
                                 <br/>
                                 <br/>
                                 <br/>
-                                <div className="d-flex justify-content-center align-items:center">
+                                <div className="d-flex justify-content-center mb-3">
                                     <button className="registered1" type="button" method="post" value="" onClick={Dosubmit}
                                     disabled=
                                     {!validName || !validAccount || !validEmail || !validPwd || !validTel || !gender || !birthday ? true : false}
