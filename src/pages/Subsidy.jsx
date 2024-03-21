@@ -26,18 +26,28 @@ const Service = () => {
     setIsFirst(true);
     setIsSecond(false);
     setIsThird(false);
+    setIsNoMatch(false);
   };
   const goToSecond = () => {
     setIsHome(false);
     setIsFirst(false);
     setIsSecond(true);
     setIsThird(false);
+    setIsNoMatch(false);
   };
   const goToThird = () => {
     setIsHome(false);
     setIsFirst(false);
     setIsSecond(false);
     setIsThird(true);
+    setIsNoMatch(false);
+  };
+  const goToNoMatch = () => {
+    setIsHome(false);
+    setIsFirst(false);
+    setIsSecond(false);
+    setIsThird(false);
+    setIsNoMatch(true);
   };
 
   return (
@@ -52,6 +62,7 @@ const Service = () => {
       {isSecond && (
         <SubsidySearchCFM
           goToThird={goToThird}
+          goToNoMatch={goToNoMatch}
           goToFirst={goToFirst}
           formData={formData}
         />

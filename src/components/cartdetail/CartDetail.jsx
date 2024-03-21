@@ -9,8 +9,9 @@ const CartDetail = ({ doSecondBtn }) => {
   const [cartInfo, setCartInfo] = useState(sessionInfo || []);
   const [couponInd, setCouponInd] = useState(0);
   const [userCoupon, setUserCoupon] = useState(null);
+  const [isUsed, setIsUsed] =useState(false)
 
-  console.log(userCoupon)
+  // console.log(userCoupon)
   // 更新購物車資訊
   const changeCartInfo = (id, num) => {
     const updatedCartInfo = cartInfo.map(item => {
@@ -35,8 +36,12 @@ const CartDetail = ({ doSecondBtn }) => {
   const { register, handleSubmit } = useForm();
   const onSubmit = e => {
     let checkInd = realCoupon.findIndex(i => i.code === e.code)
-    if (checkInd >= 0) setUserCoupon(realCoupon[checkInd].discount)
-    console.log(e.code)
+    if (checkInd >= 0) {
+      setUserCoupon(realCoupon[checkInd].discount)
+      sessionStorage.setItem('couponDiscount',realCoupon[checkInd].discount)
+      setIsUsed(true)
+    }
+    // console.log(e.code)
   }
   const checkCoupon = e => {
     let checkInd = realCoupon.findIndex(i => i.code === e.target.value)
@@ -172,7 +177,7 @@ const CartDetail = ({ doSecondBtn }) => {
 
                         <div className="input-group-append">
                           <input type="submit"
-                            className="btn btn-outline-primary"
+                            className={ "btn btn-outline-primary " + (isUsed?"disabled":"")}
                             value="使用折扣碼"
                           />
                         </div>

@@ -5,6 +5,7 @@ import "../../asset/css/subsidy.css";
 const SubsidySearchCFM = ({
   goToThird,
   goToFirst,
+  goToNoMatch,
   selectedIdentity,
   formData,
 }) => {
@@ -12,7 +13,8 @@ const SubsidySearchCFM = ({
   // Function to handle form submission
   const submitForm = () => {
     if (formData.identity === "其他") {
-      window.location.href = "/subsidyNoMatch";
+      goToNoMatch();
+      //window.location.href = "/subsidyNoMatch";
     } else {
       // window.location.href = "/subsidyResult";
       goToThird();

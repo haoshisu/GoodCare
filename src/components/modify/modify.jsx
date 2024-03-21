@@ -153,7 +153,7 @@ const Modify = () => {
                                 <a href='/' className="Modify1" type="button" method="post" value=""  onClick={DoCheck}
                                 disabled={!removePwd || !checkremovePwd ? true : false}
                                 >
-                                <button>確認</button></a>
+                                確認</a>
                             </div>
                         </form>
                     </div>
