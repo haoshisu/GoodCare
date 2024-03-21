@@ -31,10 +31,6 @@ const Register = () => {
     const [validPwd, setValidPwd] = useState(false)
     const [pwdFocus, setPwdFocus] = useState(false)
 
-    // const [matchPwd, setMatchPwd] = useState('')
-    // const [validMatch, setValidMatch] = useState(false)
-    // const [matchFocus, setMatchFocus] = useState(false)
-
     const [birthday,setBirthday] =  useState('')
     const [gender,setGender] = useState('')
 
@@ -124,18 +120,24 @@ const Register = () => {
     }
 
     const Dosubmit = async () => {
-        const response = await axios.post('http://localhost:8000/member',JSON.stringify({
+        await axios.post('http://localhost:8000/member/register',JSON.stringify({
             name,birthday,gender,email,address,tel,account,pwd
         }),{
             headers:{'Content-Type':'application/json'},
             withCredentials: true
         })
-        // console.log(response.data)
-        // e.preventDefault()
-        // console.log(name,birthday,gender,email,address,tel,account,pwd)
+        .then((response=>{
+            if(response.data==='ok'){
+                alert('註冊成功')
+                window.location.href=('/')
+        
+            }else{
+                alert('註冊失敗')
+                window.location.href('/UserRegister')
+            }
+        }))
+                
     }
-
-    // console.log(address)
 
     return(
         <React.Fragment>
