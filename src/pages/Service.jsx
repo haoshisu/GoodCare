@@ -21,7 +21,7 @@ const Service = () => {
           <SideBar title={sidebarTitle} />
 
           {/* 這裡放你的主內容 */}
-          <div className='col-9'>
+          <div className='col-md-12 col-lg-9 col-xl-9'>
           <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li>
                 <button class="nav-link" style={{  backgroundColor: '#214F39',color: 'white',textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)'}}>長照服務資訊</button>
@@ -99,7 +99,7 @@ const Service = () => {
                     <br />
                     <h5>專業服務項目說明如下：</h5>
                     <br />
-                    <p style={{ textAlign: 'center' }}> <img alt="專業服務價目表" src={require('../asset/images/server/serve2.png')}/></p>
+                    <p style={{ textAlign: 'center' }}> <img alt="專業服務價目表" src={require('../asset/images/server/serve2.png')} style={{ width: '100%' }} /></p>
                     <br />
                   </div>
                 </div>
@@ -192,7 +192,7 @@ const Service = () => {
                       <br />
                     </h5>
                     <br />
-                    <p style={{ textAlign: 'center' }}><img alt="喘息流程圖" src={require('../asset/images/server/serveprice.png')} />
+                    <p style={{ textAlign: 'center' }}><img alt="喘息流程圖" src={require('../asset/images/server/serveprice.png')} style={{ width: '100%' }}/>
                     </p>
                     <br />
                     <h4 style={{fontWeight: 'bold'}}>➡服務方式</h4>

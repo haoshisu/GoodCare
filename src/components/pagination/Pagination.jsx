@@ -12,7 +12,7 @@ function Pagination ({ totalNews, newsNum, setCurPage, curPage }) {
     // console.log(maxPage)
     return (
       <nav aria-label="Page navigation example" className="d-flex justify-content-center">
-        <ul className="pagination">
+        <ul className="pagination ">
             <li className="page-item">
                 <button className="page-link" aria-label="Previous"
                   onClick={() =>

@@ -24,7 +24,7 @@
 .user:hover {
   color: white !important;
   background-color: #cf4501 !important;
-
+  border-color: #cf4501!important;
 }
 
 .d-flex .search-icon{

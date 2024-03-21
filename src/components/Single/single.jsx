@@ -88,7 +88,7 @@ const Single = () => {
             <img
               src={require(`../../asset/images/numberImages/${index}.png`)}
               alt="..."
-              className="img-fluid"
+              style={{width:'100%'}}
             />
           </div>
           <div className="col-md-8">
@@ -97,7 +97,6 @@ const Single = () => {
               <br />
               <p
                 className="card-text"
-                style={{ fontSize: "18px" }}
                 id="cardtext"
               >
                 {cardText}
@@ -121,21 +120,19 @@ const Single = () => {
               </div>
               <br />
               {/* <!-- 直接購買 & 放入購物車 --> */}
-              <div>
+              <div className="d-flex justify-content-between">
                 <a
                   className="direct2cart btn btn-outline-success"
                   type="button"
-                  style={{ width: "300px", fontSize: "18px" }}
+            
                   onClick={handlePutInCart}
                   href="/cart"
                 >
                   直接購買
                 </a>
-
                 <button
                   className="putcart btn btn-warning ms-5 text-white"
                   type="button"
-                  style={{ width: "300px", fontSize: "18px" }}
                   onClick={() => {
                     handlePutInCart();
                     notify();
@@ -150,12 +147,12 @@ const Single = () => {
         </div>
         {/* <!-- 商品介紹 --> */}
         <div className="mt-5">
-          <h1 className="text-center mb-5" style={{ fontSize: "55px" }}>
+          <p className="text-center mb-5 producttext">
             商品規格
-          </h1>
+          </p>
           <img
             src={require(`../../asset/images/numberDescripiton/${index}.png`)}
-            alt=""
+            alt="" style={{width:'100%'}}
           />
         </div>
       </div>

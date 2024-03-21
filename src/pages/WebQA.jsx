@@ -21,7 +21,7 @@ const Service = () => {
           <SideBar title={sidebarTitle} />
 
           {/* 這裡放你的主內容 */}
-          <div className="col-9">
+          <div className="col-md-12 col-lg-9 col-xl-9">
             <ul className="nav nav-tabs" id="myTab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
@@ -45,7 +45,7 @@ const Service = () => {
                     <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne"
                       data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        <h5>&emsp;A:有照顧服務(包含居家服務、日間照顧及家庭托顧)、交通接送、專業服務、輔具及居家無障礙環境改<br /><br />&emsp;善、喘息服務、營養餐飲服務、長期照顧機構服務、家庭照顧者支持服務、小規模多機能服務、銜接出<br /><br />&emsp;院準備服務。
+                        <h5>&emsp;A:有照顧服務(包含居家服務、日間照顧及家庭托顧)、交通接送、專業服務、輔具及居家無障礙環境改善、喘息服務、營養餐飲服務、長期照顧機構服務、家庭照顧者支持服務、小規模多機能服務、銜接出院準備服務。
                         </h5>
                       </div>
                     </div>
@@ -84,7 +84,7 @@ const Service = () => {
                     <div id="collapseThree" className="accordion-collapse collapse"
                       aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        <h5>&emsp;A:協助床上擦澡或洗澡、如廁或更換尿布、翻身拍背、加熱飯菜或備餐、餵食或灌食、陪同外出、陪同<br /><br />&emsp;就醫、家務協助(針對失能者主要居家生活空間之清理，非大掃除)、代購或代領或代送服務、協助依照<br /><br />&emsp;藥袋指示將藥物置入藥盒等。
+                        <h5>&emsp;A:協助床上擦澡或洗澡、如廁或更換尿布、翻身拍背、加熱飯菜或備餐、餵食或灌食、陪同外出、陪同就醫、家務協助(針對失能者主要居家生活空間之清理，非大掃除)、代購或代領或代送服務、協助依照藥袋指示將藥物置入藥盒等。
                         </h5>
                       </div>
                     </div>
@@ -107,7 +107,7 @@ const Service = () => {
                           <br /><br />
                           ☞已接受機構收容安置者，不適用喘息服務。
                           <br /><br />
-                          ☞已聘僱外籍家庭看護工之家庭，其被照顧者經長期照顧管理中心評估為長照需要等級2至8級者，如其所聘外看<br /><br />&emsp;因故無法協助照顧，得申請喘息服務，並自109年12月1日起實施。
+                          ☞已聘僱外籍家庭看護工之家庭，其被照顧者經長期照顧管理中心評估為長照需要等級2至8級者，如其所聘外看因故無法協助照顧，得申請喘息服務，並自109年12月1日起實施。
                         </h5>
                         <br /><br />
                         <h5 style={{ fontWeight: 'bold' }}>三、服務內容分為：</h5>
@@ -155,7 +155,7 @@ const Service = () => {
                     <div id="collapseSix" className="accordion-collapse collapse" aria-labelledby="headingSix"
                       data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        <h5>&emsp;A:(1)實際居住於本市符合社會救助法列冊之低收入戶或中低收入戶，且無聘請外籍看護工，並經照顧服務管理<br /><br />&emsp;專員評估失能等級2-8級，以無法外出至社區據點、巷弄站共餐及無特殊餐食需求者為原則。
+                        <h5>&emsp;A:(1)實際居住於本市符合社會救助法列冊之低收入戶或中低收入戶，且無聘請外籍看護工，並經照顧服務管理專員評估失能等級2-8級，以無法外出至社區據點、巷弄站共餐及無特殊餐食需求者為原則。
                           <br /><br /><br />
                           &emsp;(2) 不符合上述補助之對象，可協助申請『自費送餐服務』。
                         </h5>
@@ -173,7 +173,7 @@ const Service = () => {
                     <div id="collapseSeven" className="accordion-collapse collapse"
                       aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        <h5>&emsp;A:依據長期照顧服務法第三條，長期照顧係指身心失能持續已達或預期達六個月以上者，依其個人或其<br /><br />&emsp;照顧者之需要，所提供之生活支持、協助、社會參與、照顧及相關之醫護服務；而意外事故造成暫時性<br /><br />&emsp;失能係屬急性醫療範圍非屬長照範圍。
+                        <h5>&emsp;A:依據長期照顧服務法第三條，長期照顧係指身心失能持續已達或預期達六個月以上者，依其個人或其照顧者之需要，所提供之生活支持、協助、社會參與、照顧及相關之醫護服務；而意外事故造成暫時性失能係屬急性醫療範圍非屬長照範圍。
                         </h5>
                       </div>
                     </div>
@@ -210,7 +210,7 @@ const Service = () => {
                       data-bs-parent="#accordionExample2">
                       <div className="accordion-body">
                         <h5>&emsp;A:若您忘記密碼，請您先「會員登入」後，點選「忘記密碼」
-                          再輸入註冊的電子郵件，系統會自動發送密碼重<br /><br />&emsp;&emsp;設通知給您，再請您依照通知步驟重新設定密碼即可。
+                          再輸入註冊的電子郵件，系統會自動發送密碼重設通知給您，再請您依照通知步驟重新設定密碼即可。
                         </h5>
                       </div>
                     </div>
@@ -273,7 +273,7 @@ const Service = () => {
                     <div id="collapseThirteen" className="accordion-collapse collapse"
                       aria-labelledby="headingThirteen" data-bs-parent="#accordionExample2">
                       <div className="accordion-body">
-                        <h5>&emsp;A:採信用卡方式付款，將以郵局海運配送，預計3-7日內配達，而送達時間會因天氣狀況、<br /><br />&emsp;&emsp;船隻班次而有變動的可能性。
+                        <h5>&emsp;A:採信用卡方式付款，將以郵局海運配送，預計3-7日內配達，而送達時間會因天氣狀況、船隻班次而有變動的可能性。
                         </h5>
                       </div>
                     </div>

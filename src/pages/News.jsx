@@ -52,7 +52,7 @@ function TemplateNews() {
               <SideBar title={ sidebarTitle }/>
 
               {/* 這裡放你的主內容 */}
-              <div className='col-9'>
+              <div className='col-md-12 col-lg-9 col-xl-9'>
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                   <li>
                       <button className="nav-link" style={{  backgroundColor: '#214F39',color: 'white',textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)'}}>焦點新聞</button>
@@ -65,7 +65,7 @@ function TemplateNews() {
                       currentNews.map((val,ind) => {
                         return (
                           <>
-                            <div className="newsitem row" key={ind}>
+                            <div className="newsitem d-flex align-items-center" key={ind}>
                               <div className='col-10 text-truncate'>
                                 <a href='#a' type='button' className='newslink' 
                                   onClick={ ()=>{ showNews({
@@ -79,7 +79,7 @@ function TemplateNews() {
                                 { val.title }
                                 </a>
                               </div>
-                              <div className='col-2 text-muted'>
+                              <div className='col-2 text-muted ms-2'>
                                 { val.update }
                               </div>
                             </div>        

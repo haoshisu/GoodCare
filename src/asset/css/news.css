@@ -19,4 +19,28 @@
 .newslink:hover {
   border-bottom: solid 2px #CF4501;
 }
+@media screen and (max-width: 768px) {
+  .newslink {
+    font-size: 0.9em;
+  }
+  .text-muted{
+    font-size: 0.7em;
+  }
+}
 
+@media screen and (max-width: 520px) {
+  .newslink {
+    font-size: 0.7em;
+  }
+  .text-muted {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 390px) {
+  .newslink {
+    font-size: 0.6em;
+  }
+  .text-muted {
+    font-size: 0.5em;
+  }
+}

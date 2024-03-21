@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from '../components/header/Header';
 import IndexNav from '../components/indexnav/IndexNav';
 import Footer from '../components/footer/Footer';
+import PathBox from '../components/pathbox/PathBox';
 import Path from "../components/Path/path";
 import ProductSideBar from "../components/productsidebar/ProductSideBar";
 import Single from "../components/Single/single"
@@ -19,30 +20,20 @@ library.add(fab, fas, far);
 function SingleProduct() {
   return (
     <React.Fragment>
-      <Header/>
-      <IndexNav/>
-      <div className="container">
-        <div className="row">
-          <div className="col-12  pb-4">
-            <Path/>
-          </div>
-        </div>
-        <>
-        
-        </>
-      </div>
+      <Header />
+      <IndexNav />
+      <PathBox pathName={"醫療輔具商品"} path={"/Product"} />
+      <Path />
       <div className="container">
         <div className="row mb-5">
-          <div className="col-2">
-            <ProductSideBar/>
-          </div>
-          <div className="col-10">
-            <Single/>
+          <ProductSideBar />
+          <div className="col-md-12 col-lg-9 col-xl-9'">
+            <Single />
           </div>
         </div>
       </div>
-      <Footer/>
-      <BackToTopBtn/>
+      <Footer />
+      <BackToTopBtn />
     </React.Fragment>
   );
 }

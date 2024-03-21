@@ -2,5 +2,11 @@
     width: fit-content;
 }
 #pathBox>a:hover {
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-bottom: solid 3px #F3C640;
 }
+
+@media screen and (max-width: 992px) {
+    .w3-sidebar {
+      display: none;
+    }
+  }
