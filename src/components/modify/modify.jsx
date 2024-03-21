@@ -14,7 +14,7 @@ const Modify = () => {
     const [removePwd, setRemovePWd] = useState('')
     const [checkremovePwd,setCheckRemovePwd] = useState('')
     const [account,setAccount] = useState()
-
+    
     useEffect(() => {
         if ( auth ) {
             console.log(auth)
@@ -61,7 +61,7 @@ const Modify = () => {
                 
             })
             
-            window.location.href = ('/')
+            // window.location.href = ('/')
         }
         else{
             alert('錯誤')
@@ -150,10 +150,10 @@ const Modify = () => {
                                 <Link to='/' >
                                 <button className="Modify4" type='button'>取消</button>
                                 </Link>
-                                <button className="Modify1" type="button" method="post" value=""  onClick={DoCheck}
+                                <a href='/' className="Modify1" type="button" method="post" value=""  onClick={DoCheck}
                                 disabled={!removePwd || !checkremovePwd ? true : false}
                                 >
-                                確認</button>
+                                <button>確認</button></a>
                             </div>
                         </form>
                     </div>

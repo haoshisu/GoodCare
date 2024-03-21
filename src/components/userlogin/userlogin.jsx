@@ -36,7 +36,7 @@ const UserLogin = (  ) => {
 
     const DoLogin = async(e) =>{
 
-        e.preventDefault();
+        // e.preventDefault();
         await axios.post('http://localhost:8000/member/login',JSON.stringify({
             account,pwd
         }),{
@@ -46,13 +46,10 @@ const UserLogin = (  ) => {
             const userData = {
                 account,
                 pwd,
-                accessToken: response?.data?.accessToken
+                accessToken: response?.data?.accessToken,
+                id:response?.data?.result[0].memberid
             };
             login(userData)
-            // const accessToken = response?.data?.accessToken
-            // setAuth(userData)
-            console.log(userData)
-            console.log({account})
             // console.log(response)
             
             window.location.href = ('/')
