@@ -47,7 +47,11 @@ const UserLogin = (  ) => {
                 account,
                 pwd,
                 accessToken: response?.data?.accessToken,
-                id:response?.data?.result[0].memberid
+                id:response?.data?.result[0].memberid,
+                name:response?.data?.result[0].name,
+                tel:response?.data?.result[0].tel,
+                address:response?.data?.result[0].address,
+                email:response?.data?.result[0].email,
             };
             login(userData)
             // console.log(response)

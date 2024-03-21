@@ -10,7 +10,7 @@ function Header( ) {
     // console.log(auth.accessToken)
     useEffect(() => {
         if ( auth && auth.accessToken) {
-            console.log(auth)
+            // console.log(auth)
             const accessToken = auth.accessToken;
             axios.get('http://localhost:8000/member/login', {
                 headers: {
@@ -20,16 +20,18 @@ function Header( ) {
             .then(response => {
                 setUserName(response.data[0].name);
                 setRoad('/UserModify')
-                console.log(response)
+                // console.log(response)
             })
             .catch(error => {
-                console.error('Failed to fetch user information:', error);
+                // console.error('Failed to fetch user information:', error);
+                setRoad('/userlogin')
             });
+        }else{
+            setRoad('/userlogin')
         }
     }, [auth]);
   
-    // const auth = useContext(AuthContext)
-    // console.log(auth.auth.account)
+    
   return (
     <div className="container">
         <div className="d-flex justify-content-between">
