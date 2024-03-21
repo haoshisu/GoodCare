@@ -54,10 +54,7 @@ const subsidyHome = ({ goToFirst }) => {
             </div>
 
             <div className="d-flex flex-column align-items-center mt-5">
-              <button
-                className="btn custom-btn-4 btn-lg"
-                onClick={ goToFirst }
-              >
+              <button className="btn custom-btn-4 btn-lg" onClick={goToFirst}>
                 <i className="fa-solid fa-search"></i> 進行查詢
               </button>
             </div>

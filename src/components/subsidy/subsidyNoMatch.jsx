@@ -1,7 +1,7 @@
 import React from "react";
 import "../../asset/css/subsidy.css";
 
-const SubsidyNoMatch = () => {
+const SubsidyNoMatch = ({ goToFirst }) => {
   return (
     <React.Fragment>
       <div className="container col-1"></div>
@@ -32,14 +32,13 @@ const SubsidyNoMatch = () => {
                   </div>
                 </div>
                 <div className="text-center mt-4">
-                  <a href="./SubsidySearch">
-                    <button
-                      type="button"
-                      className="btn btn-lg custom-button px-5"
-                    >
-                      重新查詢
-                    </button>
-                  </a>
+                  <button
+                    type="button"
+                    className="btn btn-lg custom-button px-5"
+                    onClick={goToFirst}
+                  >
+                    重新查詢
+                  </button>
                 </div>
               </div>
             </div>
