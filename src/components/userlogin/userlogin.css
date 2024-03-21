@@ -1,3 +1,10 @@
+/* 帳號或密碼錯誤 */
+.show{
+  color:red
+}
+
+
+
 /* 名稱判斷 */
 .hide{
   display: none;

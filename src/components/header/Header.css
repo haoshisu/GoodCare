@@ -1,3 +1,9 @@
+/* 會員登出 */
+.hide{
+  display: none;
+}
+
+
 /* header */
 .navbar-brand{
   font-size: 20px;

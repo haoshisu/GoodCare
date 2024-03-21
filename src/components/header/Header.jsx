@@ -1,15 +1,22 @@
 import React from 'react';
+import { useContext } from 'react';
+import AuthContext from "../../Context/AuthProvider";
 import './Header.css'
 
 function Header( ) {
     const userData = JSON.parse(localStorage.getItem('auth'))||''
-    
+    const {logout} = useContext(AuthContext)
+
     const doRedirect = () => {
         if (userData){
             window.location.href = '/usermodify'
         } else {
             window.location.href = '/userlogin'   
         }
+    }
+
+    const doLogout = () => {
+        logout()
     }
   
     
@@ -34,7 +41,12 @@ function Header( ) {
                         <i className="fa-solid fa-user"></i>
                         &nbsp;
                         <span>{userData.name ? `${userData.name}  你好` : '會員登入/註冊'}</span>
-                        
+                    </a>
+                    &nbsp;
+                    <a className={userData.name ? "user text-dark" : "hide"}  onClick={ doLogout } href='#a' >
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        &nbsp;
+                        <span>登出</span>
                     </a>
                 </div>
             </div>
