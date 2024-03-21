@@ -33,7 +33,7 @@ export const AuthProvider = ({children}) => {
 
     const resetTimeout = () => {
         clearTimeout(timeoutId);
-        const newTimeoutId = setTimeout(logout, 100000); //10m
+        const newTimeoutId = setTimeout(logout, 7200000); //2h
         setTimeoutId(newTimeoutId);
     };
 
