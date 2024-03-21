@@ -6,6 +6,7 @@ import './Header.css'
 function Header( ) {
     const [userName, setUserName] = useState('');
     const { auth } = useContext(AuthContext);
+    const [road, setRoad] = useState('/userlogin')
     // console.log(auth.accessToken)
     useEffect(() => {
         if ( auth && auth.accessToken) {
@@ -17,7 +18,8 @@ function Header( ) {
                 }
             })
             .then(response => {
-                setUserName(response.data[0].account);
+                setUserName(response.data[0].name);
+                setRoad('/UserModify')
                 console.log(response)
             })
             .catch(error => {
@@ -45,7 +47,7 @@ function Header( ) {
                 </nav>
                 <div className="d-flex align-items-center search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
                 <div className="d-flex align-items-center">
-                    <a className="user text-dark" href="/userlogin">
+                    <a className="user text-dark" href= {road}>
                         <i className="fa-solid fa-user"></i>
                         &nbsp;
                         <span>{userName ? `${userName}  你好` : '會員登入/註冊'}</span>

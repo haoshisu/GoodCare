@@ -4,12 +4,17 @@ import Background from '../../asset/images/userlogin/background.png'
 import '../modify/modify.css'
 import AuthContext from "../../Context/AuthProvider";
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 const Modify = () => {
     const [userData, setUserData] = useState([]);
     const { auth } = useContext(AuthContext);
     const [isGender,setIsgender] = useState('')
     const [birthday,setBirthday] = useState('')
+    const [removePwd, setRemovePWd] = useState('')
+    const [checkremovePwd,setCheckRemovePwd] = useState('')
+    const [account,setAccount] = useState()
+
     useEffect(() => {
         if ( auth ) {
             console.log(auth)
@@ -23,14 +28,47 @@ const Modify = () => {
                 setUserData(response.data);
                 setIsgender(parseInt(response.data[0].gender))
                 setBirthday(new Date(response.data[0].birthday).toISOString().split('T')[0])
+                setAccount(response.data[0].account)
             })
             .catch(error => {
-                console.error('Failed to fetch user information:', error);
+                // console.error('Failed to fetch user information:', error);
             });
         }else{
-            // window.location.href=('/userlogin')
+            window.location.href=('/userlogin')
         }
     }, [auth]);
+    
+    var Doremove = (e) => {
+        var newRemovepwd = e.target.value
+        setRemovePWd(newRemovepwd)
+    }
+
+    var DoremoveCheck = (e) => {
+        var newRemovepwd = e.target.value
+        setCheckRemovePwd(newRemovepwd)
+    }
+    
+
+    var DoCheck = async() => {
+        
+        // e.preventDefault()
+        if (auth.accessToken && removePwd === checkremovePwd){
+            // alert('ok')
+            await axios.post('http://localhost:8000/member/modify',JSON.stringify({account,removePwd}),{
+                headers:{
+                    "Content-Type":"application/json",
+                },
+                
+            })
+            
+            window.location.href = ('/')
+        }
+        else{
+            alert('錯誤')
+            
+        }
+    }
+    
 
 
     return(
@@ -96,17 +134,26 @@ const Modify = () => {
                             <br/>
                             <label className="Modify" for="password"><i className="fa-solid fa-lock"></i>&emsp;修改密碼:</label>
                             <br/>
-                            <input className="Modify2" type="password" id="password" name="password" value=""/>
+                            <input className="Modify2" type="password" id="password" name="password" value={removePwd} onChange={Doremove}
+                            required
+                            />
                             <br/>
                             <br/>
-                            <label className="Modify" for="password"><i className="fa-solid fa-lock"></i>&emsp;再次確認密碼:</label>
+                            <label className="Modify" for="password2"><i className="fa-solid fa-lock"></i>&emsp;再次確認密碼:</label>
                             <br/>
-                            <input className="Modify2" type="password" id="password" name="password" value=""/>
+                            <input className="Modify2" type="password" id="password2" name="password" value={checkremovePwd} onChange={DoremoveCheck}
+                            required
+                            />
                             <br/>
                             <br/>
                             <div className="d-flex justify-content-between align-items:center mt-3">
-                                <button className="Modify4"><a href="#">取消</a></button>
-                                <button className="Modify1" type="submit" method="post" value="">確認</button>
+                                <Link to='/' >
+                                <button className="Modify4" type='button'>取消</button>
+                                </Link>
+                                <button className="Modify1" type="button" method="post" value=""  onClick={DoCheck}
+                                disabled={!removePwd || !checkremovePwd ? true : false}
+                                >
+                                確認</button>
                             </div>
                         </form>
                     </div>
