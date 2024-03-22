@@ -184,6 +184,7 @@ const Register = () => {
                                     aria-describedby="uidnote"
                                     onFocus={()=> setUserFocus(true)}
                                     onBlur = {() => setUserFocus(false)}
+                                    
                                     // placeholder="請輸入姓氏和姓名"
                                 />
                                 <p id="uidnote" className={userFocus && name && 

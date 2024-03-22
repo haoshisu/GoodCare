@@ -10,6 +10,7 @@ import { BrowserRouter as Router,Routes, Link, Route, } from 'react-router-dom';
 const UserLogin = (  ) => {
     const {setAuth} = useContext(AuthContext)
     const { login } = useContext(AuthContext);
+    const {cookies,setCookie} = useContext(AuthContext)
 
     const userRef = useRef()
     const errRef =  useRef()
@@ -18,11 +19,19 @@ const UserLogin = (  ) => {
     const [isRemember, setIsremember] = useState('')
     const [errMsg,setErrMsg] = useState('')
     const [fail, setFail] = useState(false)
+    const[isRemembervalue,SetIsremembervalue] = useState('')
+    
     
     
 
     useEffect (() => {
         userRef.current.focus()
+        if(cookies){
+            var a =  cookies.remberaccount
+            // console.log("rember:", a)
+            setAccount(a)
+            setIsremember(1)
+        }
     },[])
 
     useEffect (() => {
@@ -32,6 +41,7 @@ const UserLogin = (  ) => {
     const Doremember = (e) => {
         var r = e.target.checked ? 1 :0
         setIsremember(r)
+        
     }
 
     const DoLogin = async(e) =>{
@@ -55,8 +65,16 @@ const UserLogin = (  ) => {
                 address:response?.data?.result[0].address,
                 email:response?.data?.result[0].email,
             };
-            login(userData) //設定用戶資訊            
+            login(userData) //設定用戶資訊
+            //cookie
+            if(isRemember===1){
+                
+                setCookie("remberaccount", account , new Date(2024,5,22))
+                
+                
+            }            
             window.location.href = ('/')
+            
         })
         .catch(error => {
             // 錯誤

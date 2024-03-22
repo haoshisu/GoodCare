@@ -1,10 +1,11 @@
 import {createContext, useEffect, useState} from 'react';
+import { useCookies } from 'react-cookie';
 const AuthContext = createContext({})
-
 
 export const AuthProvider = ({children}) => {
     const [auth,setAuth] = useState({})
     const [timeoutId, setTimeoutId] = useState(null);
+    const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
 
     useEffect(() => {
         const storedAuth = JSON.parse(localStorage.getItem('auth')) || {};
@@ -41,7 +42,7 @@ export const AuthProvider = ({children}) => {
 
     
     return (
-        <AuthContext.Provider  value={{auth,setAuth,login,logout}}>
+        <AuthContext.Provider  value={{auth,setAuth,login,logout,cookies,setCookie}}>
             {children}
         </AuthContext.Provider>
     )
