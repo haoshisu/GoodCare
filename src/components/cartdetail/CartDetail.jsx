@@ -5,10 +5,10 @@ import "./CartDetail.css";
 import Counter from "../Counter/counter";
 
 const CartDetail = ({ doSecondBtn }) => {
-  let sessionInfo = JSON.parse(sessionStorage.getItem("cartInfo"));
+  let sessionInfo = sessionStorage.getItem("cartInfo")? JSON.parse(sessionStorage.getItem("cartInfo")):null;
   const [cartInfo, setCartInfo] = useState(sessionInfo || []);
   const [couponInd, setCouponInd] = useState(0);
-  const [userCoupon, setUserCoupon] = useState(null);
+  const [userCoupon, setUserCoupon] = useState(sessionStorage.getItem("couponDiscount"));
   const [isUsed, setIsUsed] =useState(false)
 
   // console.log(userCoupon)
@@ -21,12 +21,21 @@ const CartDetail = ({ doSecondBtn }) => {
       return item;
     });
     setCartInfo(updatedCartInfo);
+    sessionStorage.setItem('cartInfo',JSON.stringify(updatedCartInfo))
   };
+  
+  // delete item
+  const doDelete = (id) => {
+    const idToRemove = id
+    let updatedCartInfo = [...cartInfo]
+    updatedCartInfo = updatedCartInfo.filter(item => item.id !== idToRemove)
+    setCartInfo(updatedCartInfo)
+    sessionStorage.setItem('cartInfo',JSON.stringify(updatedCartInfo))
+  }
 
   // 跳出吐司提示
   const notify = (msg) => toast.success(msg);
   if (!cartInfo.length) notify("購物車尚未有任何東西！");
-  if (userCoupon) notify("使用折扣碼成功！")
 
   // 驗證折扣碼
   let realCoupon = [
@@ -40,6 +49,7 @@ const CartDetail = ({ doSecondBtn }) => {
       setUserCoupon(realCoupon[checkInd].discount)
       sessionStorage.setItem('couponDiscount',realCoupon[checkInd].discount)
       setIsUsed(true)
+      notify("使用折扣碼成功！")
     }
     // console.log(e.code)
   }
@@ -105,6 +115,11 @@ const CartDetail = ({ doSecondBtn }) => {
                       />
                     </td>
                     <td>{val.quantity * val.price}</td>
+                    <td>
+                      <button className="delete-btn" onClick={ ()=>doDelete(val.id)}>
+                        <i className="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
                   </tr>
                 );
               })
@@ -204,7 +219,7 @@ const CartDetail = ({ doSecondBtn }) => {
                   type="button"
                   className="btn btn-lg custom-button px-5"
                   onClick={doSecondBtn}>
-                  <i class="fa-brands fa-cc-visa"></i>&nbsp;前往結帳
+                  <i className="fa-brands fa-cc-visa"></i>&nbsp;前往結帳
                 </button>
               </div>
             </div>

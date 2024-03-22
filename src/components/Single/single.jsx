@@ -58,7 +58,8 @@ const Single = () => {
     setCartInfo(newCartInfo);
 
     // 先取目前cartInfo 陣列值，才將新值填入
-    let cartSession = JSON.parse(sessionStorage.getItem("cartInfo"));
+    let sessionData = sessionStorage.getItem("cartInfo")
+    let cartSession = sessionData? JSON.parse(sessionData):null
 
     if (!cartSession) {
       // 目前session沒有任何資料故直接存
