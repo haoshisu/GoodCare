@@ -45,3 +45,23 @@
   color: #ffffff !important;
   text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px!important;;
 }
+
+.CartDetail{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 25px;
+  padding: 50px;
+}
+
+.CartDetail1{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 25px;
+  padding: 50px;
+}
+.CartDetailimg{
+  width: 100%;
+}
+@media screen and (max-width: 990px){
+  .CartDetailimg{
+    width: 150%;
+  }
+}

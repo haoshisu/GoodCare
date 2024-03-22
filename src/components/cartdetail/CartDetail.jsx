@@ -8,8 +8,13 @@ const CartDetail = ({ doSecondBtn }) => {
   let sessionInfo = sessionStorage.getItem("cartInfo")? JSON.parse(sessionStorage.getItem("cartInfo")):null;
   const [cartInfo, setCartInfo] = useState(sessionInfo || []);
   const [couponInd, setCouponInd] = useState(0);
+<<<<<<< Updated upstream
   const [userCoupon, setUserCoupon] = useState(sessionStorage.getItem("couponDiscount"));
   const [isUsed, setIsUsed] =useState(false)
+=======
+  const [userCoupon, setUserCoupon] = useState(null);
+  const [isUsed, setIsUsed] = useState(false)
+>>>>>>> Stashed changes
 
   // console.log(userCoupon)
   // 更新購物車資訊
@@ -47,7 +52,7 @@ const CartDetail = ({ doSecondBtn }) => {
     let checkInd = realCoupon.findIndex(i => i.code === e.code)
     if (checkInd >= 0) {
       setUserCoupon(realCoupon[checkInd].discount)
-      sessionStorage.setItem('couponDiscount',realCoupon[checkInd].discount)
+      sessionStorage.setItem('couponDiscount', realCoupon[checkInd].discount)
       setIsUsed(true)
       notify("使用折扣碼成功！")
     }
@@ -81,6 +86,7 @@ const CartDetail = ({ doSecondBtn }) => {
   return (
     <>
       {/* 購物車明細 */}
+<<<<<<< Updated upstream
       <div className="container">
         <table className="table" style={{ width: "100%" }}>
           <thead>
@@ -133,87 +139,143 @@ const CartDetail = ({ doSecondBtn }) => {
             )}
           </tbody>
         </table>
+=======
+      <div className="container CartDetail">
+        <div className="row">
+          <div className="col-sm-2 col-lg-2 text-center ">商品圖片</div>
+          <div className="col-sm-2 col-lg-2text-center ">商品名稱</div>
+          <div className="col-sm-2 col-lg-2 text-center ">單件價格</div>
+          <div className="col-sm-3 col-lg-2 text-center ">數量</div>
+          <div className="col-sm-2 col-lg-2 text-center ">小計</div>
+        </div>
+        <br />
+        {cartInfo.length > 0 ? (
+          cartInfo.map(val => {
+            return (
+
+              <div key={val.id}>
+                <div className="row">
+                  <div className="col-sm-2 text-center">
+                    <img
+                      src={require(`../../asset/images/numberImages/${val.id}.png`)}
+                      alt="Product"
+                      className="CartDetailimg"
+                    />
+                  </div>
+                  <div className="col-sm-2 text-center">{val.productName}</div>
+                  <div className="col-sm-2 text-center">{val.price}</div>
+                  <div className="col-sm-2 text-center">
+                    <Counter
+                      curNum={val.quantity}
+                      childToParent={numChanged => { changeCartInfo(val.id, numChanged) }}
+                    />
+                  </div>
+                  <div className="col-sm-2 text-center">{val.quantity * val.price}</div>
+                </div>
+                <hr />
+              </div>
+            );
+          })
+        ) : (
+          <tr>
+            <td colSpan={6} className="text-muted text-center">
+              {" "}
+              您尚未加入任何東西到購物車{" "}
+            </td>
+          </tr>
+        )}
+>>>>>>> Stashed changes
       </div>
+
       <br />
       <br />
       <br />
       <br />
       {/* 帳單明細 */}
-      {cartInfo.length > 0 && (
-        <div className="container">
-          <div className="row">
-            <div className="col-9">
-              <h2 className="my-4 text-center" style={{ fontWeight: "bold" }}>
-                訂單資訊
-              </h2>
-              <table className="table">
-                <tbody>
-                  <tr>
-                    <td>商品小計</td>
-                    <td>{"NT$" + cartPrice}</td>
-                  </tr>
-                  <tr>
-                    <td>折扣</td>
-                    <td className={totalDiscount < 0 ? "text-danger" : ""}>
-                      {"NT$" + totalDiscount}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>運費</td>
-                    <td>{"NT$" + charge}</td>
-                  </tr>
-                  <tr>
-                    <td>合計</td>
-                    <td>{"NT$" + totalPrice}</td>
-                  </tr>
-                </tbody>
-              </table>
-              <br />
-              <br />
-              {/* 折扣碼 */}
-              {cartInfo.length > 0 && (
-                <div className="container">
-                  <div className="d-flex justify-content-end">
-                    <div className="col-6 ms">
-                      <form className="input-group" onSubmit={handleSubmit(onSubmit)}>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="請輸入折扣碼"
-                          {...register('code',
-                            {
-                              require: true,
-                              pattern: '^/w+$',
-                              maxLength: 6
-                            }
-                          )}
-                          onChange={checkCoupon}
-                        />
-
-                        <div className="input-group-append">
-                          <input type="submit"
-                            className={ "btn btn-outline-primary " + (isUsed?"disabled":"")}
-                            value="使用折扣碼"
+      {
+        cartInfo.length > 0 && (
+          <div className="container CartDetail1">
+            <div className="row">
+              <div className="col-9">
+                <h2 className="my-4 text-center" style={{ fontWeight: "bold" }}>
+                  訂單資訊
+                </h2>
+                <table className="table">
+                  <tbody>
+                    <tr>
+                      <td>商品小計</td>
+                      <td>{"NT$" + cartPrice}</td>
+                    </tr>
+                    <tr>
+                      <td>折扣</td>
+                      <td className={totalDiscount < 0 ? "text-danger" : ""}>
+                        {"NT$" + totalDiscount}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>運費</td>
+                      <td>{"NT$" + charge}</td>
+                    </tr>
+                    <tr>
+                      <td>合計</td>
+                      <td>{"NT$" + totalPrice}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br />
+                <br />
+                {/* 折扣碼 */}
+                {cartInfo.length > 0 && (
+                  <div className="container">
+                    <div className="d-flex justify-content-end">
+                      <div className="col-6 ms">
+                        <form className="input-group" onSubmit={handleSubmit(onSubmit)}>
+                          <input
+                            type="text"
+                            className="form-control"
+                            placeholder="請輸入折扣碼"
+                            {...register('code',
+                              {
+                                require: true,
+                                pattern: '^/w+$',
+                                maxLength: 6
+                              }
+                            )}
+                            onChange={checkCoupon}
                           />
+
+                          <div className="input-group-append">
+                            <input type="submit"
+                              className={"btn btn-outline-primary " + (isUsed ? "disabled" : "")}
+                              value="使用折扣碼"
+                            />
+                          </div>
+                        </form>
+                        <div className={couponInd < 0 ? "block" : "d-none"} >
+                          <p className="text-danger d-flex justify-content-center">此折扣碼無效</p>
                         </div>
-                      </form>
-                      <div className={couponInd < 0 ? "block" : "d-none"} >
-                        <p className="text-danger d-flex justify-content-center">此折扣碼無效</p>
                       </div>
                     </div>
+                    <Toaster />
                   </div>
-                  <Toaster />
-                </div>
-              )}
-              <br />
-              <br />
-              <br />
-              <br />
-              <div className="text-center d-flex justify-content-around">
-                <a href="/product">
-                  <button className="btn btn-lg custom-button2 px-5">
-                    <i className="fa-solid fa-shopping-cart"></i>&nbsp;繼續購物
+                )}
+                <br />
+                <br />
+                <br />
+                <br />
+                <div className="text-center d-flex justify-content-around">
+                  <a href="/product">
+                    <button className="btn btn-lg custom-button2 px-5">
+                      <i className="fa-solid fa-shopping-cart"></i>&nbsp;繼續購物
+                    </button>
+                  </a>
+                  <button
+                    type="button"
+                    className="btn btn-lg custom-button px-5"
+                    onClick={doSecondBtn}>
+                    <i class="fa-brands fa-cc-visa"></i>&nbsp;前往結帳
                   </button>
+<<<<<<< Updated upstream
                 </a>
                 <button
                   type="button"
@@ -221,22 +283,27 @@ const CartDetail = ({ doSecondBtn }) => {
                   onClick={doSecondBtn}>
                   <i className="fa-brands fa-cc-visa"></i>&nbsp;前往結帳
                 </button>
+=======
+                </div>
+>>>>>>> Stashed changes
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )
+      }
       {/* 叫他回去買東西 */}
-      {cartInfo.length === 0 && (
-        <div className="grid text-center">
-          <a href="/product">
-            <button className="btn btn-lg custom-button px-5 g-start-2">
-              <i className="fa-solid fa-shopping-cart"></i> 繼續購物
-            </button>
-          </a>
-          <Toaster position="top-right" reverseOrder={false} />
-        </div>
-      )}
+      {
+        cartInfo.length === 0 && (
+          <div className="grid text-center">
+            <a href="/product">
+              <button className="btn btn-lg custom-button px-5 g-start-2">
+                <i className="fa-solid fa-shopping-cart"></i> 繼續購物
+              </button>
+            </a>
+            <Toaster position="top-right" reverseOrder={false} />
+          </div>
+        )
+      }
     </>
   );
 };

@@ -108,7 +108,7 @@ const UserLogin = (  ) => {
                                 <br/>
                                 <div className="mb-3">
                                     <i className="fa-solid fa-circle-user"></i>&emsp;
-                                    <label htmlFor="Account">帳號:</label>
+                                    <label htmlFor="Account"><h5>帳號:</h5></label>
                                     <input 
                                     type="text" 
                                     className="account"
@@ -119,11 +119,11 @@ const UserLogin = (  ) => {
                                 <br/>
                                 <div className="mb-3">
                                     <i className="fa-solid fa-lock"></i>&emsp;
-                                    <label htmlFor="pwd">密碼:</label>
+                                    <label htmlFor="pwd"><h5>密碼:</h5></label>
                                     <input type="password" className="password" 
                                         id="pwd" value={pwd}  onChange={(e) => setPwd(e.target.value)} required/>
                                 </div>
-                                <p className={fail ? "show" : "hide"}>帳號或密碼錯誤</p>
+                                <p className={fail ? "userloginshow" : "hide"}>帳號或密碼錯誤</p>
                                 <div className="mb-3 form-check" >
                                     <input type="checkbox" className="form-check-input" id="Check" onClick={Doremember} checked={isRemember}/>
                                     <label className="form-check-label" htmlFor="Check" style={{fontSize: "14px"}}>記住我</label>

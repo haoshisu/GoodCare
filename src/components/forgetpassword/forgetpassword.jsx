@@ -56,7 +56,7 @@ const ForegetPassword = () => {
                             </form>
                             <br/>
                             <div class="d-flex justify-content-center mt-4">
-                                <a href="#">
+                                <a href="/UserRegister">
                                     <h5>註冊帳號</h5>
                                 </a>
                             </div>
