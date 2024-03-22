@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CartConfirm.css";
 
 const CartConfirm = () => {
-  const cartInfo = JSON.parse(sessionStorage.getItem('cartInfo')) || []
-  const discount = parseFloat(sessionStorage.getItem('couponDiscount'))|| 1
+  const sessionData = sessionStorage.getItem('cartInfo')
+  const sessionData2 = sessionStorage.getItem('couponDiscount')
+  const cartInfo = sessionData? JSON.parse(sessionData):null
+  const discount = sessionData2? parseFloat(sessionData2):1
   const charge = 100
   
   //calculate price
@@ -13,6 +15,12 @@ const CartConfirm = () => {
   }, 0);
 
   const discountPrice = totalPrice*discount+charge
+
+  useEffect(()=>{
+    // 清除購物車跟折扣碼
+    sessionStorage.setItem('cartInfo','')
+    sessionStorage.setItem('couponDiscount','')
+  })
 
   return (
     <>

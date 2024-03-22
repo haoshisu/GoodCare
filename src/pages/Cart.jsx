@@ -13,8 +13,8 @@ const Cart = () => {
   const [isFirst, setIsFirst] = useState(true);
   const [isSecond, setIsSecond] = useState(false);
   const [isThird, setIsThird] = useState(false);
-  const [isActive,setIsActive] = useState(false)
-  const [isDone,setIsDone] = useState(false)
+  const localData = localStorage.getItem('auth')
+  const userData = localData? JSON.parse(localData):null
 
   const goToFirst = () => {
     setIsFirst(true);
@@ -22,6 +22,7 @@ const Cart = () => {
     setIsThird(false);
   };
   const goToSecond = () => {
+    if(!userData) window.location.href = './userlogin'
     setIsFirst(false);
     setIsSecond(true);
     setIsThird(false);
@@ -60,6 +61,7 @@ const Cart = () => {
                 doFirstBtn={goToFirst}
                 doSecondBtn={goToSecond}
                 doThirdBtn={goToThird}
+                userData = {userData}
               />
             )}
             {isThird && (

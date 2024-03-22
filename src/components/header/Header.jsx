@@ -4,7 +4,8 @@ import AuthContext from "../../Context/AuthProvider";
 import './Header.css'
 
 function Header( ) {
-    const userData = JSON.parse(localStorage.getItem('auth'))||''
+    const sessionData = localStorage.getItem('auth')
+    const userData = sessionData? JSON.parse(sessionData):[]
     const {logout} = useContext(AuthContext)
 
     const doRedirect = () => {
@@ -35,7 +36,7 @@ function Header( ) {
                         </form>
                     </div>
                 </nav>
-                <div className="d-flex align-items-center search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div className="d-flex align-items-center search-icon"><i className="fa-solid fa-magnifying-glass"></i></div>
                 <div className="d-flex align-items-center">
                     <a className="user text-dark" onClick={ doRedirect } href='#a'>
                         <i className="fa-solid fa-user"></i>
