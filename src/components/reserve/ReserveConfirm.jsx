@@ -1,10 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
-
+import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './Reserve.css';
+import axios from 'axios'
 
 function ReserveConfirm() {
 
@@ -20,25 +19,65 @@ function ReserveConfirm() {
 
   
   // 點擊按鈕時觸發的函式
-  const handleCheckClick = () => {
-    // 顯示 SweetAlert 提示框
-    Swal.fire({
-      icon: 'success',
-      title: '預約成功！',
-      text: '會由專人與主要聯絡人聯繫。',
-      imageUrl: require("../../asset/images/reserve/confirm_pic.jpg"),
-      imageAlt: '圖片',
-      imageWidth: 300,
-      imageHeight: 200,
-      showConfirmButton: false,
-    });
+  // const handleCheckClick = () => {
+  //   // 顯示 SweetAlert 提示框
+  //   Swal.fire({
+  //     icon: 'success',
+  //     title: '預約成功！',
+  //     text: '會由專人與主要聯絡人聯繫。',
+  //     imageUrl: require("../../asset/images/reserve/confirm_pic.jpg"),
+  //     imageAlt: '圖片',
+  //     imageWidth: 300,
+  //     imageHeight: 200,
+  //     showConfirmButton: false,
+  //   });
 
-    // 將網頁重定向到首頁
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 3000);
+  //   // 將網頁重定向到首頁
+  //   setTimeout(() => {
+  //     window.location.href = "/";
+  //   }, 3000);
 
+  // };
+
+
+  const handleCheckClick = async (formData) => {
+    try {
+      const response = await axios.post('http://localhost:8000/reserve', formData, {
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      if (response.data === 'ok') {
+        // 成功的處理邏輯
+        Swal.fire({
+          icon: 'success',
+          title: '預約成功！',
+          text: '會由專人與主要聯絡人聯繫。',
+          imageUrl: require("../../asset/images/reserve/confirm_pic.jpg"),
+          imageAlt: '圖片',
+          imageWidth: 300,
+          imageHeight: 200,
+          showConfirmButton: false,
+        });
+    
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 3000);
+        
+      } else {
+        // 处理其他响应
+        console.log(formData);
+      }
+    } catch (error) {
+      // 处理错误
+      console.error("Error:", error);
+      console.log(formData);
+    }
   };
+
+
+
+
+
 
   return (
     <React.Fragment>
@@ -103,15 +142,15 @@ function ReserveConfirm() {
                 <i className=""></i>
                 <i className=""></i>
                 <label for="medicalhistory"><i className="fa-solid fa-book-medical"></i> 過去病史：</label>
-                <textarea id="medicalhistory" name="medicalhistory" rows="3" maxLength="50" style={{ width: '100%' }} value={formData.medicalhistory}></textarea>
+                <textarea id="medicalhistory" name="medicalhistory" rows="3" maxLength="1000" style={{ width: '100%' }} value={formData.medicalhistory}></textarea>
               </div>
               <div className="form-row">
                 <label for="situation"><i className="fa-solid fa-comment-dots"></i> 情況描述：</label>
-                <textarea id="situation" name="situation" rows="6" maxLength="50" style={{ width: '100%' }} value={formData.situation} ></textarea>
+                <textarea id="situation" name="situation" rows="6" maxLength="1000" style={{ width: '100%' }} value={formData.situation} ></textarea>
               </div>
               <div className="button-container">
                 <input type="button" className="cancel-button" onClick={handleModifyClick} value="修改" />
-                <input type="button" className="submit-button" onClick={handleCheckClick} value="確認" />
+                <input type="button" className="submit-button" onClick={() => handleCheckClick(formData)} value="確認" />
               </div>
             </form>
             <br />

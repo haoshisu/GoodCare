@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
-
+import Pagination from '../pagination/Pagination'
 import axios from 'axios';
 
 function Mapsearch() {
-
-
   // 城市和區域數據
   const cities = [
     '基隆市', '臺北市', '新北市', '桃園市', '新竹市', '新竹縣',
@@ -83,15 +81,13 @@ function Mapsearch() {
 
   const [selectedCity, setSelectedCity] = useState('');
   const [selectedArea, setSelectedArea] = useState('');
-
   const [keyword, setKeyword] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  const handleSearch = () => {
-    // console.log("Selected Area:", selectedArea);
+  const fetchData = () => {
     axios.get(`http://localhost:8000/clinic/searchclinic`, {
       params: {
-        city: selectedCity,
+        city: selectedCity === '' ? '臺中市' : selectedCity,
         area: selectedArea,
         keyword: keyword
       }
@@ -101,15 +97,32 @@ function Mapsearch() {
         setSearchResults(response.data);
       })
       .catch(error => {
-        console.error('Error searching clinics:', error);
+        // console.error('Error searching clinics:', error);
       });
   }
+  const handleSearch = () => {
+    fetchData()
+  };
 
   const typeMap = {
     0: '居家式',
     2: '機構式',
     3: '聯合設置式',
   };
+
+  // pagination
+  let [curPage, setCurPage] = useState(1)
+  let [locationNum, setNewsNum] = useState(10)
+
+  // pagination
+  const lastIndex = curPage * locationNum;
+  const firstIndex = lastIndex - locationNum;
+  const currentSearch = searchResults.slice(firstIndex, lastIndex)
+
+  useEffect(() => {
+    fetchData()
+  }, [selectedCity, selectedArea])
+
   return (
     <React.Fragment>
       <div className="search-container">
@@ -117,7 +130,11 @@ function Mapsearch() {
 
         <select
           value={selectedCity}
-          onChange={(e) => setSelectedCity(e.target.value)}
+          onChange={(e) => {
+            setSelectedCity(e.target.value)
+            setSelectedArea('')
+          }
+          }
           className="serchtext"
         >
           <option value="">請選擇縣市</option>
@@ -161,7 +178,7 @@ function Mapsearch() {
           </tr>
         </thead>
         <tbody>
-          {searchResults.map(result => (
+          {currentSearch && currentSearch.map(result => (
             <tr key={result.id}>
               <td>{typeMap[result.type]}</td>
               <td>{result.name}</td>
@@ -171,6 +188,8 @@ function Mapsearch() {
           ))}
         </tbody>
       </table>
+      <Pagination totalNews={searchResults && searchResults.length} newsNum={locationNum} setCurPage={setCurPage} curPage={curPage} />
+
     </React.Fragment>
   )
 };

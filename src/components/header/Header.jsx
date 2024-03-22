@@ -45,7 +45,7 @@ function Header( ) {
                     </a>
                     &nbsp;
                     <a className={userData.name ? "user text-dark" : "hide"}  onClick={ doLogout } href='#a' >
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <i className="fa-solid fa-arrow-right-from-bracket"></i>
                         &nbsp;
                         <span>登出</span>
                     </a>

@@ -1,14 +1,26 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./CartPayment.css";
+import axios from 'axios';
 
 const CartPayment = ({ doFirstBtn, doThirdBtn, userData }) => {
-  const [orderData, setOrderData] = useState({});
+  // const [orderData, setOrderData] = useState({});
   const [isSync, setIsSync] = useState(false);
-
-  // cart info
+  // total price
   const sessionData = sessionStorage.getItem("cartInfo")
   const cartInfo = sessionData? JSON.parse(sessionData):null
+  const sessionData2 = sessionStorage.getItem('couponDiscount')
+  const discount = sessionData2? parseFloat(sessionData2):1
+  const charge = 100
+  
+  //calculate price
+  const totalPrice = cartInfo.reduce((acc, val) => {
+    const productTotal = val.price * val.quantity;
+    return acc + productTotal;
+  }, 0);
+
+  const discountPrice = totalPrice*discount+charge
+  
   // form sync
   const doSycnInfo = (e) => {
     if (!isSync) {
@@ -34,17 +46,74 @@ const CartPayment = ({ doFirstBtn, doThirdBtn, userData }) => {
     setValue,
   } = useForm({ mode: "onChange" });
 
-  const onSubmit = (data) => {
-    setOrderData(data);
+  const onSubmit = async (data) => {
+    // setOrderData(data);
+    const postOrderContact = {
+      memberid: userData.id,
+      orderid: orderId,
+      ordertime: orderTime,
+      ordermoney: discountPrice,
+      orderman: data.orderman,
+      ordertel: data.ordertel,
+      orderemail:data.orderemail,
+      ordermanaddress: data.orderaddress,
+      orderpay: 0,
+      getman: data.getman,
+      gettel: data.gettel,
+      getaddress: data.getaddress,
+      discount: discount,
+      status: "訂單處理中",
+      orderremark: data.orderremark === "" ? "none":data.orderremark
+    }
+    const postOrderProduct = cartInfo.map(val=>{
+      let newVal = {...val}
+      newVal.orderid = orderId
+      newVal.ordertime = orderTime
+      return newVal
+    })
+    // console.log(postOrderContact)
+    // console.log(postOrderProduct)
+
+    try {
+      // await order contact info insert into db
+      await fetchData('http://localhost:8000/newordercontact',postOrderContact)
+      // await each product info
+      for(const item of postOrderProduct) {
+        await fetchData('http://localhost:8000/neworderproduct',item)
+      }
+      console.log("All data posted successfully!");
+      
+    } catch(err){
+      console.log(err)
+    }
+
     if (isRealValue(errors)) doThirdBtn();
-  };
+}
 
   // check null object
   const isRealValue = (obj) => {
     return obj && obj !== "null" && obj !== "undefined";
   };
 
-  //axios post
+  //post data to server
+  const currentDate = new Date();
+
+  // 根據當前日期和時間生成訂單 ID 流水號
+  const orderId = `ORD-${currentDate.getFullYear()}${(currentDate.getMonth()+1).toString().padStart(2, '0')}${currentDate.getDate().toString().padStart(2, '0')}-${currentDate.getHours().toString().padStart(2, '0')}${currentDate.getMinutes().toString().padStart(2, '0')}${currentDate.getSeconds().toString().padStart(2, '0')}`;
+  const orderTime = `${currentDate.getFullYear()}-${(currentDate.getMonth()+1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')} ${currentDate.getHours().toString().padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}:${currentDate.getSeconds().toString().padStart(2, '0')}`;
+  
+  // axios post
+  const fetchData = async (url, data) => {
+    try {
+      await axios.post(url, data,{
+        headers:{"Content-Type":"application/json"}
+      })
+
+    } catch(err) {
+      console.log(err)
+    }
+    
+  }
 
   return (
     <>
@@ -319,6 +388,19 @@ const CartPayment = ({ doFirstBtn, doThirdBtn, userData }) => {
                         required: true,
                       })}
                     />
+                  </div>
+                  <div className="mb-3">
+                  <label for="remark" className="form-label">
+                      備註留言
+                  </label>
+                  <textarea
+                  className="form-control"
+                  id="remark"
+                  rows="3"
+                  placeholder="備註Rex好帥！ <3 <3 <3"
+                  {...register("orderremark", { required: false })}
+                  >
+                  </textarea>
                   </div>
                   <hr />
                   <div className="mb-3">

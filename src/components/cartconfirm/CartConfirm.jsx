@@ -52,7 +52,7 @@ const CartConfirm = () => {
           { cartInfo &&
               cartInfo.map((val,ind)=>{
                 return(
-                  <div className="row border-bottom pb-2 mb-2">
+                  <div className="row border-bottom pb-2 mb-2" key={ ind }>
                     <div className="col">{ ind+1 }</div>
                     <div className="col">{ val.productName }</div>
                     <div className="col">{ val.price }</div>
