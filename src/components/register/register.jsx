@@ -47,7 +47,6 @@ const Register = () => {
     const[accountFocus,setaccountFocus] = useState(false)
 
     const [errMsg,setErrMsg] = useState('')
-    const [success, setSuccess] = useState(false)
 
     useEffect (() => {
         userRef.current.focus();
@@ -268,7 +267,6 @@ const Register = () => {
                                 id="account" 
                                 name="account"
                                 placeholder="請輸入帳號(6-20英數字)"
-                                ref={userRef} 
                                 autoComplete="off"  /* autoComplete取消自動完成 */
                                 onChange ={(e) => setAccount(e.target.value)}
                                 required
