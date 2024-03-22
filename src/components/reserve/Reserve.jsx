@@ -18,7 +18,7 @@ function Reserve() {
   const [formData, setFormData] = useState(formDataFromLocation || {});
 
   const onSubmit = (data) => {
-    // 将数据作为参数传递到第二页
+    // 將數據做為參數傳到第二頁
     navigate('/reserveconfirm', { state: { formData: data } });
   };
 
@@ -87,11 +87,11 @@ function Reserve() {
                 <i className=""></i>
                 <i className=""></i>
                 <label for="medicalhistory"><p><i className="fa-solid fa-book-medical"></i> 過去病史：</p></label>
-                <textarea id="medicalhistory" name="medicalhistory" rows="3" maxLength="50" style={{ width: '100%' }} {...register("medicalhistory")} defaultValue={formData.medicalhistory}></textarea>
+                <textarea id="medicalhistory" name="medicalhistory" rows="3" maxLength="1000" style={{ width: '100%' }} {...register("medicalhistory")} defaultValue={formData.medicalhistory}></textarea>
               </div>
               <div className="form-row">
                 <label for="situation"><p><i className="fa-solid fa-comment-dots"></i> 情況描述：</p></label>
-                <textarea id="situation" name="situation" rows="6" maxLength="50" style={{ width: '100%' }} {...register("situation")} defaultValue={formData.situation}></textarea>
+                <textarea id="situation" name="situation" rows="6" maxLength="1000" style={{ width: '100%' }} {...register("situation")} defaultValue={formData.situation}></textarea>
               </div>
               <div className="button-container">
                 <input type="button" className="cancel-button" onClick={handleCancelClick} value="取消" />
