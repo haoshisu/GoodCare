@@ -1,51 +1,52 @@
-import React from 'react';
-import { useParams } from 'react-router-dom'
+import React from "react";
+import { useParams } from "react-router-dom";
 
-import Header from '../components/header/Header';
-import IndexNav from '../components/indexnav/IndexNav';
-import PathBox from '../components/pathbox/PathBox';
-import VideoSideBar from '../components/videosidebar/VideoSideBar';
-import SingleVideoContent from '../components/singlevideocontent/SingleVideoContent';
-import Footer from '../components/footer/Footer';
-import BackToTopBtn from '../components/backtotopbtn/BackToTopBtn';
+import Header from "../components/header/Header";
+import IndexNav from "../components/indexnav/IndexNav";
+import PathBox from "../components/pathbox/PathBox";
+import VideoSideBar from "../components/videosidebar/VideoSideBar";
+import SingleVideoContent from "../components/singlevideocontent/SingleVideoContent";
+import Footer from "../components/footer/Footer";
+import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
 
-import videoData from '../components/singlevideocontent/VideoContent.json'
+import videoData from "../components/singlevideocontent/VideoContent.json";
 
 const Service = () => {
-  const { id } = useParams()
-  const singleContent = videoData[id]
+  const { id } = useParams();
+  const singleContent = videoData[id];
   // console.log(singleContent.title)
 
   return (
     <React.Fragment>
-        <Header />
-        <IndexNav />
-        <PathBox />
-        <div className="container">
-            <div className="row">
-              <VideoSideBar dataList= { videoData }/>
-
-              {/* 這裡放你的主內容 */}
-              <div className='col-9'>
-                {videoData && <SingleVideoContent dataList= { singleContent }/>}
-                {/* {videoData && console.log('OK')} */}
-              </div>
-            </div>
+      <Header />
+      <IndexNav />
+      <PathBox />
+      <div className="container">
+        <div className="row">
+          <div className="col-md-3 d-none d-md-block">
+            <VideoSideBar dataList={videoData} />
+          </div>
+          {/* 這裡放你的主內容 */}
+          <div className="col-12 col-md-9">
+            {videoData && <SingleVideoContent dataList={singleContent} />}
+            {/* {videoData && console.log('OK')} */}
+          </div>
         </div>
-  
-        {/* 底下用8個換行空出雨footer距離 */}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <Footer />
-        <BackToTopBtn />
-      </React.Fragment>
-  )
-}
+      </div>
 
-export default Service
+      {/* 底下用8個換行空出雨footer距離 */}
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Footer />
+      <BackToTopBtn />
+    </React.Fragment>
+  );
+};
+
+export default Service;
