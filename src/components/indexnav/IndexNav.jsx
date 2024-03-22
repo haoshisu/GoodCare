@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 import './IndexNav.css'
 
 function IndexNav() {
-  const [road,setRoad] = useState('./userlogin')
+  const [road, setRoad] = useState('./userlogin')
   const userData = localStorage.getItem('auth')
 
   useEffect(
-    () => userData? setRoad('./usermodify'): setRoad('./userlogin'),
+    () => userData ? setRoad('./usermodify') : setRoad('./userlogin'),
     [userData]
   )
 
   return (
-  
-     <div>
+
+    <div>
       <nav className="navbar navbar-expand-lg topnav p-0">
         <div className="container">
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,8 +53,13 @@ function IndexNav() {
                 <li className="nav-item">
                   <a href="/reserve" className="topnav-title">預約照服員</a>
                 </li>
-                <li className="nav-item">
+                <li class="nav-item dropdown ">
                   <a href={road} className="topnav-title">會員資料</a>
+                  <ul class="dropdown-menu dropdown-content">
+                    <li class="dropdown-content1">
+                      <a href="/CheckOrder">訂單查詢</a>
+                    </li>
+                  </ul>
                 </li>
                 <li className="nav-item">
                   <a href="/webqa" className="topnav-title">網站常見問題</a>
@@ -65,7 +70,7 @@ function IndexNav() {
         </div>
       </nav>
     </div>
-    
+
   );
 }
 
