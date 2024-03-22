@@ -70,7 +70,7 @@ const Pofile = () => {
                                     <br/>
                                     <br/>
                                     <br/>
-                                    <div className="d-flex justify-content-center align-items:center">
+                                    <div className="d-flex justify-content-center align-items-center">
                                         <button className="profile1" type="submit" method="post" value="">修改資料</button>
                                     </div>
                                 </form>

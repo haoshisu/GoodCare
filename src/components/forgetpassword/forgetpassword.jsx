@@ -80,7 +80,7 @@ const ForegetPassword = () => {
                                         <i className="fa-solid fa-envelope"></i>&emsp;<input type="text" className="account"
                                             id="Inputaccount" value={pwd} onChange={(e) => setPwd(e.target.value)} placeholder="請輸入新密碼" />
                                     </div>
-                                    <p className={fail ? "show" : "hide"}>帳號或信箱錯誤</p>
+                                    <p className={fail ? "forgetpasswordshow" : "hide"}>帳號或信箱錯誤</p>
                                     <br />
                                     <br />
                                     <div className='d-flex  justify-content-center'>
@@ -100,7 +100,7 @@ const ForegetPassword = () => {
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div className="modal-body" style={{ fontSize: "17px" }}>
-                                                        密碼以重設
+                                                        密碼已重設
                                                     </div>
                                                     <div className="modal-footer">
                                                         <button type="button" className="btn btn-secondary"

@@ -142,14 +142,13 @@ const Modify = () => {
                                 />
                                 <br/>
                                 <br/>
-                                <div className="d-flex justify-content-between align-items:center mt-3">
-                                    <Link to='/' >
-                                    <button className="Modify4" type='button'>取消</button>
-                                    </Link>
-                                    <a href='/' className="Modify1" type="button" method="post" value=""  onClick={DoCheck}
-                                    disabled={!removePwd || !checkremovePwd ? true : false}
+                                <div className="d-flex justify-content-center text-center mt-3">
+                                    <Link to='/' 
+                                     className="Modify4 me-3" type='button' style={{textDecoration:'none'}}>取消</Link>
+                                    <Link to='/' className="Modify1" type="button" method="post" value=""  onClick={DoCheck}
+                                    disabled={!removePwd || !checkremovePwd ? true : false} style={{textDecoration:'none'}}
                                     >
-                                    確認</a>
+                                    確認</Link>
                                 </div>
                             </form>
                         </div>
