@@ -5,16 +5,11 @@ import "./CartDetail.css";
 import Counter from "../Counter/counter";
 
 const CartDetail = ({ doSecondBtn }) => {
-  let sessionInfo = sessionStorage.getItem("cartInfo")? JSON.parse(sessionStorage.getItem("cartInfo")):null;
+  let sessionInfo = JSON.parse(sessionStorage.getItem("cartInfo"));
   const [cartInfo, setCartInfo] = useState(sessionInfo || []);
   const [couponInd, setCouponInd] = useState(0);
-<<<<<<< Updated upstream
-  const [userCoupon, setUserCoupon] = useState(sessionStorage.getItem("couponDiscount"));
-  const [isUsed, setIsUsed] =useState(false)
-=======
   const [userCoupon, setUserCoupon] = useState(null);
   const [isUsed, setIsUsed] = useState(false)
->>>>>>> Stashed changes
 
   // console.log(userCoupon)
   // 更新購物車資訊
@@ -26,21 +21,12 @@ const CartDetail = ({ doSecondBtn }) => {
       return item;
     });
     setCartInfo(updatedCartInfo);
-    sessionStorage.setItem('cartInfo',JSON.stringify(updatedCartInfo))
   };
-  
-  // delete item
-  const doDelete = (id) => {
-    const idToRemove = id
-    let updatedCartInfo = [...cartInfo]
-    updatedCartInfo = updatedCartInfo.filter(item => item.id !== idToRemove)
-    setCartInfo(updatedCartInfo)
-    sessionStorage.setItem('cartInfo',JSON.stringify(updatedCartInfo))
-  }
 
   // 跳出吐司提示
   const notify = (msg) => toast.success(msg);
   if (!cartInfo.length) notify("購物車尚未有任何東西！");
+  if (userCoupon) notify("使用折扣碼成功！")
 
   // 驗證折扣碼
   let realCoupon = [
@@ -54,7 +40,6 @@ const CartDetail = ({ doSecondBtn }) => {
       setUserCoupon(realCoupon[checkInd].discount)
       sessionStorage.setItem('couponDiscount', realCoupon[checkInd].discount)
       setIsUsed(true)
-      notify("使用折扣碼成功！")
     }
     // console.log(e.code)
   }
@@ -86,60 +71,6 @@ const CartDetail = ({ doSecondBtn }) => {
   return (
     <>
       {/* 購物車明細 */}
-<<<<<<< Updated upstream
-      <div className="container">
-        <table className="table" style={{ width: "100%" }}>
-          <thead>
-            <tr>
-              <th scope="col">商品圖片</th>
-              <th scope="col">商品名稱</th>
-              <th scope="col">單價</th>
-              <th scope="col">數量</th>
-              <th scope="col">小計</th>
-              <th scope="col">刪除</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cartInfo.length > 0 ? (
-              cartInfo.map(val => {
-                return (
-                  <tr key={val.id}>
-                    <td>
-                      <img
-                        src={require(`../../asset/images/numberImages/${val.id}.png`)}
-                        alt="Product"
-                        width="150"
-                        height="150"
-                      />
-                    </td>
-                    <td>{val.productName}</td>
-                    <td>{val.price}</td>
-                    <td>
-                      <Counter
-                        curNum={val.quantity}
-                        childToParent={numChanged => { changeCartInfo(val.id, numChanged) }}
-                      />
-                    </td>
-                    <td>{val.quantity * val.price}</td>
-                    <td>
-                      <button className="delete-btn" onClick={ ()=>doDelete(val.id)}>
-                        <i className="fas fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })
-            ) : (
-              <tr>
-                <td colSpan={6} className="text-muted text-center">
-                  {" "}
-                  您尚未加入任何東西到購物車{" "}
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-=======
       <div className="container CartDetail">
         <div className="row">
           <div className="col-sm-2 col-lg-2 text-center ">商品圖片</div>
@@ -164,7 +95,7 @@ const CartDetail = ({ doSecondBtn }) => {
                   </div>
                   <div className="col-sm-2 text-center">{val.productName}</div>
                   <div className="col-sm-2 text-center">{val.price}</div>
-                  <div className="col-sm-2 text-center">
+                  <div className="col-sm-3 text-center">
                     <Counter
                       curNum={val.quantity}
                       childToParent={numChanged => { changeCartInfo(val.id, numChanged) }}
@@ -184,7 +115,49 @@ const CartDetail = ({ doSecondBtn }) => {
             </td>
           </tr>
         )}
->>>>>>> Stashed changes
+      </div>
+
+
+
+      <div className="containe CartDetail2">
+        {cartInfo.length > 0 ? (
+          cartInfo.map(val => {
+            return (
+              <div className="row">
+
+                <div key={val.id} className="col-9 col-md-6 col-sm-6">
+                  <img
+                    src={require(`../../asset/images/numberImages/${val.id}.png`)}
+                    alt="Product"
+                    className="CartDetailimg2"
+                  />
+                </div>
+                <div className="col-sm-3 col-md-6 col-sm-6 d-flex flex-column justify-content-center">
+                  <div>{val.productName}</div>
+                  <br />
+                  <div className="d-flex justify-content-end mb-3"><p>單件價格:</p>{val.price}</div>
+                  <div>
+                    <Counter
+                      curNum={val.quantity}
+                      childToParent={numChanged => { changeCartInfo(val.id, numChanged) }}
+                    />
+                  </div>
+
+                  <div className="d-flex justify-content-end"><p>小計:</p>{val.quantity * val.price}</div>
+
+                </div>
+                <hr />
+              </div>
+            );
+          })
+        ) : (
+          <tr>
+            <td colSpan={6} className="text-muted text-center">
+              {" "}
+              您尚未加入任何東西到購物車{" "}
+            </td>
+          </tr>
+        )}
       </div>
 
       <br />
@@ -227,68 +200,62 @@ const CartDetail = ({ doSecondBtn }) => {
                 {/* 折扣碼 */}
                 {cartInfo.length > 0 && (
                   <div className="container">
-                    <div className="d-flex justify-content-end">
-                      <div className="col-6 ms">
-                        <form className="input-group" onSubmit={handleSubmit(onSubmit)}>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="請輸入折扣碼"
-                            {...register('code',
-                              {
-                                require: true,
-                                pattern: '^/w+$',
-                                maxLength: 6
-                              }
-                            )}
-                            onChange={checkCoupon}
-                          />
-
-                          <div className="input-group-append">
-                            <input type="submit"
-                              className={"btn btn-outline-primary " + (isUsed ? "disabled" : "")}
-                              value="使用折扣碼"
+                    <div className="row">
+                      <div className="d-flex justify-content-end">
+                        <div className="col-7 me-5">
+                          <form className="input-group" onSubmit={handleSubmit(onSubmit)}>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="請輸入折扣碼"
+                              {...register('code',
+                                {
+                                  require: true,
+                                  pattern: '^/w+$',
+                                  maxLength: 6
+                                }
+                              )}
+                              onChange={checkCoupon}
                             />
+                            <div className="input-group-append">
+                              <input type="submit"
+                                className={"btn btn-outline-primary " + (isUsed ? "disabled" : "")}
+                                value="使用折扣碼"
+                              />
+                            </div>
+                          </form>
+                          <div className={couponInd < 0 ? "block" : "d-none"} >
+                            <p className="text-danger d-flex justify-content-center">此折扣碼無效</p>
                           </div>
-                        </form>
-                        <div className={couponInd < 0 ? "block" : "d-none"} >
-                          <p className="text-danger d-flex justify-content-center">此折扣碼無效</p>
                         </div>
                       </div>
+                      <Toaster />
                     </div>
-                    <Toaster />
                   </div>
                 )}
                 <br />
                 <br />
                 <br />
                 <br />
-                <div className="text-center d-flex justify-content-around">
-                  <a href="/product">
-                    <button className="btn btn-lg custom-button2 px-5">
-                      <i className="fa-solid fa-shopping-cart"></i>&nbsp;繼續購物
-                    </button>
-                  </a>
-                  <button
-                    type="button"
-                    className="btn btn-lg custom-button px-5"
-                    onClick={doSecondBtn}>
-                    <i class="fa-brands fa-cc-visa"></i>&nbsp;前往結帳
-                  </button>
-<<<<<<< Updated upstream
-                </a>
-                <button
-                  type="button"
-                  className="btn btn-lg custom-button px-5"
-                  onClick={doSecondBtn}>
-                  <i className="fa-brands fa-cc-visa"></i>&nbsp;前往結帳
-                </button>
-=======
+       
+                    <div className="text-center d-flex justify-content-around">
+                      <a href="/product">
+                        <button className="btn btn-lg custom-button2 ">
+                          <i className="fa-solid fa-shopping-cart"></i>&nbsp;繼續購物
+                        </button>
+                      </a>
+               
+                      <button
+                        type="button"
+                        className="btn btn-lg custom-button "
+                        onClick={doSecondBtn}>
+                        <i className="fa-brands fa-cc-visa"></i>&nbsp;前往結帳
+                      </button>
+                    </div>
+                  </div>
                 </div>
->>>>>>> Stashed changes
               </div>
-            </div>
-          </div>
+
         )
       }
       {/* 叫他回去買東西 */}
