@@ -32,7 +32,7 @@ const SubsidySearchCFM = ({
           </div>
         </div>
         <div className="row justify-content-center mt-4 mb-4">
-          <div className="col-10">
+          <div className="col-12">
             <div className="content">
               <h3 style={{ color: "#cf4501", fontWeight: "bold" }}>
                 請確認以下您輸入的資訊是否正確:

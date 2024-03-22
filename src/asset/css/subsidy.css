@@ -122,10 +122,6 @@ td {
   border-right: 1px solid #dee2e6 !important; /* 设置每列数据的右边框为1px实线灰色 */
 }
 
-.content-block {
-  /* display: none !important; 默认隐藏内容块 */
-}
-
 .btn-container {
   display: flex !important;
   justify-content: center !important;
@@ -155,4 +151,42 @@ td {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+}
+
+/* RWD of subsidyHome */
+@media (max-width: 700px) {
+  .custom-btn,
+  .custom-btn-4,
+  .btn-toggle,
+  .form-group label {
+    font-size: 16px !important;
+    padding: 8px 16px !important;
+  }
+  .picCaption {
+    display: none;
+  }
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn-containerA {
+    display: flex;
+    flex-direction: column;
+  }
+  /* RWD of SearchCFM */
+  .text-center.mt-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .custom-button {
+    margin-bottom: 10px; /* 調整按鈕的底部間距 */
+  }
+
+  /* RWD of NoMatch */
+
+  /* RWD of Result */
 }

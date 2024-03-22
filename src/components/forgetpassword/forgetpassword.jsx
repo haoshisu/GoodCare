@@ -27,7 +27,7 @@ const ForegetPassword = () => {
                                 </div>
                                 <br/>
                                 <br/>
-                                <div style={{display: "flex" ,justifyContent: "spaceEvenly"}}>
+                                <div className='d-flex  justify-content-center'>
                                     {/* <!-- Button trigger modal --> */}
                                     <button type="button" class="forgotpassword" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal">

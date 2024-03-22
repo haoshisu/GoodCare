@@ -61,11 +61,11 @@ const Counter = ({ curNum, childToParent }) => {
 
   return (
     <React.Fragment>
-      <div className="d-flex">
+      <>
         <button className="btn btn-outline-secondary" type="button" onClick={doReduce}><FontAwesomeIcon icon="fa-solid fa-minus" /></button>
         <input type="text" className="form-control text-center" value={counter} id='quantity' readOnly />
         <button className="btn btn-outline-secondary" type="button" onClick={doPlus}><FontAwesomeIcon icon="fa-solid fa-plus" /></button>
-      </div>
+      </>
     </React.Fragment>
   )
 

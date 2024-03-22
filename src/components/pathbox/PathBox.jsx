@@ -1,5 +1,5 @@
 import React from 'react';
-import './PathBox.css'
+import './PathBox.css';
 
 function PathBox({ path, pathName }) {
 

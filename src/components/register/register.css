@@ -48,3 +48,27 @@
   border-radius: 25px;
 }
 
+@media screen and (max-width: 576px) {
+  .registered3{
+    padding: 40px 90px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .registered3{
+    padding: 30px 70px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .registered3{
+    padding: 10px 50px;
+  }
+}
+
+  @media screen and (max-width: 450px) {
+    .registered3{
+      padding: 5px 20px;
+    }
+
+}

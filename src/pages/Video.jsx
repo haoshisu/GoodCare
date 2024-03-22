@@ -21,9 +21,11 @@ function Video() {
       <PathBox pathName={"影音專區"} path={"/video"} />
       <div className="container">
         <div className="row">
-          <SideBar title={sidebarTitle} />
+          <div className="col-lg-3 col-md-4 d-lg-block d-md-block">
+            <SideBar title={sidebarTitle} />
+          </div>
           {/* 這裡放你的主內容 */}
-          <div className="col-9 new-content">
+          <div className="col-lg-9 col-md-8 new-content">
             <div className="tab-content" id="myTabContent">
               <div
                 className="tab-pane fade show active"

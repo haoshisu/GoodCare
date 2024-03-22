@@ -19,7 +19,7 @@ const Service = () => {
         <div className="row">
           <SideBar title={ sidebarTitle } pathName={ sidebarTitle }/>
           {/* 這裡放你的主內容 */}
-          <div className='col-9'>
+          <div className='col-md-12 col-lg-9 col-xl-9'>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li>
                 <button class="nav-link" style={{  backgroundColor: '#214F39',color: 'white',textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)'}}>政府長照政策</button>

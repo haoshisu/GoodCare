@@ -1,3 +1,10 @@
+/* 帳號或密碼錯誤 */
+.show{
+  color:red
+}
+
+
+
 /* 名稱判斷 */
 .hide{
   display: none;
@@ -49,4 +56,23 @@
   background-color: white;
   padding: 50px 80px;
   border-radius: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .userlogin{
+    padding: 30px 45px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .userlogin{
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .userlogin{
+    padding: 10px 20px;
+  }
+
 }

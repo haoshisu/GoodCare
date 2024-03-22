@@ -1,9 +1,9 @@
 import React from 'react';
-import './Pagination.css';
+import '../../components/pagination/Pagination.css';
 
-function Pagination ({ totalNews, newsNum, setCurPage, curPage }) {
+function Pagination ({ totalItems, itemsPerPage, setCurrentPage, currentPage }) {
     let pages = []
-    let maxPage = Math.ceil(totalNews / newsNum)
+    let maxPage = Math.ceil(totalItems / itemsPerPage)
 
     for (let i=1; i<= maxPage; i++) {
       pages.push(i)
@@ -12,11 +12,11 @@ function Pagination ({ totalNews, newsNum, setCurPage, curPage }) {
     // console.log(maxPage)
     return (
       <nav aria-label="Page navigation example" className="d-flex justify-content-center">
-        <ul className="pagination ">
+        <ul className="pagination">
             <li className="page-item">
                 <button className="page-link" aria-label="Previous"
                   onClick={() =>
-                    setCurPage((prev) => {
+                    setCurrentPage((prev) => {
                       if (prev === 1) return prev;
                       return prev - 1;
                     })}>
@@ -27,11 +27,11 @@ function Pagination ({ totalNews, newsNum, setCurPage, curPage }) {
             {
             pages.map((page, ind) => {
               return(
-                <li className={curPage === page ? "page-item active" : "page-item"}>
+                <li className={currentPage === page ? "page-item active" : "page-item"}>
                   <a
                     key={ind}
                     onClick={() => {
-                      setCurPage(page);
+                      setCurrentPage(page);
                     }}
                     href='##'
                     className='page-link'
@@ -46,7 +46,7 @@ function Pagination ({ totalNews, newsNum, setCurPage, curPage }) {
             <li className="page-item">
                 <button className="page-link" aria-label="Previous"
                   onClick={() =>
-                    setCurPage((prev) => {
+                    setCurrentPage((prev) => {
                       if (prev === maxPage) return prev;
                       return prev + 1;
                     })}>

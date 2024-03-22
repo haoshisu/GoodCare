@@ -17,7 +17,7 @@ const UserLogin = (  ) => {
     const [pwd, setPwd] = useState('')
     const [isRemember, setIsremember] = useState('')
     const [errMsg,setErrMsg] = useState('')
-    const [success, setSuccess] = useState(false)
+    const [fail, setFail] = useState(false)
     
     
 
@@ -36,13 +36,15 @@ const UserLogin = (  ) => {
 
     const DoLogin = async(e) =>{
 
-        // e.preventDefault();
         await axios.post('http://localhost:8000/member/login',JSON.stringify({
             account,pwd
         }),{
             headers:{"Content-Type":"application/json"}
         })
         .then(response => {
+            if(response?.data ==="account or paasword no correct"){
+                setFail(true)
+            }
             const userData = {
                 account,
                 pwd,
@@ -53,9 +55,7 @@ const UserLogin = (  ) => {
                 address:response?.data?.result[0].address,
                 email:response?.data?.result[0].email,
             };
-            login(userData)
-            // console.log(response)
-            
+            login(userData) //設定用戶資訊            
             window.location.href = ('/')
         })
         .catch(error => {
@@ -105,6 +105,7 @@ const UserLogin = (  ) => {
                                     <input type="password" className="password" 
                                         id="pwd" value={pwd}  onChange={(e) => setPwd(e.target.value)} required/>
                                 </div>
+                                <p className={fail ? "show" : "hide"}>帳號或密碼錯誤</p>
                                 <div className="mb-3 form-check" >
                                     <input type="checkbox" className="form-check-input" id="Check" onClick={Doremember} checked={isRemember}/>
                                     <label className="form-check-label" htmlFor="Check" style={{fontSize: "14px"}}>記住我</label>
@@ -114,12 +115,12 @@ const UserLogin = (  ) => {
                                     <button className="login" type="button" onClick={DoLogin} >登入</button>
                                 </div>
                             </form>
-                            <div className="d-flex justify-content-center mb-3">
-                                <Link to="/UserRegister">
-                                    <h5>註冊帳號&emsp;｜</h5>
+                            <div className="userregister d-flex justify-content-center mb-3">
+                                <Link to="/UserRegister" style={{textDecoration:'none'}}>
+                                    <h5 >註冊帳號&emsp;｜</h5>
                                 </Link>                            
 
-                                <Link to="/UserForget">
+                                <Link to="/UserForget" style={{textDecoration:'none'}}>
                                     <h5>&emsp;忘記密碼</h5>
                                 </Link>
                             </div>

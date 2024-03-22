@@ -1,0 +1,37 @@
+.direct2cart{
+    width: 250px;
+    font-Size: 16px;
+}
+
+.putcart{
+    width: 250px;
+    font-Size: 16px;
+}
+.card-text{
+    font-Size:18px;
+}
+
+.producttext{
+    font-Size:55px;
+}
+
+@media screen and (max-width: 990px) {
+    .producttext{
+        font-Size:45px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .producttext{
+        font-Size:35px;
+    }
+  }
+  
+@media screen and (max-width: 390px) {
+    .card-text{
+        font-Size:0.8em;
+    }
+    .card-title{
+     font-size:13px;; 
+    }
+  }

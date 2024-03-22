@@ -11,7 +11,7 @@ const SubsidyLink2 = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"補助資訊"} path={"/subsidy"} />
       <div className="container col-1"></div>
       <div className="container col-10">
         <div className="row">

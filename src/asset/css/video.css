@@ -1,6 +1,15 @@
-.videoitem{
-    /* border-bottom: solid #DCDAD9; */
-    padding: 20 px;
-    font-size: 20px;
-    transition: margin 0.2s ease-in-out;
+.videoitem {
+  /* border-bottom: solid #DCDAD9; */
+  padding: 20 px;
+  font-size: 20px;
+  transition: margin 0.2s ease-in-out;
+}
+
+/* RWD of video */
+
+@media (max-width: 700px) {
+  .videoitem {
+    font-size: 16px; /* 調整字體大小 */
+    /* padding: 10px; 調整間距 */
+  }
 }
