@@ -18,6 +18,7 @@ function Header( ) {
 
     const doLogout = () => {
         logout()
+        window.location.href = '/userlogin'
     }
   
     
