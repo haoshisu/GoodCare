@@ -30,10 +30,6 @@ const Modify = () => {
                 setBirthday(new Date(response.data[0].birthday).toISOString().split('T')[0])
                 setAccount(response.data[0].account)
             })
-            .catch(err => {
-                // if(err) window.location.href=('/userlogin')
-                // alert(err)
-            });
         }
     }, [auth]);
     
