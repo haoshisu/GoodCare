@@ -185,8 +185,44 @@ td {
   .custom-button {
     margin-bottom: 10px; /* 調整按鈕的底部間距 */
   }
-
-  /* RWD of NoMatch */
-
-  /* RWD of Result */
 }
+
+@media (max-width: 1100px) {
+  .custom-btn,
+  .custom-btn-4,
+  .btn-toggle,
+  .form-group label {
+    font-size: 20px !important;
+    padding: 8px 16px !important;
+  }
+
+  .responsive-image {
+    max-width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-containerA {
+    display: none;
+    /* flex-direction: column; */
+  }
+  .picCaption {
+    display: none;
+  }
+  /* RWD of SearchCFM */
+  .text-center.mt-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .custom-button {
+    margin-bottom: 10px; /* 調整按鈕的底部間距 */
+  }
+}
+/* RWD of NoMatch */
+
+/* RWD of Result */

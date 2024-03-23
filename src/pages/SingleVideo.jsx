@@ -20,7 +20,7 @@ const Service = () => {
     <React.Fragment>
       <Header />
       <IndexNav />
-      <PathBox />
+      <PathBox pathName={"影音專區"} path={"/video"} />
       <div className="container">
         <div className="row">
           <div className="col-md-3 d-none d-md-block">

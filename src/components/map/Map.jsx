@@ -338,7 +338,7 @@ function Map() {
     <React.Fragment>
       <div className="tab-content" id="center-Content">
         <div
-          className="tab-pane fade show active"
+          className="tab-pane fade show active fixed-right"
           id="longcare"
           role="tabpanel"
           aria-labelledby="longcare-tab"

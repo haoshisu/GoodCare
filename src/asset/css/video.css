@@ -7,7 +7,7 @@
 
 /* RWD of video */
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .videoitem {
     font-size: 16px; /* 調整字體大小 */
     /* padding: 10px; 調整間距 */

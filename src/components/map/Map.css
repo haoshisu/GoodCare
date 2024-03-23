@@ -1,6 +1,7 @@
 /*html的部分-卡片*/
 .search-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -33,6 +34,8 @@
   height: 2.5em;
   width: auto;
   margin-right: 30px;
+  flex: 1; /* 讓 select 和 input 元素填滿剩餘空間 */
+  margin-right: 10px;
 }
 
 .serchtext1 {
@@ -47,6 +50,8 @@
   font-size: 20px;
   background-color: #ededed;
   margin-right: 20px;
+  flex-shrink: 0; /* 防止按鈕被壓縮 */
+  margin-left: 10px;
 }
 
 .stronghold {
@@ -72,17 +77,17 @@
 #svgarea {
   height: 80vh;
   position: relative;
-  left: 25%;
+  left: 40%;
 }
 
 .title_area {
-  width: 22em;
+  /* width: 22em; */
   border: solid 2px rgb(17, 16, 16);
   border-radius: 25px;
-  margin-top: 20px;
+  margin-top: 80px;
   padding: 10px 25px;
   position: absolute;
-  right: 15%;
+  left: 15%;
 }
 
 /*位置*/
@@ -110,4 +115,64 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   box-sizing: border-box; /* 保證padding不影響元素寬度 */
+}
+
+.mapTitle {
+  font-size: 24px;
+}
+
+.forcast {
+  font-size: 18px;
+}
+
+/* 媒體查詢，調整樣式以適應不同的螢幕寬度 */
+@media screen and (max-width: 768px) {
+  .mapTitle {
+    font-size: 20px;
+  }
+
+  .forcast {
+    font-size: 16px;
+  }
+}
+.box {
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .mapTitle {
+    font-size: 18px;
+  }
+
+  .forcast {
+    font-size: 14px;
+  }
+}
+
+/* RWD for search-container */
+@media screen and (max-width: 990px) {
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    border-radius: 5%;
+    padding-top: 10px;
+    margin-top: 30px;
+  }
+
+  .serchtext,
+  .serchtext1,
+  .serchbutton {
+    width: 80%; /* 讓元素填滿父容器 */
+    margin: 5px 0; /* 調整元素之間的垂直間距 */
+  }
+  #svgarea {
+    display: none;
+  }
+  .title_area {
+    display: none;
+  }
+  .nav-tabs {
+    flex-direction: row;
+  }
 }
