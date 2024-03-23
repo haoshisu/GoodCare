@@ -5,19 +5,24 @@ import '../modify/modify.css'
 import AuthContext from "../../Context/AuthProvider";
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Modify = () => {
     const [userData, setUserData] = useState([]);
     const { auth } = useContext(AuthContext);
     const [isGender,setIsgender] = useState('')
     const [birthday,setBirthday] = useState('')
+    const [tel,setTel] = useState('')
+    const [address, setAddress] = useState('')
     const [removePwd, setRemovePWd] = useState('')
     const [checkremovePwd,setCheckRemovePwd] = useState('')
     const [account,setAccount] = useState()
-    
+    const [memberState, setmemberState] = useState(false)
+    const [modifyState, setmodifyState] = useState(false)
     useEffect(() => {
         if ( auth ) {
             console.log(auth)
+            setmemberState(true)
             const accessToken = auth.accessToken;
             axios.get('http://localhost:8000/member/login', {
                 headers: {
@@ -29,9 +34,23 @@ const Modify = () => {
                 setIsgender(parseInt(response.data[0].gender))
                 setBirthday(new Date(response.data[0].birthday).toISOString().split('T')[0])
                 setAccount(response.data[0].account)
+                setTel(response.data[0].tel)
+                setAddress(response.data[0].address)
             })
         }
     }, [auth]);
+
+    var Dotel = (e) => {
+        var newtel = e.target.value
+        if (newtel.length <= 10) {
+            setTel(newtel);
+        }
+    }
+
+    var Doaddress = (e) => {
+        var newaddress = e.target.value
+        setAddress(newaddress)
+    }
     
     var Doremove = (e) => {
         var newRemovepwd = e.target.value
@@ -42,30 +61,45 @@ const Modify = () => {
         var newRemovepwd = e.target.value
         setCheckRemovePwd(newRemovepwd)
     }
+
+    var DoModify = () => {
+        setmodifyState(true)
+    }
     
 
     var DoCheck = async() => {
         // e.preventDefault()
         if (auth.accessToken && removePwd === checkremovePwd){
             // alert('ok')
-            await axios.post('http://localhost:8000/member/modify',JSON.stringify({account,removePwd}),{
+            await axios.post('http://localhost:8000/member/modify',JSON.stringify({account,removePwd,tel,address}),{
                 headers:{
                     "Content-Type":"application/json",
                 },
                 
             })
-            alert('修改成功')
-            window.location.href = ('/')
-        }
-        else{
-            alert('錯誤')
+            .then((response => {
+                if(response.data === "member update"){
+                    toast.success('修改成功',{style: {
+                        minWidth: '200px', //寬
+                        borderRadius: '300px', //長
+                        fontSize: '20px', 
+                        padding: '10px', 
+                      }})
+                    setInterval(() => {
+                        window.location.href = ('/usermodify')  
+                    },1500)
+                }    
+            }))
         }
     }
+
+    
     
 
 
     return(
     <>
+    <Toaster/>
     {userData.map((p,i) => (
         <div style={{ 
             backgroundImage: `url(${Background})`,
@@ -77,7 +111,8 @@ const Modify = () => {
                     <div className="d-flex flex-column justify-content-center align-items-center mb-5 mt-5">
                         <div className="Modify3">
                             <div className="bm-5">
-                                <h2 className="d-flex justify-content-center">修改會員資料</h2>
+                                <h2 className={memberState && !modifyState ? "d-flex justify-content-center" : "hide"}>會員資料</h2>
+                                <h2 className={memberState && modifyState ? "d-flex justify-content-center" : "hide"}>修改會員資料</h2>
                                 <h4 className="d-flex justify-content-center">______________________________</h4>
                             </div>
                             <br/>
@@ -106,18 +141,20 @@ const Modify = () => {
                                 <label className="Modify" for="email"><i
                                         className="fa-solid fa-envelope"></i>&emsp;Email:</label>
                                 <br/>
-                                <input className="Modify2" type="email" id="email" name="email" value={p.email}/>
+                                <input className="Modify2" type="email" id="email" name="email" value={p.email} disabled />
                                 <br/>
                                 <br/>
                                 <label className="Modify" for="address"><i
                                         className="fa-solid fa-location-dot"></i>&emsp;地址:</label>
                                 <br/>
-                                <input className="Modify2" id="address" name="address" value={p.address}/>
+                                <input className="Modify2" id="address" name="address" value={modifyState ? address : p.address} onChange={Doaddress} disabled={!modifyState} 
+                                required/>
                                 <br/>
                                 <br/>
                                 <label className="Modify" for="tel"><i className="fa-solid fa-phone"></i>&emsp;電話:</label>
                                 <br/>
-                                <input className="Modify2" type="tel" id="tel" name="tel" value={p.tel}/>
+                                <input className="Modify2" type="tel" id="tel" name="tel" value={modifyState ? tel : p.tel} onChange={Dotel} disabled={!modifyState} 
+                                required/>
                                 <br/>
                                 <br/>
                                 <label className="Modify" for="account"><i className="fa-solid fa-ghost"></i>&emsp;帳號:</label>
@@ -125,27 +162,64 @@ const Modify = () => {
                                 <input className="Modify2" type="text" id="account" name="account" value={p.account} disabled />
                                 <br/>
                                 <br/>
-                                <label className="Modify" for="password"><i className="fa-solid fa-lock"></i>&emsp;修改密碼:</label>
+                                {!modifyState ? ( 
+                                <React.Fragment>
+                                    <label className="Modify"  for="account"><i className="fa-solid fa-ghost">
+                                        </i>&emsp;密碼:</label>
+                                    <br/>
+                                    <input className= "Modify2"  type="password" id="account" name="account" 
+                                    value={p.pwd} disabled />                                
+                                </React.Fragment>                                
+                                    ) : (
+                                <React.Fragment>
+                                    <label className="Modify" for="password"><i className="fa-solid fa-lock">
+                                        </i>&emsp;修改密碼:</label>
+                                    <br/>
+                                    <input className="Modify2" type="password" id="password" name="password" 
+                                    value={removePwd} onChange={Doremove}
+                                    required
+                                    />
+                                    <br/>
+                                    <br/>
+                                    <label className="Modify" for="password2"><i className="fa-solid fa-lock">
+                                        </i>&emsp;再次確認密碼:</label>
+                                    <br/>
+                                    <input className="Modify2" type="password" id="password2" name="password" 
+                                    value={checkremovePwd} onChange={DoremoveCheck}
+                                    required
+                                    />
+                                </React.Fragment>)}
+                                {/* <label className={!modifyState ? "Modify" : "hide"} for="account"><i className="fa-solid fa-ghost"></i>&emsp;密碼:</label>
                                 <br/>
-                                <input className="Modify2" type="password" id="password" name="password" value={removePwd} onChange={Doremove}
+                                <input className={!modifyState ? "Modify2" : "hide"} type="password" id="account" name="account" value={p.pwd} disabled />
+                                <br/>
+                                <br/>
+                                <label className={modifyState ? "Modify" : "hide"} for="password"><i className="fa-solid fa-lock"></i>&emsp;修改密碼:</label>
+                                <br/>
+                                <input className={modifyState ? "Modify2" : "hide"} type="password" id="password" name="password" value={removePwd} onChange={Doremove}
                                 required
                                 />
                                 <br/>
                                 <br/>
-                                <label className="Modify" for="password2"><i className="fa-solid fa-lock"></i>&emsp;再次確認密碼:</label>
+                                <label className={modifyState ? "Modify" : "hide"} for="password2"><i className="fa-solid fa-lock"></i>&emsp;再次確認密碼:</label>
                                 <br/>
-                                <input className="Modify2" type="password" id="password2" name="password" value={checkremovePwd} onChange={DoremoveCheck}
+                                <input className={modifyState ? "Modify2" : "hide"} type="password" id="password2" name="password" value={checkremovePwd} onChange={DoremoveCheck}
                                 required
-                                />
+                                /> */}
                                 <br/>
                                 <br/>
                                 <div className="d-flex justify-content-center text-center mt-3">
-                                    <Link to='/' 
-                                     className="Modify4 me-3" type='button' style={{textDecoration:'none'}}>取消</Link>
-                                    <Link to='/' className="Modify1" type="button" method="post" value=""  onClick={DoCheck}
-                                    disabled={!removePwd || !checkremovePwd ? true : false} style={{textDecoration:'none'}}
-                                    >
-                                    確認</Link>
+                                    <Link to='/usermodify' 
+                                        className={modifyState ? "Modify4 me-3" : "hide"} type='button' style={{textDecoration:'none'}}>
+                                        取消
+                                    </Link>
+
+                                    <button className={memberState && !modifyState ? "Modify1" : "hide"} type="button" onClick={DoModify}>修改</button>
+
+                                    <button className={modifyState ? "Modify1" : "hide"} type="button" method="post" value=""  onClick={DoCheck}
+                                        disabled={ !tel || !address || !removePwd || !checkremovePwd ? true : false} style={{textDecoration:'none'}}>
+                                        確認
+                                    </button>
                                 </div>
                             </form>
                         </div>

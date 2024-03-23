@@ -34,12 +34,17 @@ const ForegetPassword = () => {
 
 
     const Dofinal = async () => {
-        await axios.post('http://localhost:8000/member/reforget', { pwd },
+        await axios.post('http://localhost:8000/member/reforget', { account, email,pwd },
             { headers: { "Content-Type": "application/json" } }
         )
             .then((response => {
                 if (response.data === "restart err") {
-                    alert('請在試一次')
+                    toast.error('請在試一次',{style: {
+                        minWidth: '200px', //寬
+                        borderRadius: '300px', //長
+                        fontSize: '20px', 
+                        padding: '10px', 
+                      }})
                 } else {
                     toast.success('密碼已更新，請重新登入',{style: {
                         minWidth: '200px', //寬
