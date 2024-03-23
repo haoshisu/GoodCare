@@ -189,23 +189,6 @@ const Modify = () => {
                                     required
                                     />
                                 </React.Fragment>)}
-                                {/* <label className={!modifyState ? "Modify" : "hide"} for="account"><i className="fa-solid fa-ghost"></i>&emsp;密碼:</label>
-                                <br/>
-                                <input className={!modifyState ? "Modify2" : "hide"} type="password" id="account" name="account" value={p.pwd} disabled />
-                                <br/>
-                                <br/>
-                                <label className={modifyState ? "Modify" : "hide"} for="password"><i className="fa-solid fa-lock"></i>&emsp;修改密碼:</label>
-                                <br/>
-                                <input className={modifyState ? "Modify2" : "hide"} type="password" id="password" name="password" value={removePwd} onChange={Doremove}
-                                required
-                                />
-                                <br/>
-                                <br/>
-                                <label className={modifyState ? "Modify" : "hide"} for="password2"><i className="fa-solid fa-lock"></i>&emsp;再次確認密碼:</label>
-                                <br/>
-                                <input className={modifyState ? "Modify2" : "hide"} type="password" id="password2" name="password" value={checkremovePwd} onChange={DoremoveCheck}
-                                required
-                                /> */}
                                 <br/>
                                 <br/>
                                 <div className="d-flex justify-content-center text-center mt-3">
