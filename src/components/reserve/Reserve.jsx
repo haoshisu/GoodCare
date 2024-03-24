@@ -26,7 +26,7 @@ function Reserve() {
     <React.Fragment>
       <div className="appointment">
         <div className="row">
-          <div className="col-sm-1 col-xxl-2"></div>
+          <div className="col-sm-1 col-xl-2"></div>
           <div className="col-sm-8 col-md-8 col-lg-6 col-xl-5">
             <br />
             <form onSubmit={handleSubmit(onSubmit)} id="formcontent">
@@ -77,10 +77,6 @@ function Reserve() {
                   }
                 })} defaultValue={formData.relationship} />
                 {errors.relationship && <p style={{ color: 'red' }}>{errors.relationship.message}</p>}
-              </div>
-              <div className="form-row">
-                <label for="relationship"><p><i className="fa-solid fa-people-arrows"></i> 與被照顧者的關係：</p></label>
-                <input type="text" id="relationship" name="relationship" style={{ width: '135px' }} {...register("relationship")} defaultValue={formData.relationship} />
               </div>
               <br />
               <hr />
