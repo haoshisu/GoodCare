@@ -110,15 +110,10 @@ function Reserve() {
               </div>
               <div className="form-row">
                 <label for="weight"><p><i className="fa-solid fa-thin fa-weight-scale"></i> 體重：</p></label>
-<<<<<<< Updated upstream
                 <input type="number" id="weight" name="weight" min="0" max="300" style={{ width: '135px' }} {...register("weight", { required: "* 此欄位必填" })} defaultValue={formData.weight} />
                 {errors.weight && <p style={{ color: 'red' }}>{errors.weight.message}</p>}
               </div>
 
-=======
-                <input type="number" id="weight" name="weight" min="0" max="300" style={{ width: '135px' }} {...register("weight")} defaultValue={formData.weight} />
-              </div>
->>>>>>> Stashed changes
               <div className="form-row">
                 <label for="servicelocation"><p><i className="fa-solid fa-location-dot"></i> 服務地址：</p></label>
                 <input id="servicelocation" name="servicelocation" rows="1" style={{ width: '100%' }} {...register("servicelocation", { required: "* 此欄位必填" })} defaultValue={formData.servicelocation}></input>
