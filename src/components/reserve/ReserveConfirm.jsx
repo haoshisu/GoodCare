@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+// import { useForm } from 'react-hook-form';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './Reserve.css';
@@ -11,8 +11,8 @@ function ReserveConfirm() {
   const formData = location.state.formData;
   const navigate = useNavigate();
 
+  //修改回第一頁
   const handleModifyClick = () => {
-    // 点击修改按钮时导航回第一页
     navigate('/reserve', { state: { formData } });
   };
 
@@ -64,20 +64,14 @@ function ReserveConfirm() {
         }, 3000);
         
       } else {
-        // 处理其他响应
-        console.log(formData);
+        alert('預約失敗，請重試')
       }
     } catch (error) {
-      // 处理错误
+      // 處理錯誤
       console.error("Error:", error);
       console.log(formData);
     }
   };
-
-
-
-
-
 
   return (
     <React.Fragment>
@@ -100,8 +94,12 @@ function ReserveConfirm() {
                 <input type="email" id="email" name="email" style={{ width: '80%' }} value={formData.email} />
               </div>
               <div className="form-row">
-                <label for="phone"><p><i className="fa-solid fa-phone"></i> 電話：</p></label>
+                <label for="phone"><p><i className="fa-solid fa-phone"></i> 行動電話：</p></label>
                 <input type="tel" id="phone" name="phone" value={formData.phone} />
+              </div>
+              <div className="form-row">
+                <label for="relationship"><p><i className="fa-solid fa-people-arrows"></i> 與被照顧者的關係：</p></label>
+                <input type="text" id="relationship" name="relationship" style={{ width: '135px' }} value={formData.relationship} />
               </div>
               <br />
               <hr />
@@ -130,10 +128,7 @@ function ReserveConfirm() {
                 <label for="weight"><p><i className="fa-solid fa-thin fa-weight-scale"></i> 體重：</p></label>
                 <input type="number" id="weight" name="weight" min="0" max="300" style={{ width: '135px' }} value={formData.weight} />
               </div>
-              <div className="form-row">
-                <label for="relationship"><p><i className="fa-solid fa-people-arrows"></i> 與被照顧者的關係：</p></label>
-                <input type="text" id="relationship" name="relationship" style={{ width: '135px' }} value={formData.relationship} />
-              </div>
+
               <div className="form-row">
                 <label for="servicelocation"><p><i className="fa-solid fa-location-dot"></i> 服務地址：</p></label>
                 <input id="servicelocation" name="servicelocation" rows="1" style={{ width: '100%' }} value={formData.servicelocation} ></input>
