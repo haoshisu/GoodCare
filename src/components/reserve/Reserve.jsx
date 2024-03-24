@@ -26,14 +26,13 @@ function Reserve() {
     <React.Fragment>
       <div className="appointment">
         <div className="row">
-          <div className="col-2"></div>
-          <div className="col-5 col-md-5 col-lg-5">
+          <div className="col-sm-1 col-xxl-2"></div>
+          <div className="col-sm-8 col-md-8 col-lg-6 col-xl-5">
             <br />
             <form onSubmit={handleSubmit(onSubmit)} id="formcontent">
               <h2>預約照服員資料表</h2>
               <hr />
               <h4>申請人&nbsp;&nbsp;(主要聯絡人)</h4>
-
               <div className="form-row">
                 <label for="name"><p><i className="fa-solid fa-user"></i> 姓名：</p></label>
                 <input type="text" id="applyname" name="applyname"
@@ -79,6 +78,10 @@ function Reserve() {
                 })} defaultValue={formData.relationship} />
                 {errors.relationship && <p style={{ color: 'red' }}>{errors.relationship.message}</p>}
               </div>
+              <div className="form-row">
+                <label for="relationship"><p><i className="fa-solid fa-people-arrows"></i> 與被照顧者的關係：</p></label>
+                <input type="text" id="relationship" name="relationship" style={{ width: '135px' }} {...register("relationship")} defaultValue={formData.relationship} />
+              </div>
               <br />
               <hr />
               <h4>預約照顧&nbsp;&nbsp;(被照顧者資料)</h4>
@@ -107,10 +110,15 @@ function Reserve() {
               </div>
               <div className="form-row">
                 <label for="weight"><p><i className="fa-solid fa-thin fa-weight-scale"></i> 體重：</p></label>
+<<<<<<< Updated upstream
                 <input type="number" id="weight" name="weight" min="0" max="300" style={{ width: '135px' }} {...register("weight", { required: "* 此欄位必填" })} defaultValue={formData.weight} />
                 {errors.weight && <p style={{ color: 'red' }}>{errors.weight.message}</p>}
               </div>
 
+=======
+                <input type="number" id="weight" name="weight" min="0" max="300" style={{ width: '135px' }} {...register("weight")} defaultValue={formData.weight} />
+              </div>
+>>>>>>> Stashed changes
               <div className="form-row">
                 <label for="servicelocation"><p><i className="fa-solid fa-location-dot"></i> 服務地址：</p></label>
                 <input id="servicelocation" name="servicelocation" rows="1" style={{ width: '100%' }} {...register("servicelocation", { required: "* 此欄位必填" })} defaultValue={formData.servicelocation}></input>
