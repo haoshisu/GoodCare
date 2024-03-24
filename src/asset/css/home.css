@@ -51,16 +51,14 @@
 
   &::before {
     content: '';
-    width: 45vw;
+    width: 50%;
     height: 100vh;
     background-image: url('../images/Home/heartlove.png');
     background-size:cover;
     opacity: 0.3;
     position: absolute;
     z-index: -1;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(45%, 110%);
   }
 }
 

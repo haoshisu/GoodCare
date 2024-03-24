@@ -164,7 +164,7 @@ const Modify = () => {
                                 <br/>
                                 {!modifyState ? ( 
                                 <React.Fragment>
-                                    <label className="Modify"  for="account"><i className="fa-solid fa-ghost">
+                                    <label className="Modify mb-2"  for="account"><i className="fa-solid fa-ghost">
                                         </i>&emsp;密碼:</label>
                                     <br/>
                                     <input className= "Modify2"  type="password" id="account" name="account" 

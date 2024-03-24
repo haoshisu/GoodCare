@@ -38,3 +38,29 @@
 .Modify4 a{
   text-decoration: none;
 }
+
+
+@media screen and (max-width: 576px) {
+  .Modify3{
+    padding: 40px 90px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .Modify3{
+    padding: 30px 70px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .Modify3{
+    padding: 10px 50px;
+  }
+}
+
+  @media screen and (max-width: 450px) {
+    .Modify3{
+      padding: 5px 20px;
+    }
+
+}

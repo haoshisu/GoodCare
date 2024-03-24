@@ -13,11 +13,19 @@
   border-bottom: solid #d9dcd9;
   padding: 20px;
   font-size: 20px;
-  /* width: 10%; */
+}
+.newslink{
+  text-decoration: none;
 }
 
 .newslink:hover {
-  border-bottom: solid 2px #CF4501;
+  color: #CF4501;
+  border-bottom: solid 1px #CF4501;
+}
+
+.text-muted{
+  display: flex;
+  justify-content: end;
 }
 @media screen and (max-width: 768px) {
   .newslink {

@@ -65,7 +65,7 @@ function TemplateNews() {
                       currentNews.map((val,ind) => {
                         return (
                           <>
-                            <div className="newsitem d-flex align-items-center" key={ind}>
+                            <div className="newsitem d-flex" key={ind}>
                               <div className='col-10 text-truncate'>
                                 <a href='#a' type='button' className='newslink' 
                                   onClick={ ()=>{ showNews({
