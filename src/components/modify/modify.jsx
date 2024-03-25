@@ -37,6 +37,9 @@ const Modify = () => {
                 setTel(response.data[0].tel)
                 setAddress(response.data[0].address)
             })
+            .catch((error => {
+                console.error("err",error)
+            }))
         }
     }, [auth]);
 
@@ -164,7 +167,7 @@ const Modify = () => {
                                 <br/>
                                 {!modifyState ? ( 
                                 <React.Fragment>
-                                    <label className="Modify mb-2"  for="account"><i className="fa-solid fa-ghost">
+                                    <label className="Modify"  for="account"><i className="fa-solid fa-ghost">
                                         </i>&emsp;密碼:</label>
                                     <br/>
                                     <input className= "Modify2"  type="password" id="account" name="account" 
@@ -192,7 +195,7 @@ const Modify = () => {
                                 <br/>
                                 <br/>
                                 <div className="d-flex justify-content-center text-center mt-3">
-                                    <Link to='/usermodify' 
+                                    <Link to='/' 
                                         className={modifyState ? "Modify4 me-3" : "hide"} type='button' style={{textDecoration:'none'}}>
                                         取消
                                     </Link>
