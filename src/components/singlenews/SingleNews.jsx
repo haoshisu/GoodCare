@@ -9,7 +9,7 @@ const SingleNews = ({ newsData }) => {
       <div className='container'>
         <div className='row'>
           <div className='col-10 p-4 newsBox'>
-            <h2 className='mb-3' style={{ fontWeight: "bold" }}>{news.title}</h2>
+            <h2 className='mb-3' style={{ fontWeight: "bold",textAlign: "center"}}>{news.title}</h2>
             <div className='text-muted mb-1'>來源：{news.source}</div>
             <div className='text-muted mb-3'>更新日期：{news.update}</div>
             <div className='container'>
@@ -19,7 +19,8 @@ const SingleNews = ({ newsData }) => {
                 </section>
               </div>
               <div className='row'>
-            <a href={"/news"} type='button' className='col-2 newsbtn mb-3'>返回新聞</a>
+              <div className='col-8 col-sm-8 col-md-9 col-lg-10 col-xl-10'></div>
+            <a href={"/news"} type='button' className='col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 newsbtn mb-3'>返回新聞</a>
           </div>
           </div>
           </div>

@@ -515,7 +515,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
 
   return (
     <React.Fragment>
-      <div className="container col-10">
+      <div className="container col-12">
         <div className="row">
           <div className="col-md-12 text-left">
             <h1 style={{ fontWeight: "bold" }}>長照服務補助資訊專區-查詢</h1>
@@ -529,14 +529,14 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
             >
               <h3>請填寫被照顧者之相關資訊:</h3>
               <div className="row">
-                <div className="col-md-5 mb-5 mt-4 d-flex justify-content-center">
+                <div className="col-sm-6 col-md-7 mb-5 mt-4 d-flex justify-content-center">
                   <img
                     src={require("../../asset/images/subsidy/elder.jpg")}
                     alt="elder"
                     className="img-fluid"
                   />
                 </div>
-                <div className="col-md-6 mb-4">
+                <div className="col-sm-6 col-md-5">
                   <form className="mb-1" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                       <label htmlFor="identity">身份:</label>
@@ -544,7 +544,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                         className="form-control"
                         id="identitySelect"
                         {...register("identity")}
-                        // value={selectedIdentity}
+                      // value={selectedIdentity}
                       >
                         <option value="請選擇身份">請選擇身份</option>
                         <option value="50歲以上失智者">50歲以上失智者</option>
@@ -635,13 +635,15 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                         ))}
                       </select>
                     </div>
-                    <div className="text-center mt-5">
-                      <input
-                        type="submit"
-                        className="btn btn-lg custom-button px-5"
-                        // onClick={goToSecond}
-                        value={"下一頁"}
-                      />
+                    <div className="row justify-content-center">
+                      <div className=" text-center mt-5">
+                        <input
+                          type="submit"
+                          className="btn btn-lg custom-button px-5"
+                          // onClick={goToSecond}
+                          value={"下一頁"}
+                        />
+                      </div>
                     </div>
                   </form>
                 </div>

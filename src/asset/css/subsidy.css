@@ -68,16 +68,7 @@ a.custom-link:hover {
   border-color: #cf4501 !important;
   color: #ffffff !important;
 }
-.custom-button {
-  background-color: white !important;
-  border-color: #cf4501 !important;
-  color: #cf4501 !important;
-}
-.custom-button:hover {
-  background-color: #cf4501 !important;
-  border-color: #cf4501 !important;
-  color: #ffffff !important;
-}
+
 .form-group label {
   font-size: 18px !important;
   font-weight: bold !important;
@@ -152,6 +143,14 @@ td {
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 500px) {
+  .custom-button {
+   font-size: 17px!important;
+   padding: 10px!important;
+  }
+}
+
 
 /* RWD of subsidyHome */
 @media (max-width: 700px) {

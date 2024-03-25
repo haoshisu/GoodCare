@@ -23,7 +23,7 @@ const Path = ({ onSearch }) => {
 
     <div className="container">
       <div className="row d-flex justify-content-end">
-        <div className="col-7 col-md-6 col-sm-5 col-lg-3 d-flex justify-content-center align-items-center mt-3">
+        <div className="col-6 col-md-7 col-sm-8 col-lg-6 d-flex justify-content-center align-items-center mt-3">
           <div className="input-group ">
             <input type="text" className="form-control" placeholder="找商品" id="search" value={searchvalue.value} onChange={Dochange} />
             <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={DoSearch}><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
