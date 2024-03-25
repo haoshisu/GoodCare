@@ -23,7 +23,6 @@ function SingleProduct() {
       <Header />
       <IndexNav />
       <PathBox pathName={"醫療輔具商品"} path={"/Product"} />
-      <Path />
       <div className="container">
         <div className="row mb-5">
           <ProductSideBar />

@@ -53,13 +53,8 @@ function IndexNav() {
                 <li className="nav-item">
                   <a href="/reserve" className="topnav-title">預約照服員</a>
                 </li>
-                <li class="nav-item dropdown ">
+                <li className="nav-item">
                   <a href={road} className="topnav-title">會員資料</a>
-                  <ul class="dropdown-menu dropdown-content">
-                    <li class="dropdown-content1">
-                      <a href="/CheckOrder">訂單查詢</a>
-                    </li>
-                  </ul>
                 </li>
                 <li className="nav-item">
                   <a href="/webqa" className="topnav-title">網站常見問題</a>

@@ -81,7 +81,6 @@ function App() {
           <Route path="/UserRegister" element={<UserRegister />} />
           <Route path="/UserProfile" element={<UserProfile />} />
           <Route path="/UserModify" element={<UserModify />} />
-          <Route path="/CheckOrder" element={<CheckOrder />} />
 
           {/* single video */}
           <Route path="/Video/:id" element={<SingleVideo />} />

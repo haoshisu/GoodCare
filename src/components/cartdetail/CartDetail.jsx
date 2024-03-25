@@ -212,7 +212,7 @@ const CartDetail = ({ doSecondBtn }) => {
                 {/* 折扣碼 */}
                 {cartInfo.length > 0 && (
                   <div className="container">
-                    <div className="d-flex justify-content-end">
+                    <div className="d-flex justify-content-center">
                       <div className="col-6 ms">
                         <form className="input-group" onSubmit={handleSubmit(onSubmit)}>
                           <input

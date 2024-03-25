@@ -21,7 +21,6 @@ export { default as UserForget } from "./UserForget";
 export { default as UserRegister } from "./UserRegister";
 export { default as UserProfile } from "./UserProfile";
 export { default as UserModify } from "./UserModify";
-export { default as CheckOrder } from "./CheckOrder"
 
 // single video
 export { default as SingleVideo } from "./SingleVideo";

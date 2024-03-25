@@ -35,15 +35,14 @@
 }
 
 .custom-button2 {
-  background-color: white!important;
-  border-color:#f3b90b!important;
-  color: #f3b90b!important;
+  background-color: white !important;
+  border-color: #838181 !important;
+  color: #838181 !important;
 }
 .custom-button2:hover {
-  background-color: #f3b90b !important;
-  border-color: #f3b90b!important;
-  color: #ffffff !important;
-  text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px!important;;
+    background-color: #acabab !important;
+    border-color: #acabab !important;
+    color: #ffffff !important;
 }
 
 .CartDetail{

@@ -397,7 +397,7 @@ const CartPayment = ({ doFirstBtn, doThirdBtn, userData }) => {
                   className="form-control"
                   id="remark"
                   rows="3"
-                  placeholder="備註Rex好帥！ <3 <3 <3"
+                  placeholder=""
                   {...register("orderremark", { required: false })}
                   >
                   </textarea>
@@ -486,19 +486,19 @@ const CartPayment = ({ doFirstBtn, doThirdBtn, userData }) => {
                 <div className="row">
                   <div className="col-md-4 text-center">
                     <button
-                      className="btn btn-lg custom-button-back px-5"
+                      className="btn btn-lg custom-button-back"
                       onClick={doFirstBtn}
                     >
-                      返回購物車
+                       <i className="fa-solid fa-shopping-cart"></i>&nbsp;返回購物車
                     </button>
                   </div>
                   <div className="col-md-4 text-center">
                     <button
                       type="submit"
-                      className="btn btn-lg custom-button px-5"
+                      className="btn btn-lg custom-button"
                       // onClick={doThirdBtn}
                     >
-                      確認結帳
+                      <i className="fa-brands fa-cc-visa"></i>&nbsp;確認結帳
                     </button>
                   </div>
                 </div>
