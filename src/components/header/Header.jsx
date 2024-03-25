@@ -32,14 +32,27 @@ function Header() {
                         <div className="container-fluid">
                             <a href="https://www.hpa.gov.tw/Home/Index.aspx" className="navbar-brand me-4" id='tmp'>衛生福利部</a>
                             <a href="/" className="navbar-brand me-4">首頁專區</a>
-                            <form className="d-flex search-bar" role="search">
-                                <input className="form-control me-2" type="search" placeholder="搜尋長照補助" aria-label="Search" />
+                            <form className="d-flex search-bar" role="search" action="/news">
+                                <input className="form-control me-2" type="search" placeholder="搜尋長照補助" aria-label="Search" name="keyword" />
                                 <button className="btn btn-outline-success" type="submit">Search</button>
                             </form>
+                            {/* 彈跳視窗 */}
+                            <div class="modal fade" id="searchmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <form className="d-flex" role="search" action="/news">
+                                                <input className="form-control me-2" type="search" placeholder="搜尋長照補助" aria-label="Search" name="keyword" />
+                                                <button className="btn btn-outline-success" type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </nav>
-                    <div className="d-flex align-items-center search-icon"><i className="fa-solid fa-magnifying-glass"></i></div>
                     <div className="d-flex align-items-center">
+                        <a className="search-icon text-decoration-none" data-bs-toggle="modal" data-bs-target="#searchmodal"><i className="fa-solid fa-magnifying-glass"></i></a>
                         <a className="user text-dark" onClick={doRedirect} href='#a'>
                             <i className="fa-solid fa-user"></i>
                             &nbsp;
@@ -51,7 +64,7 @@ function Header() {
                             <span>登出</span>
                         </a>
                         &nbsp;
-                        <div className="ps-3 mt-2 me-5">
+                        <div className="ps-2 mt-2 me-lg-5">
                             <a href="/cart" ><h2><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></h2></a>
                         </div>
                     </div>
