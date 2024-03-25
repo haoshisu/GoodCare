@@ -104,14 +104,14 @@ const CartDetail = ({ doSecondBtn }) => {
                     />
                   </div>
                   <div className="col-sm-2 text-center">{val.productName}</div>
-                  <div className="col-sm-2 text-center">{val.price}</div>
+                  <div className="col-sm-2 text-center">{'NTD$ '+val.price}</div>
                   <div className="col-sm-2 text-center">
                     <Counter
                       curNum={val.quantity}
                       childToParent={numChanged => { changeCartInfo(val.id, numChanged) }}
                     />
                   </div>
-                  <div className="col-sm-2 text-center">{val.quantity * val.price}</div>
+                  <div className="col-sm-2 text-center">{'NTD$ '+ (val.quantity * val.price)}</div>
                   <div className="delete-btn col-sm-2 text-center" onClick={() => doDelete(val.id)}>
                     <i className="fas fa-trash-alt"></i>
                   </div>
@@ -189,21 +189,21 @@ const CartDetail = ({ doSecondBtn }) => {
                   <tbody>
                     <tr>
                       <td>商品小計</td>
-                      <td>{"NT$" + cartPrice}</td>
+                      <td>{"NTD$ " + cartPrice}</td>
                     </tr>
                     <tr>
                       <td>折扣</td>
                       <td className={totalDiscount < 0 ? "text-danger" : ""}>
-                        {"NT$" + totalDiscount}
+                        {"NTD$ " + parseInt(totalDiscount)}
                       </td>
                     </tr>
                     <tr>
                       <td>運費</td>
-                      <td>{"NT$" + charge}</td>
+                      <td>{"NTD$ " + charge}</td>
                     </tr>
                     <tr>
                       <td>合計</td>
-                      <td>{"NT$" + totalPrice}</td>
+                      <td>{"NTD$ " + parseInt(totalPrice)}</td>
                     </tr>
                   </tbody>
                 </table>

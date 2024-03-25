@@ -67,7 +67,7 @@ const Card = ({ category,sortBy,search }) => {
                             <div className="card-body">
                             
                                 <h5 className="card-title">{p.productName}</h5>
-                                <p className="card-text">NT ${p.price}</p>
+                                <p className="card-text">NTD$ {p.price}</p>
                             
                             </div>
                         </a>

@@ -105,7 +105,7 @@ const Single = () => {
 
               <p className="card-text">
                 <span style={{ color: "orangered" }}>
-                  NT ${singleList[0].price}
+                  NTD$ {singleList[0].price}
                 </span>
               </p>
               {/* <!-- 數量按鈕 --> */}

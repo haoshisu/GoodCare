@@ -55,9 +55,9 @@ const CartConfirm = () => {
                   <div className="row border-bottom pb-2 mb-2" key={ ind }>
                     <div className="col">{ ind+1 }</div>
                     <div className="col">{ val.productName }</div>
-                    <div className="col">{ val.price }</div>
+                    <div className="col">{ 'NTD$ '+ val.price }</div>
                     <div className="col">{ val.quantity }</div>
-                    <div className="col">{ val.price*val.quantity }</div>
+                    <div className="col">{ 'NTD$ '+ val.price*val.quantity }</div>
                   </div>
                 )
               })
@@ -72,7 +72,7 @@ const CartConfirm = () => {
           </div>
           <div className="col-4"></div>
           <div className="col-5">
-            <h5>{ totalPrice }</h5>
+            <h5>{ 'NTD$ '+ totalPrice }</h5>
           </div>
         </div>
         <div className="row border-bottom pb-2 mb-2">
@@ -82,7 +82,7 @@ const CartConfirm = () => {
           </div>
           <div className="col-4"></div>
           <div className="col-5">
-            <h5>{ totalPrice-(discountPrice-charge) }</h5>
+            <h5>{ 'NTD$ '+ parseInt(totalPrice-(discountPrice-charge)) }</h5>
           </div>
         </div>
         <div className="row border-bottom pb-2 mb-2">
@@ -92,7 +92,7 @@ const CartConfirm = () => {
           </div>
           <div className="col-4"></div>
           <div className="col-5">
-            <h5>{ charge }</h5>
+            <h5>{ 'NTD$ '+ charge }</h5>
           </div>
         </div>
         <div className="row">
@@ -102,7 +102,7 @@ const CartConfirm = () => {
           </div>
           <div className="col-4"></div>
           <div className="col-5">
-            <h5>{ discountPrice }</h5>
+            <h5>{ 'NTD$ '+ parseInt(discountPrice) }</h5>
           </div>
         </div>
         <br />

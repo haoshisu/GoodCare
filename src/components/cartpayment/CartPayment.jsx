@@ -425,9 +425,10 @@ const CartPayment = ({ doFirstBtn, doThirdBtn, userData }) => {
                       className="form-control"
                       id="creditCardNumber"
                       placeholder="請填寫信用卡號碼"
-                      // aria-invalid={errors.cardnumber ? "true" : "false"}
+                      aria-invalid={errors.cardnumber ? "true" : "false"}
                       {...register("cardnumber", {
-                        // required: false,
+                        required: true,
+                        minLength:16,
                         // pattern: /^(4[0-9]{12}(?:[0-9]{3})?)*$/,
                       })}
                     />
