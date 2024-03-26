@@ -34,9 +34,9 @@ const SubsidySearchCFM = ({
         <div className="row justify-content-center mt-4 mb-4">
           <div className="col-12">
             <div className="content">
-              <h3 style={{ color: "#cf4501", fontWeight: "bold" }}>
+              <h2 style={{ color: "#cf4501", fontWeight: "bold" }}>
                 請確認以下您輸入的資訊是否正確:
-              </h3>
+              </h2>
               <p></p>
               <div className="row">
                 <div className="d-flex justify-content-center mt-2 mb-2">
@@ -51,20 +51,23 @@ const SubsidySearchCFM = ({
                   <table className="table table-striped custom-table">
                     <thead className="thead-dark">
                       <tr>
-                        <th className="text-center col m-line">項目</th>
-                        <th className="text-center col">資訊</th>
+                        <th className="text-center col m-line ">項目</th>
+                        <th className="text-center col m-line">資訊</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td className="text-center m-line">身份</td>
-                        <td className="text-center" id="identityPlaceholder">
+                        <td
+                          className="text-center m-line"
+                          id="identityPlaceholder"
+                        >
                           {formData.identity}
                         </td>
                       </tr>
                       <tr>
                         <td className="text-center m-line">收入狀況</td>
-                        <td className="text-center" id="income">
+                        <td className="text-center m-line" id="income">
                           {formData.income}
                         </td>
                       </tr>
@@ -72,11 +75,11 @@ const SubsidySearchCFM = ({
                         <td className="text-center m-line">
                           是否持有身心障礙證明
                         </td>
-                        <td className="text-center" id="disability">
+                        <td className="text-center m-line" id="disability">
                           {formData.disability}
                         </td>
                       </tr>
-                      <tr>
+                      {/* <tr>
                         <td className="text-center m-line">縣市</td>
                         <td className="text-center" id="city">
                           {formData.city}
@@ -87,7 +90,7 @@ const SubsidySearchCFM = ({
                         <td className="text-center" id="district">
                           {formData.district}
                         </td>
-                      </tr>
+                      </tr> */}
                       {/* Add other form items as needed */}
                     </tbody>
                   </table>

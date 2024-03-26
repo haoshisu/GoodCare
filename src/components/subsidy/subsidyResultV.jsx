@@ -11,25 +11,25 @@ const SubsidyResultV = () => {
             <thead className="thead-dark">
               <tr>
                 <th className="text-center col m-line">項目</th>
-                <th className="text-center col">資訊</th>
+                <th className="text-center col m-line">資訊</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="text-center m-line ">您的收入狀況為</td>
-                <td className="text-center " id="income">
+                <td className="text-center m-line " id="income">
                   一般戶
                 </td>
               </tr>
               <tr>
                 <td className="text-center m-line ">政府補貼每趟</td>
-                <td className="text-center " id="subsidy">
+                <td className="text-center m-line " id="subsidy">
                   補助金額之70%
                 </td>
               </tr>
               <tr>
                 <td className="text-center m-line">每月補助最高額度 (NTD)</td>
-                <td className="text-center " id="level">
+                <td className="text-center m-line " id="level">
                   NTD$ 1680
                 </td>
               </tr>

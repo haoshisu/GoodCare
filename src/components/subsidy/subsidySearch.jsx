@@ -527,7 +527,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
               className="content"
               style={{ maxWidth: "100%", overflowX: "auto" }}
             >
-              <h3>請填寫被照顧者之相關資訊:</h3>
+              <h2>請填寫被照顧者之相關資訊:</h2>
               <div className="row">
                 <div className="col-sm-6 col-md-7 mb-5 mt-4 d-flex justify-content-center">
                   <img
@@ -536,10 +536,19 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                     className="img-fluid"
                   />
                 </div>
+<<<<<<< Updated upstream
                 <div className="col-sm-6 col-md-5">
                   <form className="mb-1" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                       <label htmlFor="identity">身份:</label>
+=======
+                <div className="col-md-6 mb-4 mt-4 formFont">
+                  <form className="mb-1 " onSubmit={handleSubmit(onSubmit)}>
+                    <div className="form-group mb-4">
+                      <label htmlFor="identity">
+                        <h4 style={{ fontWeight: "bold" }}>身份:</h4>
+                      </label>
+>>>>>>> Stashed changes
                       <select
                         className="form-control"
                         id="identitySelect"
@@ -554,8 +563,10 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                         <option value="其他">其他</option>
                       </select>
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="income">收入狀況:</label>
+                    <div className="form-group mb-4">
+                      <label htmlFor="income">
+                        <h4 style={{ fontWeight: "bold" }}>收入狀況:</h4>
+                      </label>
                       <select
                         className="form-control"
                         id="income"
@@ -568,7 +579,11 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                       </select>
                     </div>
                     <div className="form-group">
-                      <label htmlFor="disability">是否持有身心障礙證明:</label>
+                      <label htmlFor="disability">
+                        <h4 style={{ fontWeight: "bold" }}>
+                          是否持有身心障礙證明:
+                        </h4>
+                      </label>
                       <select
                         className="form-control"
                         id="disability"
@@ -579,7 +594,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                         <option>否</option>
                       </select>
                     </div>
-                    <div className="form-group">
+                    {/* <div className="form-group">
                       <label htmlFor="city">縣市:</label>
                       <select
                         className="form-control"
@@ -614,8 +629,8 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                         <option value="金門縣">金門縣</option>
                         <option value="連江縣">連江縣</option>
                       </select>
-                    </div>
-                    <div className="form-group">
+                    </div> */}
+                    {/* <div className="form-group">
                       <label htmlFor="district">區域:</label>
                       <select
                         className="form-control"
@@ -634,6 +649,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                           </option>
                         ))}
                       </select>
+<<<<<<< Updated upstream
                     </div>
                     <div className="row justify-content-center">
                       <div className=" text-center mt-5">
@@ -644,6 +660,17 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                           value={"下一頁"}
                         />
                       </div>
+=======
+                    </div> */}
+                    <div className="form-group mt-3">&nbsp;</div>
+                    <div className="text-center mt-4 ">
+                      <input
+                        type="submit"
+                        className="btn btn-lg custom-button px-5"
+                        // onClick={goToSecond}
+                        value={"下一頁"}
+                      />
+>>>>>>> Stashed changes
                     </div>
                   </form>
                 </div>

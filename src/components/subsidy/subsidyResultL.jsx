@@ -10,7 +10,7 @@ const SubsidyResultL = () => {
         style={{ border: "1px dashed #000" }}
       >
         <h3 className="text-center">住宿式機構服務</h3>
-        <p>
+        <p className="pLiving">
           &emsp;&emsp;&emsp;&emsp;
           為緩解中、重度失能者使用機構式服務之家庭經濟負荷，本部自108年起辦理「住宿式服務機構使用者補助方案」，針對入住指定7類機構且所得稅額未達20%之住民，依稅率級距給予最高每人每年6萬元之補助；自112年起，針對長照需要等級達4級以上之住民，調增補助為每人每年12萬元，並取消排富規定。{" "}
           <br />

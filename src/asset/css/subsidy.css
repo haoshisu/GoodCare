@@ -111,6 +111,7 @@ td {
 }
 .m-line {
   border-right: 1px solid #dee2e6 !important; /* 设置每列数据的右边框为1px实线灰色 */
+  font-size: 18px;
 }
 
 .btn-container {
@@ -142,6 +143,9 @@ td {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+}
+.pLiving {
+  font-size: 18px !important;
 }
 
 @media (max-width: 500px) {
