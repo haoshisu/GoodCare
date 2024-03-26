@@ -536,24 +536,19 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                     className="img-fluid"
                   />
                 </div>
-<<<<<<< Updated upstream
-                <div className="col-sm-6 col-md-5">
-                  <form className="mb-1" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-group">
-                      <label htmlFor="identity">身份:</label>
-=======
+
                 <div className="col-md-6 mb-4 mt-4 formFont">
                   <form className="mb-1 " onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-4">
                       <label htmlFor="identity">
                         <h4 style={{ fontWeight: "bold" }}>身份:</h4>
                       </label>
->>>>>>> Stashed changes
+
                       <select
                         className="form-control"
                         id="identitySelect"
                         {...register("identity")}
-                      // value={selectedIdentity}
+                        // value={selectedIdentity}
                       >
                         <option value="請選擇身份">請選擇身份</option>
                         <option value="50歲以上失智者">50歲以上失智者</option>
@@ -649,18 +644,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                           </option>
                         ))}
                       </select>
-<<<<<<< Updated upstream
-                    </div>
-                    <div className="row justify-content-center">
-                      <div className=" text-center mt-5">
-                        <input
-                          type="submit"
-                          className="btn btn-lg custom-button px-5"
-                          // onClick={goToSecond}
-                          value={"下一頁"}
-                        />
-                      </div>
-=======
+
                     </div> */}
                     <div className="form-group mt-3">&nbsp;</div>
                     <div className="text-center mt-4 ">
@@ -670,7 +654,6 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                         // onClick={goToSecond}
                         value={"下一頁"}
                       />
->>>>>>> Stashed changes
                     </div>
                   </form>
                 </div>
