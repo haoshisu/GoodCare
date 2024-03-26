@@ -18,7 +18,7 @@ const Service = () => {
             <ul className="nav nav-tabs" id="myTab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className="nav-link active mapTab"
                   id="longcare-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#longcare"
@@ -32,7 +32,7 @@ const Service = () => {
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className="nav-link mapTab"
                   id="rehabilitation-tab"
                   data-bs-toggle="tab"
                   data-bs-target="#rehabilitation"
