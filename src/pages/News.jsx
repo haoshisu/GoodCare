@@ -88,7 +88,7 @@ function TemplateNews() {
                                   {val.title}
                                 </a>
                               </div>
-                              <div className='col-2 text-muted'>
+                              <div className='col-2 text-muted mutedcontent'>
                                 {val.update}
                               </div>
                             </div>

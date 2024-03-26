@@ -23,10 +23,11 @@
   border-bottom: solid 1px #CF4501;
 }
 
-.text-muted{
+.mutedcontent{
   display: flex;
   justify-content: end;
 }
+
 @media screen and (max-width: 768px) {
   .newslink {
     font-size: 0.9em;

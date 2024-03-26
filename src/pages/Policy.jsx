@@ -60,7 +60,7 @@ const Service = () => {
                     <h5>&emsp;為健全長照服務體系之發展，並兼顧服務品質與資源發展，以保障弱勢接受長照服務者之權益，長期照顧服務法（下稱長服法）於104年6月3日總統令公布，106年6月3日正式上路。本法為我國長照發展重要之根本大法，整合各類長照服務資源，使資源更全面，服務更有品質，使長照服務使用者得到適當照顧。
                     </h5>
                     <br />
-                    <h5>相關連結：<a href="https://law.moj.gov.tw/LawclassName/LawAll.aspx?pcode=L0070040"
+                    <h5>相關連結：<a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070040&kw=%e9%95%b7%e6%9c%9f%e7%85%a7%e9%a1%a7%e6%9c%8d%e5%8b%99"
                       target="_blank" rel="noreferrer" style={{ color: '#CF4501', textDecoration: 'none' }}>全國法規資料庫：長期照顧服務</a>
                     </h5>
                   </div>
@@ -85,7 +85,7 @@ const Service = () => {
                       &emsp;本條例共四章47條，長照機構法人包含兩類：長照機構財團法人及長照機構社團法人。長照機構法人有共通性規範，包含限制法人設立長照機構之區域、分類、家數及規模、設立必要之財產、董事會組成、資訊公開(如財報)、投資限制及年度收支結餘提撥等。
                     </h5>
                     <br />
-                    <h5>相關連結：<a href="https://law.moj.gov.tw/LawclassName/LawAll.aspx?pcode=L0070040"
+                    <h5>相關連結：<a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070051&kw=%e9%95%b7%e6%9c%9f%e7%85%a7%e9%a1%a7%e6%9c%8d%e5%8b%99%e6%a9%9f%e6%a7%8b%e6%b3%95%e4%ba%ba%e6%a2%9d%e4%be%8b"
                       target="_blank" rel="noreferrer"
                       style={{ color: '#CF4501', textDecoration: 'none' }}>全國法規資料庫：長期照顧服務機構法人條例</a></h5>
                   </div>
