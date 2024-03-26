@@ -87,7 +87,7 @@ function Mapsearch() {
   const fetchData = () => {
     axios.get(`http://localhost:8000/clinic/searchclinic`, {
       params: {
-        city: selectedCity === '' ? '臺中市' : selectedCity,
+        city: selectedCity === '' ? '臺北市' : selectedCity,
         area: selectedArea,
         keyword: keyword
       }
