@@ -522,14 +522,14 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
           </div>
         </div>
         <div className="row justify-content-center mt-4 mb-4">
-          <div className="col-12">
+          <div className="col-10">
             <div
               className="content"
               style={{ maxWidth: "100%", overflowX: "auto" }}
             >
               <h2>請填寫被照顧者之相關資訊:</h2>
               <div className="row">
-                <div className="col-sm-6 col-md-7 mb-5 mt-4 d-flex justify-content-center">
+                <div className="col-sm-12 col-md-7 mb-5 mt-4 d-flex justify-content-center">
                   <img
                     src={require("../../asset/images/subsidy/elder.jpg")}
                     alt="elder"
@@ -537,7 +537,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                   />
                 </div>
 
-                <div className="col-md-6 mb-4 mt-4 formFont">
+                <div className="col-sm-6 col-md-5 mb-4 mt-4 formFont">
                   <form className="mb-1 " onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mb-4">
                       <label htmlFor="identity">
@@ -646,7 +646,7 @@ const SubsidySearch = ({ goToSecond, setFormData }) => {
                       </select>
 
                     </div> */}
-                    <div className="form-group mt-3">&nbsp;</div>
+                    <div className="form-group mt-5">&nbsp;</div>
                     <div className="text-center mt-4 ">
                       <input
                         type="submit"
