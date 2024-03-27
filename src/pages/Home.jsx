@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/header/Header";
 import IndexNav from "../components/indexnav/IndexNav";
 import Footersecond from "../components/footersecond/Footersecond";
-import BackToTopBtn from "../components/backtotopbtn/BackToTopBtn";
+import BackToTopBtn2 from "../components/backtotopbtn2/BackToTopBtn";
 import ScrollEffectComponent from "../components/hover/hover";
 import MyclassNameComponent from "../components/aos/aos";
 import SwiperComponent from "../components/swiper/swiperComponent";
@@ -273,7 +273,7 @@ const Home = () => {
         </div>
       </>
       <Footersecond />
-      <BackToTopBtn />
+      <BackToTopBtn2 />
     </React.Fragment>
   );
 };

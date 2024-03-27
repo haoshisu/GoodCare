@@ -19,7 +19,7 @@ const toggleVisible = () => {
 
 const scrollToTop = () =>{ 
 	window.scrollTo({ 
-	top:0, 
+	top:1100, 
 	behavior: 'smooth'
 	/* you can also use 'auto' behaviour 
 		in place of 'smooth' */
