@@ -127,7 +127,7 @@ const Register = () => {
         })
         .then((response=>{
             if(response.data==='ok'){
-                alert('註冊成功')
+                alert('註冊成功  獲得折扣碼:GC2024')
                 window.location.href=('/')
         
             }else{
