@@ -73,7 +73,7 @@ const UserLogin = (  ) => {
                 
                 
             }            
-            window.location.href = ('/')
+            window.location.href = ('/Product')
             
         })
         .catch(error => {
