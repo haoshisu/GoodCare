@@ -87,9 +87,10 @@
 
 @media screen and (max-width: 500px){
   .custom-button2 {
-    font-size: 12px;
+    font-size: 14px;
   }
   .custom-button{
-    font-size: 1px;
+    font-size: 14px!important;
+    padding:7.5px 15px!important;
   }
 }

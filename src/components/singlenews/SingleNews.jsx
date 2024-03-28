@@ -10,8 +10,14 @@ const SingleNews = ({ newsData }) => {
         <div className='row'>
           <div className='col-10 p-4 newsBox'>
             <h2 className='mb-3' style={{ fontWeight: "bold",textAlign: "center"}}>{news.title}</h2>
-            <div className='text-muted mb-1'>來源：{news.source}</div>
+            <br />
+            <div className='row'>
+            <div className='col-10 d-flex justify-content-flex-start'>
+            <div className='text-muted mb-3 me-5'>來源：{news.source}</div>
             <div className='text-muted mb-3'>更新日期：{news.update}</div>
+            </div>
+            </div>
+            <br />
             <div className='container'>
               <div className='row'>
                 <section className=' col-10 fs-5 mb-5'>

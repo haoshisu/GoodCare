@@ -22,7 +22,6 @@ const Home = () => {
         <br />
         </div>
         <br />
-        <br />
         <MyclassNameComponent />
         <SwiperComponent />
         <br />
@@ -68,7 +67,7 @@ const Home = () => {
                 </a>
               </li>
               <li>
-                <a href="/ReserveConfirm" target="_blank">
+                <a href="/Reserve" target="_blank">
                   <img src={require("../asset/images/Home/icon4.png")} alt="預約照服員"/>
                   <h4>預約照服員</h4>
                 </a>

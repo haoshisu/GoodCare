@@ -248,15 +248,15 @@ const CartDetail = ({ doSecondBtn }) => {
                 <br />
                 <br />
                 <br />
-                <div className="text-center d-flex justify-content-around">
+                <div className="text-center d-flex justify-content-center">
                   <a href="/product">
-                    <button className="btn btn-lg custom-button2">
+                    <button className="btn btn-lg custom-button2 me-3">
                       <i className="fa-solid fa-shopping-cart"></i>&nbsp;繼續購物
                     </button>
                   </a>
                   <button
                     type="button"
-                    className="btn btn-lg custom-button"
+                    className="btn btn-lg custom-button "
                     onClick={doSecondBtn}>
                     <i className="fa-brands fa-cc-visa"></i>&nbsp;前往結帳
                   </button>
