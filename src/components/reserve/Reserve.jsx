@@ -73,7 +73,7 @@ function Reserve() {
                   required: "* 此欄位必填",
                   pattern: {
                     value: /^[\u4E00-\u9FA5]+$/,
-                    message: "請輸入中文姓名"
+                    message: "請輸入正確格式"
                   }
                 })} defaultValue={formData.relationship} />
                 {errors.relationship && <p style={{ color: 'red' }}>{errors.relationship.message}</p>}
@@ -83,7 +83,13 @@ function Reserve() {
               <h4>預約照顧&nbsp;&nbsp;(被照顧者資料)</h4>
               <div className="form-row">
                 <label for="name"><p><i className="fa-solid fa-user"></i> 姓名：</p></label>
-                <input type="text" id="name" name="name" {...register("name", { required: "* 此欄位必填" })} defaultValue={formData.name} />
+                <input type="text" id="name" name="name" {...register("name", {
+                  required: "* 此欄位必填",
+                  pattern: {
+                    value: /^[\u4E00-\u9FA5]+$/,
+                    message: "請輸入中文姓名"
+                  }
+                })} defaultValue={formData.name} />
                 {errors.name && <p style={{ color: 'red' }}>{errors.name.message}</p>}
               </div>
               <div className="form-row">
