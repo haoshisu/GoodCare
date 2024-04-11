@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# GoodCare Web 好照顧網站
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/00689f79-1c3d-4156-a64b-82d33ab785b4)
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Toolkit
+  - ### Frontend: React.js
+    - ### useContext, useForm, useEffect
+  - ### Backend: Node.js
+    - ### JWT Token
+  - ### API: Axios
+  - ### Database: AWS RDS (MySQL)
+  - ### Other: RWD Design, Bootstrap5
+    
+### Purpose
+  - ### One-Stop Service
+  - ### Professional and Reliable Information
+  - ### User-Friendly Design
+    
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/fdf8d04f-df99-4364-bbee-5ff4c7f23d71)
 
-## Available Scripts
+### Features
+- ### video
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/44f0be6a-d218-457e-a1fb-9dbefeb2897f)
 
-In the project directory, you can run:
+- ### subsidy
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/fee1a1d2-6e1e-4653-8b2f-6d0d032c99eb)
 
-### `npm start`
+- ### map
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/9482dfa8-e73c-4a93-94d9-dd059150e596)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ### product
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/16cc1556-b701-40d3-99e5-11550dd50db6)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ### reserve
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/b2fb5a6b-dd04-4d94-b0cd-174fc487a7d0)
 
-### `npm test`
+- ### member
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/2578f9b8-4d41-4ba2-88fa-2014ad8857c5)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ### cart
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/53f4ee1e-77ba-4727-98fe-2e01141b9eeb)
 
-### `npm run build`
+- ### webqa
+![image](https://github.com/haoshisu/GoodCare/assets/155418630/b1a61cd7-5565-4cdc-a481-d9861e7d7bfc)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
